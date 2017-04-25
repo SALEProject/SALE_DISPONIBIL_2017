@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_UploadXLSDLG>
+	<Name>frm_UploadXLSDLG</Name>
+	<theme>sale</theme>
+	
+	<Caption>REMIT XLS Form Upload</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>400</Width>
+	<Height>200</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+
+	<TLabel>
+		<Name>lbl_UploadFile</Name>
+		<Left>32</Left>
+		<Top>32</Top>
+		<Caption>Upload File:</Caption>
+	</TLabel>
+	
+	<TFileUpload>
+		<Name>ed_UploadFile</Name>
+		<Left>136</Left>
+		<Top>24</Top>
+		<Height>50</Height>
+		<Caption>Select file to upload...</Caption>
+	</TFileUpload>	
+	
+	<TButton>
+		<Name>btn_Save</Name>
+		<Caption>Save</Caption>
+		<Left>100</Left>
+		<Top>200</Top>
+		<Width>80</Width>
+		<CSSClass>green</CSSClass>		
+		<OnClick>btn_SaveOnClick</OnClick>
+	</TButton>
+		
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Caption>Cancel</Caption>
+		<Left>200</Left>
+		<Top>200</Top>
+		<Width>80</Width>
+		<CSSClass>red</CSSClass>
+		<OnClick>btn_CancelOnClick</OnClick>
+	</TButton>
+				
+</Tfrm_UploadXLSDLG>

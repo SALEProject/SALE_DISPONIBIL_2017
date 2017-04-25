@@ -1,0 +1,54 @@
+span.disponibil_TLabel
+{
+		display: block;
+		font-family: 'Open Sans';
+		font-weight: 300;
+		color: #3B4249;
+		font-size: 20px;
+		line-height: 26px;
+  	margin-top: 0px;
+		padding-right: 20px;
+}
+
+}
+
+span.disponibil_TLabel.active
+{
+	display: block;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	color: #3B4249;
+	font-size: 20px;
+	line-height: 26px;
+	margin-top: 0px;
+	padding-right: 20px
+
+}
+
+
+span.disponibil_TLabel.formcaption
+{
+	display: block;
+	font-family: 'Open Sans';
+	font-weight: 300;
+	color: #3B4249;
+	font-size: 20px;
+	line-height: 26px;
+	margin-top: 0px;
+	padding-right: 20px;
+
+}
+
+span.disponibil_TLabel.temp
+{
+	display: block;
+	position: relative;
+	max-width: 170px;
+  margin: 0;
+	font-family: "Open Sans";
+	font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  box-sizing: border-box;
+  color: #6F7B8A;
+}

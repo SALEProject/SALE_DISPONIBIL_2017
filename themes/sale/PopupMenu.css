@@ -1,0 +1,48 @@
+div.sale_TPopupMenu
+{	
+	
+	font-family: "Open Sans";
+	display: block;
+	position: absolute;
+	background-color: #22262E;
+	border: 1px solid gray;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+	color: #E1EAF1;
+	
+}
+
+div.sale_TPopupMenu ul
+{
+	font-family: "Open Sans";
+	list-style: outside none none;
+	margin: 0px;
+	background-color: #22262E;
+	padding: 8px 0px 10px;
+	width: 250px;
+	box-sizing: border-box;
+	color: #E1EAF1;
+}
+
+div.sale_TPopupMenu ul li
+{
+	line-height: 20px;
+	color: #E1EAF1;
+	font-family: "Open Sans";
+	list-style: outside none none;
+	margin: 0px;
+	background-color: #22262E;
+	padding: 8px 0px 10px;
+	width: 250px;
+	box-sizing: border-box;
+	color: #E1EAF1;
+}
+
+div.sale_TPopupMenu ul li:hover
+{
+	    color: #2A6496;
+	    text-shadow: none !important;
+	    background: #1B1E24 none repeat scroll 0% 0% !important;
+}
+a {
+    
+}

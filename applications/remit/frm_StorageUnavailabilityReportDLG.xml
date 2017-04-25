@@ -1,0 +1,382 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_StorageUnavailabilityReportDLG>
+	<Name>frm_StorageUnavailabilityReportDLG</Name>
+	<theme>sale</theme>
+
+	<Caption>REMIT Storage Unavailability Report Definition</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>930</Width>
+	<Height>404</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	<CSSClass>rotund</CSSClass>
+
+
+	<TLabel>
+		<Name>lbl_UnavailabilityNotificationTimestamp</Name>
+		<Left>32</Left>
+		<Top>16</Top>
+		<Caption>Unavailability Notif. Timestamp:</Caption>
+	</TLabel>
+
+	<TDatePicker>
+		<Name>dp_UnavailabilityNotificationTimestamp</Name>
+		<Left>272</Left>
+		<Top>16</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Unavailability Notif. Timestamp</Hint>
+		<CSSClass>required</CSSClass>
+	</TDatePicker>
+
+	<TEdit>
+		<Name>ed_UnavailabilityNotificationTimestamp</Name>
+		<Left>378</Left>
+		<Top>16</Top>
+		<Height>24</Height>
+		<Width>100</Width>
+		<Hint>hh:mm</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9:]+$</Mask>
+	</TEdit>
+
+
+	<TLabel>
+		<Name>lbl_UnavailabilityStart</Name>
+		<Left>508</Left>
+		<Top>16</Top>
+		<Caption>Unavailability Start:</Caption>
+	</TLabel>
+
+	<TDatePicker>
+		<Name>dp_UnavailabilityStart</Name>
+		<Left>688</Left>
+		<Top>16</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Unavailability Start</Hint>
+		<CSSClass>required</CSSClass>
+	</TDatePicker>
+
+	<TEdit>
+		<Name>ed_UnavailabilityStart</Name>
+		<Left>794</Left>
+		<Top>16</Top>
+		<Height>24</Height>
+		<Width>100</Width>
+		<Hint>hh:mm</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9:]+$</Mask>
+	</TEdit>
+
+
+	<TLabel>
+		<Name>lbl_UnavailabilityEnd</Name>
+		<Left>508</Left>
+		<Top>52</Top>
+		<Caption>Unavailability End:</Caption>
+	</TLabel>
+
+	<TDatePicker>
+		<Name>dp_UnavailabilityEnd</Name>
+		<Left>688</Left>
+		<Top>52</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Unavailability End</Hint>
+		<CSSClass>required</CSSClass>
+	</TDatePicker>
+
+	<TEdit>
+		<Name>ed_UnavailabilityEnd</Name>
+		<Left>794</Left>
+		<Top>52</Top>
+		<Height>24</Height>
+		<Width>100</Width>
+		<Hint>hh:mm</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9:]+$</Mask>
+	</TEdit>
+
+	<TLabel>
+		<Name>lbl_UnavailabilityEndFlag</Name>
+		<Left>508</Left>
+		<Top>88</Top>
+		<Caption>Unavailability End Flag:</Caption>
+	</TLabel>
+
+<!-- 	<TCheckBox>
+		<Name>ckb_UnavailabilityEndFlag</Name>
+		<Left>618</Left>
+		<Top>88</Top>
+	</TCheckBox> -->
+
+	<TComboBox>
+		<Name>cb_UnavailabilityEndFlag</Name>
+		<Left>692</Left>
+		<Top>88</Top>
+		<Width>200</Width>
+		<Height>24</Height>
+		<Hint>Unavailable End Flag</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>Estimate, Confirmed</Items>
+	</TComboBox>
+
+
+ 	<TLabel>
+		<Name>lbl_StorageFacilityOperatorIdentifier</Name>
+		<Left>32</Left>
+		<Top>88</Top>
+		<Caption>Storage Facility Operator ID:</Caption>
+	</TLabel>
+
+	<TEdit>
+		<Name>ed_StorageFacilityOperatorIdentifier</Name>
+		<Left>272</Left>
+		<Top>88</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility Operator ID</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[a-zA-Z.0-9]+$</Mask>
+	</TEdit>
+
+	<TComboBox>
+		<Name>cb_StorageFacilityOperatorIdentifierType</Name>
+		<Left>378</Left>
+		<Top>88</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility Operator Identifier Type</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>ACER, LEI, EIC</Items>
+	</TComboBox>
+
+
+
+
+	<!-- <TLabel>
+		<Name>lbl_ReportingEntityReferenceID</Name>
+		<Left>32</Left>
+		<Top>124</Top>
+		<Caption>Reporting Entity Reference ID:</Caption>
+	</TLabel>
+
+	<TEdit>
+		<Name>ed_ReportingEntityReferenceID</Name>
+		<Left>272</Left>
+		<Top>124</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Reporting Entity Reference ID</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[a-zA-Z0-9]+$</Mask>
+	</TEdit> -->
+
+
+	<TLabel>
+		<Name>lbl_StorageFacilityIdentifier</Name>
+		<Left>32</Left>
+		<Top>52</Top>
+		<Caption>Storage Facility ID:</Caption>
+	</TLabel>
+
+	<TEdit>
+		<Name>ed_StorageFacilityIdentifier</Name>
+		<Left>272</Left>
+		<Top>52</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility Identifier</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[a-zA-Z.0-9]+$</Mask>
+	</TEdit>
+
+	<TComboBox>
+		<Name>cb_StorageFacilityIdentifierType</Name>
+		<Left>378</Left>
+		<Top>52</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility Identifier Type</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>ACER, LEI, EIC</Items>
+	</TComboBox>
+
+
+	<TLabel>
+		<Name>lbl_UnavailableVolume</Name>
+		<Left>32</Left>
+		<Top>124</Top>
+		<Caption>Unavailable Volume:</Caption>
+	</TLabel>
+
+	<TEdit>
+		<Name>ed_UnavailableVolume</Name>
+		<Left>272</Left>
+		<Top>124</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Unavailable Volume</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+
+	<!-- 	<TLabel>
+		<Name>lbl_UnavailableVolumeMU</Name>
+		<Left>794</Left>
+		<Top>124</Top>
+		<Caption>(MWh)</Caption>
+	</TLabel> -->
+
+	<TComboBox>
+		<Name>cb_UnavailableVolumeMU</Name>
+		<Left>378</Left>
+		<Top>124</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Measuring Unit</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>cm, cm/d, mcm, mcm/d, kWh, kWh/h, kWh/d, GW, GWh, GW/h, GW/d, MW, MWh, MWh/h, MWh/d, TWh, Therm/d, kTherm/d, MTherm/d, Therm, kTherm, MTherm, %</Items>
+		<DataField>NameTR</DataField>
+        <KeyField>ID</KeyField>
+	</TComboBox>
+
+
+	<TLabel>
+		<Name>lbl_UnavailableInjection</Name>
+		<Left>32</Left>
+		<Top>160</Top>
+		<Caption>Unavailable Injection:</Caption>
+	</TLabel>
+
+	<TEdit>
+		<Name>ed_UnavailableInjection</Name>
+		<Left>272</Left>
+		<Top>160</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Unavailable Injection</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+
+<!-- 	<TLabel>
+		<Name>lbl_UnavailableInjectionMU</Name>
+		<Left>794</Left>
+		<Top>160</Top>
+		<Caption>(MWh)</Caption>
+	</TLabel> -->
+
+	<TComboBox>
+		<Name>cb_UnavailableInjectionMU</Name>
+		<Left>378</Left>
+		<Top>160</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Measuring Unit</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>cm, cm/d, mcm, mcm/d, kWh, kWh/h, kWh/d, GW, GWh, GW/h, GW/d, MW, MWh, MWh/h, MWh/d, TWh, Therm/d, kTherm/d, MTherm/d, Therm, kTherm, MTherm, %</Items>
+		<DataField>NameTR</DataField>
+        <KeyField>ID</KeyField>
+	</TComboBox>
+
+
+	<TLabel>
+		<Name>lbl_UnavailableWithdrawal</Name>
+		<Left>508</Left>
+		<Top>160</Top>
+		<Caption>Unavailable Withdrawal:</Caption>
+	</TLabel>
+
+	<TEdit>
+		<Name>ed_UnavailableWithdrawal</Name>
+		<Left>688</Left>
+		<Top>160</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Unavailable Withdrawal</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+
+	<!-- 	<TLabel>
+		<Name>lbl_UnavailableWithdrawalMU</Name>
+		<Left>794</Left>
+		<Top>196</Top>
+		<Caption>(MWh)</Caption>
+	</TLabel> -->
+
+	<TComboBox>
+		<Name>cb_UnavailableWithdrawalMU</Name>
+		<Left>794</Left>
+		<Top>160</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Measuring Unit</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>cm, cm/d, mcm, mcm/d, kWh, kWh/h, kWh/d, GW, GWh, GW/h, GW/d, MW, MWh, MWh/h, MWh/d, TWh, Therm/d, kTherm/d, MTherm/d, Therm, kTherm, MTherm, %</Items>
+		<DataField>NameTR</DataField>
+        <KeyField>ID</KeyField>
+	</TComboBox>
+
+	<TLabel>
+		<Name>lbl_UnavailabilityType</Name>
+		<Left>508</Left>
+		<Top>124</Top>
+		<Caption>Unavailability Type:</Caption>
+	</TLabel>
+
+	<TComboBox>
+		<Name>cb_UnavailabilityType</Name>
+		<Left>692</Left>
+		<Top>124</Top>
+		<Width>200</Width>
+		<Height>24</Height>
+		<Hint>Unavailable Type</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>Planned, Unplanned</Items>
+	</TComboBox>
+
+
+	<TLabel>
+		<Name>lbl_UnavailabilityDescription</Name>
+		<Left>32</Left>
+		<Top>238</Top>
+		<Caption>Unavailability Description:</Caption>
+	</TLabel>
+
+	<TMemo>
+		<Name>tm_UnavailabilityDescription</Name>
+		<Left>272</Left>
+		<Top>238</Top>
+		<Width>504</Width>
+		<Height>56</Height>
+		<Hint>Unavailability Description</Hint>
+		<CSSClass>required</CSSClass>
+	</TMemo>
+
+
+	<TButton>
+		<Name>btn_Save</Name>
+		<Caption>Save</Caption>]
+		<Left>250</Left>
+		<Top>326</Top>
+		<Width>80</Width>
+		<OnClick>btn_SaveOnClick</OnClick>
+		<CSSClass>green</CSSClass>s
+	</TButton>
+
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Caption>Cancel</Caption>]
+		<Left>600</Left>
+		<Top>326</Top>
+		<Width>80</Width>
+		<OnClick>btn_CancelOnClick</OnClick>
+		<CSSClass>red</CSSClass>
+	</TButton>
+
+</Tfrm_StorageUnavailabilityReportDLG>

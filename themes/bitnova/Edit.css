@@ -1,0 +1,36 @@
+input[type='text'].bitnova_TEdit
+{
+	background-color: #808080;
+	/*border: 1px solid #a0a0ff;*/
+	border: none;
+	border-radius: 3px;
+	color: white;
+	box-shadow: 0px 0px 1px white inset;
+}
+
+input[type='password'].bitnova_TEdit
+{
+	background-color: #808080;
+	/*border: 1px solid #a0a0ff;*/
+	border: none;
+	border-radius: 3px;
+	color: white;
+	box-shadow: 0px 0px 1px white inset;
+	
+}
+
+input[type='text'].bitnova_TEdit:focus
+{
+	background-color: #c0c0c0;
+	color: black;
+	text-weight: bold;
+	box-shadow: 0px 0px 1px white inset;
+}
+
+input[type='password'].bitnova_TEdit:focus
+{
+	background-color: #c0c0c0;
+	color: black;
+	text-weight: bold;
+	box-shadow: 0px 0px 1px white inset;
+}

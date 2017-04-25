@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_TreeView>
+	<Name>frm_TreeView</Name>
+	<theme>disponibil</theme>
+	
+	<Caption>Test Tree View</Caption>
+	<Left>240</Left>
+	<Top>60</Top>
+	<Width>400</Width>
+	<Height>320</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poDesigned</Position>
+		
+	<TButton>
+		<Name>btn_ceva</Name>
+		<Caption>asasa</Caption>
+		<Left>16</Left>
+		<Top>260</Top>
+	</TButton>
+	
+	<TTreeView>
+		<Name>tv_Assets</Name>
+		<Left>16</Left>
+		<Top>16</Top>
+		<Width>200</Width>
+		<Height>320</Height>
+		<Items.Data></Items.Data>
+	</TTreeView>
+	
+</Tfrm_TreeView>

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_AppDebug>
+	<Name>frm_AppDebug</Name>
+	<Theme>disponibil</Theme>
+	<Caption>Application Debug</Caption>
+	<Left>840</Left>
+	<Top>400</Top>
+	<Width>400</Width>
+	<Height>240</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poDesigned</Position>
+	
+	<TMemo>
+		<Name>ed_Log</Name>
+		<Left>8</Left>
+		<Top>8</Top>
+		<Width>384</Width>
+		<Height>160</Height>
+	</TMemo>
+	
+	<TButton>
+		<Name>btn_ClearCache</Name>
+		<Caption>Clear Cache</Caption>
+		<Left>180</Left>
+		<Top>180</Top>
+		<OnClick>btn_ClearCacheOnClick</OnClick>
+	</TButton>
+	
+	<TButton>
+		<Name>btn_ControlPanel</Name>
+		<Caption>Control Panel</Caption>
+		<Left>280</Left>
+		<Top>180</Top>
+		<OnClick>btn_ControlPanelOnClick</OnClick>
+	</TButton>
+</Tfrm_AppDebug>

@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_DataSources>
+	<Name>frm_DataSources</Name>
+	<theme>sale</theme>
+
+	<Caption>Data Sources</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>400</Width>
+	<Height>275</Height>
+	<BorderStyle>bsNone</BorderStyle>
+	<Position>poFillContainer</Position>
+
+	<TButton>
+		<Name>btn_NewDataSource</Name>
+		<Caption>New Data Source</Caption>]
+		<Left>24</Left>
+		<Top>28</Top>
+		<OnClick>btn_NewDataSourceOnClick</OnClick>
+	</TButton>
+
+	<TDataGrid>
+		<Name>dg_DataSources</Name>
+		<Left>24</Left>
+		<Top>80</Top>
+		<Width>500</Width>
+		<Height>256</Height>
+		<ColsCount>5</ColsCount>
+		<RowsCount>5</RowsCount>
+		<FixedCols>1</FixedCols>
+		<FixedRows>1</FixedRows>
+	</TDataGrid>
+
+</Tfrm_DataSources>

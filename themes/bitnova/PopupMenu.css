@@ -1,0 +1,27 @@
+div.bitnova_TPopupMenu
+{
+	display: block;
+	position: absolute;
+	background-color: #606050;
+	border: 1px solid gray;
+	box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);	
+}
+
+div.bitnova_TPopupMenu ul
+{
+	padding: 0px;
+	margin: 0px;
+}
+
+div.bitnova_TPopupMenu ul li
+{
+	padding: 4px 4px 4px 4px;
+	color: white;
+	list-style: none;
+	cursor: pointer;
+}
+
+div.bitnova_TPopupMenu ul li:hover
+{
+	background-color: #ffc000;
+}

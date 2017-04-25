@@ -1,0 +1,83 @@
+div.sale_TGrid
+{
+	line-height: 1.5;
+	font-family: "Open Sans";
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+	color: #6F7B8A;
+	height: 32px;
+}
+
+div.sale_TGrid table.sale_TGrid
+{
+		line-height: 1.5;
+	font-family: "Open Sans";
+	font-size: 13px;
+	font-style: normal;
+	font-weight: normal;
+	color: #6F7B8A;
+	height: 32px;
+}
+
+div.sale_TGrid table.sale_TGrid tr.even
+{
+	background-color: #e8e8e8;	
+	height: 32px;
+}
+
+div.sale_TGrid table.sale_TGrid tr.odd
+{
+	background-color: #eef;	
+	height: 32px;
+}
+
+div.sale_TGrid table.sale_TGrid tr:hover
+{
+	background-color: ccd !important;	
+	height: 32px;
+}
+
+div.sale_TGrid table.sale_TGrid tr.selected
+{
+	background-color: white !important;
+	color: black !important;
+	height: 32px;
+}
+
+div.sale_TGrid table.sale_TGrid tr.selected:hover
+{
+	background-color: white !important;
+	color: black !important;
+	height: 32px;
+}
+
+div.sale_TGrid table.sale_TGrid tr th.sale_TGrid
+{
+	background: -webkit-linear-gradient(#FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(#FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+	background: -moz-linear-gradient(#FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+	background: linear-gradient(#FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+/*background-color: #9999ff;
+	background: url('bluegray_bkgrnd_th.png') repeat-x;*/
+	color: gray;
+	font-size: 12px;
+	border-bottom: 1px solid #99a;
+	border-right: 1px solid #99a;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	height: 32px;
+}
+
+div.sale_TGrid table.sale_TGrid tr td.sale_TGrid
+{
+	/*background-color: #ffffff;*/
+	color: black;
+	font-size: 12px;
+	border-bottom: 1px solid #99a;
+	padding-left: 4px;
+	padding-right: 4px;
+	height: 32px;
+}

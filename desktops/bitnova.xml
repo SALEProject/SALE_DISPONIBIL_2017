@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TbitnovaDesktop>
+	<Name>bitnovaDesktop</Name>
+	<theme>bitnova</theme>
+	
+	<Caption>.quark Desktop</Caption>
+	
+	<TdojoMenuBar>
+		<Name>mn_Desktop</Name>
+	</TdojoMenuBar>
+	
+</TbitnovaDesktop>

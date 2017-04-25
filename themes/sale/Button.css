@@ -1,0 +1,84 @@
+input[type='button'].sale_TButton, input[type='submit'].sale_TButton
+{
+	/*background: url('bluegray_button.png') repeat-x 0px 0px;*/
+	background-color: #1F3853;
+	outline: medium none;
+	background-position: 0px -15px;
+	display: inline-block;
+	padding: 7px 12px 9px;
+	margin-bottom: 0px;
+	color: white;
+	text-align: center;
+	border: medium none;
+	text-shadow: none;
+	box-shadow: none;
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: color 0.1s linear 0s, background-color 0.1s linear 0s !important;
+	
+	}
+
+input[type='button'].sale_TButton:hover, input[type='submit'].sale_TButton:hover 
+{
+	/*background: url('bluegray_button.png') repeat-x 0px -23px;*/
+	
+	background-color: #152639;
+	background-position: 0px -15px;
+	border-color: #269ABC;
+	outline: 0px none;
+	text-decoration: none;
+	outline-offset: -2px;
+	
+}
+
+input[type='button'].sale_TButton.green, input[type='submit'].sale_TButton.green
+{
+	
+	background-color: #008a00;
+	color: white;
+	transition: all 0s ease 0s;
+	
+}
+
+input[type='button'].sale_TButton.red, input[type='submit'].sale_TButton.red
+{
+	
+	background: #ff2d19;
+	color: white;
+	transition: all 0s ease 0s;
+	
+}
+
+input[type='button'].sale_TButton.white, input[type='submit'].sale_TButton.white
+{
+	background-color: #FFF;
+	color: #5E5E5E;
+	border: 1px solid #E5E9EC;
+	transition: all 0s ease 0s;
+	
+}
+
+input[type='button'].sale_TButton.green:hover, input[type='submit'].sale_TButton.green:hover
+{
+
+	filter: brightness(96%);
+	
+}
+
+
+input[type='button'].sale_TButton.white:hover, input[type='submit'].sale_TButton.white:hover
+{
+	
+	border: 1px solid #B4B9BE;
+
+}
+
+
+input[type='button'].sale_TButton.red:hover, input[type='submit'].sale_TButton.red:hover
+{
+	
+	filter: brightness(94%);
+	
+
+}

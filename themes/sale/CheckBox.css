@@ -1,0 +1,30 @@
+@CHARSET "UTF-8";
+
+
+div.sale_TCheckBox
+{
+	text-align: center;
+	display: block;
+	margin-bottom: 5px;
+	font-family: "Open Sans";
+	font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    box-sizing: border-box;
+    color: #6F7B8A;
+	
+}
+
+span.sale_TCheckBox
+{
+	text-align: center;
+	display: block;
+	margin-bottom: 5px;
+	font-family: "Open Sans";
+	font-size: 14px;
+    font-weight: normal;
+    line-height: 20px;
+    box-sizing: border-box;
+    color: #6F7B8A;
+	
+}

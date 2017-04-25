@@ -1,0 +1,65 @@
+div.bitnova_TGrid
+{
+	background-color: #dde;
+	overflow: scroll;
+}
+
+div.bitnova_TGrid table.bitnova_TGrid
+{
+	
+}
+
+div.bitnova_TGrid table.bitnova_TGrid tr.even
+{
+	background-color: #e8e8e8;	
+}
+
+div.bitnova_TGrid table.bitnova_TGrid tr.odd
+{
+	background-color: #eef;	
+}
+
+div.bitnova_TGrid table.bitnova_TGrid tr:hover
+{
+	background-color: ccd !important;	
+}
+
+div.bitnova_TGrid table.bitnova_TGrid tr.selected
+{
+	background-color: white !important;
+	color: black !important;
+}
+
+div.bitnova_TGrid table.bitnova_TGrid tr.selected:hover
+{
+	background-color: white !important;
+	color: black !important;
+}
+
+div.bitnova_TGrid table.bitnova_TGrid tr th.bitnova_TGrid
+{
+	background: -webkit-linear-gradient(#FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+	background: -o-linear-gradient(#FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+	background: -moz-linear-gradient(#FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+	background: linear-gradient(#FFFFFF, #EEEEEE) repeat scroll 0 0 transparent;
+/*background-color: #9999ff;
+	background: url('bluegray_bkgrnd_th.png') repeat-x;*/
+	color: gray;
+	font-size: 12px;
+	border-bottom: 1px solid #99a;
+	border-right: 1px solid #99a;
+	padding-left: 4px;
+	padding-right: 4px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+}
+
+div.bitnova_TGrid table.bitnova_TGrid tr td.bitnova_TGrid
+{
+	/*background-color: #ffffff;*/
+	color: black;
+	font-size: 12px;
+	border-bottom: 1px solid #99a;
+	padding-left: 4px;
+	padding-right: 4px;
+}

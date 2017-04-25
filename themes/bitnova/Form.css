@@ -1,0 +1,114 @@
+div.bitnova_TForm
+{
+	background-color: #606050;
+	
+	background: -webkit-radial-gradient(circle farthest-side at 60% 40%, #808080, #606050); /* Safari 5.1 to 6.0 */
+	background: -o-radial-gradient(circle farthest-side at 60% 40%, #808080, #606050); /* For Opera 11.6 to 12.0 */
+	background: -moz-radial-gradient(circle farthest-side at 60% 40%, #808080, #606050); /* For Firefox 3.6 to 15 */
+	background: radial-gradient(circle farthest-side at 60% 40%, #808080, #606050); /* Standard syntax */
+	
+	border-style: solid;
+	border-color: #ffc000;
+	border-width: 1px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px #444444;	
+	
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+div.bitnova_TForm.morph
+{
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */	
+}
+
+div.bitnova_TForm_modal
+{
+	background-color: #888888;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+div.bitnova_TForm div.bitnova_TForm_caption
+{
+	background-color: transparent;
+	height: 22px;
+	border-style: none;
+	/*border-top-color: #ffc000;
+	border-top-style: solid;
+	border-top-width: 1px;
+	border-left-color: #ffc000;
+	border-left-style: solid;
+	border-left-width: 1px;
+	border-right-color: #ffc000;
+	border-right-style: solid;
+	border-right-width: 1px;*/
+	border-radius: 10px 10px 0px 0px;
+	/*box-shadow: 0px 0px 10px #888888;*/	
+	text-shadow: 0 0 3px #999999;
+}
+
+div.bitnova_TForm a.bitnova_TForm_close
+{
+	display: block;
+	position: absolute;
+	/*background-color: red;*/
+	background: -webkit-linear-gradient(darkorange, orangered);
+	background: -o-linear-gradient(darkorange, orangered);
+	background: -moz-linear-gradient(darkorange, orangered);
+	background: linear-gradient(darkorange, orangered);
+	right: 12px;
+	top: 0px;
+	width: 24px;
+	height: 16px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;	
+	border-bottom: 1px solid white;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+div.bitnova_TForm a.bitnova_TForm_resize
+{
+	display: block;
+	position: absolute;
+	background-color: transparent;
+	/*border: 1px solid black;*/	
+	width: 16px;
+	height: 16px;
+}
+
+div.bitnova_TForm a.bitnova_TForm_close:hover
+{
+	opacity: 1;
+}
+
+div.bitnova_TForm span.bitnova_TForm_caption
+{
+	display: block;
+	position: absolute;
+	left: 16px;
+	top: -10px;
+	height: 20px;
+	border-radius: 10px;
+	padding-left: 8px;
+	padding-right: 8px;
+	/*padding-top: 3px;*/
+	line-height: 20px;
+	border: 1px solid #ffc000;
+
+	background: -webkit-linear-gradient(#ffc000, #ffffff);
+	background: -o-linear-gradient(#ffc000, #ffffff);
+	background: -moz-linear-gradient(#ffc000, #ffffff);
+	background: linear-gradient(#ffc000, #ffffff);
+
+	font-weight: normal;
+	color: #444444;
+}

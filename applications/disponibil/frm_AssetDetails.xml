@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_AssetDetails>
+	<Name>frm_AssetDetails</Name>
+	<Theme>disponibil</Theme>
+	<Caption>Asset Details</Caption>
+	
+	<Left>292</Left>
+	<Top>60</Top>
+	<Width>640</Width>
+	<Height>240</Height>
+	<BorderStyle>bsSingle</BorderStyle>
+	<Position>poFillContainer</Position>
+	<CustomTarget>column_main</CustomTarget>
+	
+	<TLabel>
+		<Name>lbl_FormCaption</Name>
+		<Left>8</Left>
+		<Top>8</Top>
+		<Caption>Activ:</Caption>
+		<CSSClass>formcaption</CSSClass>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_AssetName</Name>
+		<Left>72</Left>
+		<Top>8</Top>
+		<Caption></Caption>
+		<CSSClass>formcaption</CSSClass>
+		<Style>font-weight: 700;</Style>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_AssetDescription</Name>
+		<Left>8</Left>
+		<Top>32</Top>
+		<Caption></Caption>
+	</TLabel>
+	
+	<TClock>
+		<Name>clk_servertime</Name>
+		<Left>16</Left>
+		<Top>64</Top>
+	</TClock>
+	
+	<TLabel>
+		<Name>lbl_T0</Name>
+		<Left>128</Left>
+		<Top>64</Top>
+		<Caption>T0()</Caption>
+	</TLabel>
+		
+	<TLabel>
+		<Name>lbl_T1</Name>
+		<Left>256</Left>
+		<Top>64</Top>
+		<Caption>T1()</Caption>
+	</TLabel>
+		
+	<TLabel>
+		<Name>lbl_T2</Name>
+		<Left>384</Left>
+		<Top>64</Top>
+		<Caption>T2()</Caption>
+	</TLabel>
+		
+	<TLabel>
+		<Name>lbl_T3</Name>
+		<Left>512</Left>
+		<Top>64</Top>
+		<Caption>T3()</Caption>
+	</TLabel>
+	
+	<TShape>
+		<Name>shp_SessionOpening</Name>
+		<Left>128</Left>
+		<Top>80</Top>
+		<Width>184</Width>
+		<Height>16</Height>
+		<BrushColor>dddddd</BrushColor>
+		<PenColor>dddddd</PenColor>
+	</TShape>
+	
+	<TShape>
+		<Name>shp_SessionTransactions</Name>
+		<Left>312</Left>
+		<Top>80</Top>
+		<Width>184</Width>
+		<Height>16</Height>
+		<BrushColor>dddddd</BrushColor>
+		<PenColor>dddddd</PenColor>
+	</TShape>
+	
+	<TShape>
+		<Name>shp_SessionClosing</Name>
+		<Left>496</Left>
+		<Top>80</Top>
+		<Width>184</Width>
+		<Height>16</Height>
+		<BrushColor>dddddd</BrushColor>
+		<PenColor>dddddd</PenColor>
+	</TShape>
+	
+	<TShape>
+		<Name>shp_ActiveOpening</Name>
+		<Left>128</Left>
+		<Top>80</Top>
+		<Width>184</Width>
+		<Height>16</Height>
+		<BrushColor>3998F6</BrushColor>
+		<PenColor>3998F6</PenColor>
+	</TShape>
+	
+	<TShape>
+		<Name>shp_ActiveTransactions</Name>
+		<Left>312</Left>
+		<Top>80</Top>
+		<Width>184</Width>
+		<Height>16</Height>
+		<BrushColor>3998F6</BrushColor>
+		<PenColor>3998F6</PenColor>
+	</TShape>
+	
+	<TShape>
+		<Name>shp_ActiveClosing</Name>
+		<Left>496</Left>
+		<Top>80</Top>
+		<Width>184</Width>
+		<Height>16</Height>
+		<BrushColor>3998F6</BrushColor>
+		<PenColor>3998F6</PenColor>
+	</TShape>
+	
+	<TShape>
+		<Name>shp_TextOpening</Name>
+		<Left>128</Left>
+		<Top>80</Top>
+		<Width>184</Width>
+		<Height>16</Height>
+		<BrushColor>transparent</BrushColor>
+		<PenColor>transparent</PenColor>
+		<FontColor>black</FontColor>
+		<Caption>Faza Deschidere</Caption>
+	</TShape>
+
+	<TShape>
+		<Name>shp_TextTransactions</Name>
+		<Left>312</Left>
+		<Top>80</Top>
+		<Width>184</Width>
+		<Height>16</Height>
+		<BrushColor>transparent</BrushColor>
+		<PenColor>transparent</PenColor>
+		<FontColor>black</FontColor>
+		<Caption>Faza Tranzactionare</Caption>
+	</TShape>
+
+	<TShape>
+		<Name>shp_TextClosing</Name>
+		<Left>496</Left>
+		<Top>80</Top>
+		<Width>184</Width>
+		<Height>16</Height>
+		<BrushColor>transparent</BrushColor>
+		<PenColor>transparent</PenColor>
+		<FontColor>black</FontColor>
+		<Caption>Faza Inchidere</Caption>
+	</TShape>
+
+	<TLabel>
+		<Name>lbl_DeltaTCaption</Name>
+		<Left>16</Left>
+		<Top>96</Top>
+		<Caption>ΔT:</Caption>
+		<CSSClass>formcaption</CSSClass>
+	</TLabel>
+		
+	<TClock>
+		<Name>clk_DeltaTValue</Name>
+		<Left>64</Left>
+		<Top>96</Top>
+		<CSSClass>formcaption</CSSClass>
+		<ClockType>ctCountdown</ClockType>
+		<Interval>60</Interval>
+	</TClock>
+	<!-- <TLabel>
+		<Name>lbl_DeltaTValue</Name>
+		<Left>64</Left>
+		<Top>96</Top>
+		<Caption></Caption>
+		<CSSClass>formcaption</CSSClass>
+	</TLabel> -->
+		
+	<TLabel>
+		<Name>lbl_DeltaT1Caption</Name>
+		<Left>16</Left>
+		<Top>128</Top>
+		<Caption>ΔT1:</Caption>
+		<CSSClass>formcaption</CSSClass>
+	</TLabel>
+		
+	<TClock>
+		<Name>clk_DeltaT1Value</Name>
+		<Left>64</Left>
+		<Top>128</Top>
+		<CSSClass>formcaption</CSSClass>
+		<ClockType>ctCountdown</ClockType>
+		<Interval>60</Interval>
+	</TClock>
+	<!-- <TLabel>
+		<Name>lbl_DeltaT1Value</Name>
+		<Left>64</Left>
+		<Top>128</Top>
+		<Caption></Caption>
+		<CSSClass>formcaption</CSSClass>
+	</TLabel> -->
+	
+	<!-- order parameters -->
+	<TLabel>
+		<Name>lbl_InitialQuantityLabel</Name>
+		<Left>128</Left>
+		<Top>96</Top>
+		<Caption>Cant. Ordin:</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_InitialQuantityValue</Name>
+		<Left>224</Left>
+		<Top>96</Top>
+		<Caption></Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_MinQuantityLabel</Name>
+		<Left>128</Left>
+		<Top>112</Top>
+		<Caption>Cant. Min:</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_MinQuantityValue</Name>
+		<Left>224</Left>
+		<Top>112</Top>
+		<Caption></Caption>
+	</TLabel>
+	
+	<!-- statistics -->
+	<TLabel>
+		<Name>lbl_TransactionsCountCaption</Name>
+		<Left>384</Left>
+		<Top>96</Top>
+		<Caption>Nr. Tranzactii:</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_TransactionsCountValue</Name>
+		<Left>480</Left>
+		<Top>96</Top>
+		<Caption></Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_QuotationCaption</Name>
+		<Left>384</Left>
+		<Top>128</Top>
+		<Caption>Cotatie:</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_QuotationValue</Name>
+		<Left>480</Left>
+		<Top>128</Top>
+		<Caption></Caption>
+	</TLabel>
+	
+</Tfrm_AssetDetails>

@@ -1,0 +1,189 @@
+div.sale_TsaleDesktop_bkgrnd
+{
+
+}
+
+div.sale_TsaleDesktop_wrapper
+{
+
+}
+
+div.sale_TsaleDesktop_Menu
+{
+	background: -webkit-linear-gradient(#808080, #606050);
+	background: -o-linear-gradient(#808080, #606050);
+	background: -moz-linear-gradient(#808080, #606050);
+	background: linear-gradient(#808080, #606050);
+
+	color: white;
+}
+
+div.sale_TsaleDesktop_Menu span
+{
+	color: white;
+}
+
+div.sale_TsaleDesktop_logo
+{
+	display: block;
+	background-color: #22262e;
+	width: 224px;
+	float: left;
+	height: 136px;
+}
+
+div.sale_TsaleDesktop_top
+{
+	display: block;
+	background-color: white;
+	width: 100%;
+	height: 136px;
+	position: top;
+
+}
+
+div.sale_TsaleDesktop_login
+{
+	display: block;
+	position: absolute;
+
+	border-left: 1px dotted #DDD;
+	right: 0px;
+	top: 24px;
+	width: 200px;
+	height: 96px;
+}
+
+div.sale_TsaleDesktop_iconbar
+{
+	border: medium none;
+	display: inline-block;
+	position: relative;
+	margin: 0px;
+	border: 0px none;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: normal;
+	padding-top: 2%;
+	padding-bottom: 2%;
+	text-shadow: none !important;
+	transition: color 0.1s linear 0s, background-color 0.1s linear 0s !important;
+	box-sizing: border-box;
+	line-height: 20px;
+	font-family: "Open Sans";
+	list-style: outside none none;
+	background-color: #1b1e24;
+	float: left;
+	position: relative;
+	width: 224px;
+	height: 78%;
+	margin-top: 0px;
+}
+
+div.sale_TsaleDesktop_separator
+{
+}
+
+div.sale_TsaleDesktop_container
+{
+	display: inline-block;
+	background-color: #e5e9ec;
+	width: 80%;
+	height: 75%;
+	position: absolute;
+	padding: 16px;
+	padding-bottom: 0%;
+}
+
+div.sale_TsaleDesktop_viewport
+{
+	background-color: white;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+}
+
+a.sale_TFormThumb
+{
+	font-family: "Open Sans";
+	max-width: 188px;
+	height: 20px;
+	border: 3px medium none;
+	border-top-color: transparent !important;
+	color: #8B91A0;
+	background: transparent;
+	padding: 11.5px 31px;
+	display: block;
+	position: relative;
+	margin: 0px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: normal;
+	outline: 0px none;
+	list-style: outside none none;
+	cursor: pointer;
+	transition: color 0.1s linear 0s, background-color 0.1s linear 0s !important;
+	padding-left: 20%
+}
+
+a.sale_TFormThumb div.content img
+{
+	padding-right: 4px;
+    width: 32px !important;
+    position: absolute;
+    left: 22px;
+    top: 30% !important;
+    clip: rect(0px, 16px, 16px, 0px);
+}
+
+
+a.sale_TFormThumb div.caption
+{
+	display: none;
+}
+
+a.sale_TFormThumb:hover
+{
+	color: white;
+	transition: color 0.2s linear 0s, background-color 0.1s linear 0s !important;
+}
+
+a.sale_TFormThumb:hover div.content img
+{
+	color: white;
+	clip: rect(0px, 32px, 16px, 16px);
+	left: 6px;
+	transition: color 0.2s linear 0s, background-color 0.1s linear 0s !important;
+}
+
+a.thumbActive
+{
+	background-color: white;
+	font-family: "Open Sans";
+	max-width: 188px;
+	height: 20px;
+	border: 3px medium none;
+	border-top-color: transparent !important;
+	color: white;
+	background: transparent;
+	padding: 11.5px 31px;
+	display: block;
+	position: relative;
+	margin: 0px;
+	text-decoration: none;
+	font-size: 14px;
+	font-weight: normal;
+	outline: 0px none;
+	list-style: outside none none;
+	cursor: pointer;
+	padding-left: 20%
+
+}
+
+
+a.thumbActive div.content img
+{
+	clip: rect(0px, 32px, 16px, 16px);
+	left: 6px;
+
+}

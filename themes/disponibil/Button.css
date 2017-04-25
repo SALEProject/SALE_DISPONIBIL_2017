@@ -1,0 +1,98 @@
+input[type='button'].disponibil_TButton, input[type='submit'].disponibil_TButton
+{
+	/*background: url('bluegray_button.png') repeat-x 0px 0px;*/
+	background-color: #1F3853;
+	outline: medium none;
+	background-position: 0px -15px;
+	display: inline-block;
+	padding: 2px 4px 2px;
+	margin-bottom: 0px;
+	color: white;
+	text-align: center;
+	border: medium none;
+	text-shadow: none;
+	box-shadow: none;
+	font-family: 14px/20px "Helvetica Neue", Helvetica, Arial, sans-serif;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: color 0.1s linear 0s, background-color 0.1s linear 0s !important;
+}
+
+input[type='button'].disponibil_TButton:hover, input[type='submit'].disponibil_TButton:hover
+{
+	/*background: url('bluegray_button.png') repeat-x 0px -23px;*/
+
+	background-color: #152639;
+	background-position: 0px -15px;
+	border-color: #269ABC;
+	outline: 0px none;
+	text-decoration: none;
+	outline-offset: -2px;
+}
+
+input[type='button'].disponibil_TButton.orange, input[type='submit'].disponibil_TButton.orange
+{
+	background-color: #f66908;
+	color: white;
+}
+
+input[type='button'].disponibil_TButton.greenish, input[type='submit'].disponibil_TButton.greenish
+{
+	background-color: #99BB22;
+	color: white;
+}
+
+input[type='button'].disponibil_TButton.silver, input[type='submit'].disponibil_TButton.silver
+{
+	background-color: #acacac;
+	color: white;
+}
+
+input[type='button'].disponibil_TButton.green, input[type='submit'].disponibil_TButton.green
+{
+	background-color: #008a00;
+	color: white;
+	transition: all 0s ease 0s;
+}
+
+input[type='button'].disponibil_TButton.red, input[type='submit'].disponibil_TButton.red
+{
+	background-color: #8a0000;
+	color: white;
+	transition: all 0s ease 0s;
+}
+
+input[type='button'].disponibil_TButton.white, input[type='submit'].disponibil_TButton.white
+{
+	background-color: #FFF;
+	color: #5E5E5E;
+	border: 1px solid #E5E9EC;
+	transition: all 0s ease 0s;
+
+}
+
+input[type='button'].disponibil_TButton.green:hover, input[type='submit'].disponibil_TButton.green:hover
+{
+	filter: brightness(96%);
+}
+
+
+input[type='button'].disponibil_TButton.white:hover, input[type='submit'].disponibil_TButton.white:hover
+{
+	border: 1px solid #B4B9BE;
+}
+
+
+input[type='button'].disponibil_TButton.red:hover, input[type='submit'].disponibil_TButton.red:hover
+{
+	filter: brightness(94%);
+}
+
+input[type='button'].disponibil_TButton.transparent, input[type='submit'].transparent
+{
+	background-color: transparent;
+	color: white;
+	transition: all 0s ease 0s;
+	width: 100%;
+	height: 100%;
+}

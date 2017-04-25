@@ -1,0 +1,15 @@
+.radio input[type=radio] {
+  display:inline-block !important;
+  float:none;
+  margin-left:0;
+  border:none;
+}
+.radio label {
+  padding-left:0 !important;
+}
+.radio label:after {
+  display:none !important;
+}
+.radio label:before {
+  display:none !important;
+}

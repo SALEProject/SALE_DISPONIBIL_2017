@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_AssetOrders>
+	<Name>frm_AssetOrders</Name>
+	<Theme>disponibil</Theme>
+	<Caption>Asset Orders</Caption>
+	
+	<Left>292</Left>
+	<Top>60</Top>
+	<Width>640</Width>
+	<Height>240</Height>
+	<BorderStyle>bsSingle</BorderStyle>
+	<Position>poFillContainer</Position>
+	<CustomTarget>column_main</CustomTarget>
+	
+	<TShape>
+		<Name>shp_Blue</Name>
+		<Left>0</Left>
+		<Top>0</Top>
+		<Width>328</Width>
+		<Height>3</Height>
+		<Shape>stRectangle</Shape>
+		<BrushColor>3998F6</BrushColor>
+		<PenColor>3998F6</PenColor>
+	</TShape>
+	
+	<TShape>
+		<Name>shp_Orange</Name>
+		<Left>336</Left>
+		<Top>0</Top>
+		<Width>328</Width>
+		<Height>3</Height>
+		<Shape>stRectangle</Shape>
+		<BrushColor>F6690B</BrushColor>
+		<PenColor>F6690B</PenColor>
+	</TShape>
+	
+	<TLabel>
+		<Name>lbl_FormCaption_BID</Name>
+		<Left>8</Left>
+		<Top>8</Top>
+		<Caption>Ordine cumparare (BID)</Caption>
+		<CSSClass>formcaption</CSSClass>
+	</TLabel>
+
+	<TLabel>
+		<Name>lbl_FormCaption_ASK</Name>
+		<Left>336</Left>
+		<Top>8</Top>
+		<Caption>Ordine vanzare (ASK)</Caption>
+		<CSSClass>formcaption</CSSClass>
+	</TLabel>
+	
+	<TButton>
+		<Name>btn_Buy</Name>
+		<Left>260</Left>
+		<Top>8</Top>
+		<Caption>cumpara</Caption>
+		<CSSClass>green</CSSClass>
+		<OnClick>btn_BuyOnClick</OnClick>
+	</TButton>
+
+	<TButton>
+		<Name>btn_Sell</Name>
+		<Left>608</Left>
+		<Top>8</Top>
+		<Caption>vinde</Caption>
+		<CSSClass>orange</CSSClass>
+		<OnClick>btn_SellOnClick</OnClick>
+	</TButton>
+
+	<TDataGrid>
+		<Name>dg_Bid</Name>
+		<Left>8</Left>
+		<Top>40</Top>
+		<Width>320</Width>
+		<Height>128</Height>
+		<FixedCols>0</FixedCols>
+	</TDataGrid>
+	
+	<TDataGrid>
+		<Name>dg_Ask</Name>
+		<Left>336</Left>
+		<Top>40</Top>
+		<Width>320</Width>
+		<Height>128</Height>
+		<FixedCols>0</FixedCols>
+	</TDataGrid>
+	
+</Tfrm_AssetOrders>

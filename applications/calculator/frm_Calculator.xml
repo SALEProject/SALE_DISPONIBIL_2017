@@ -1,0 +1,296 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_Calculator>
+	<Name>frm_Calculator</Name>
+	<theme>bitnova</theme>
+	
+	<Caption>Calculator</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>400</Width>
+	<Height>275</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poDesigned</Position>
+		
+		
+	<TButton>
+		<name>7</name>
+		<Left>85</Left>
+		<Top>50</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>7</Caption>
+		<Onkeypress>Calc</Onkeypress>	
+	</TButton>	
+
+	<TButton>
+		<name>8</name>
+		<Left>120</Left>
+		<Top>50</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>8</Caption>	
+	</TButton>	
+	
+	
+	<TButton>
+		<name>9</name>
+		<Left>155</Left>
+		<Top>50</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>9</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>4</name>
+		<Left>85</Left>
+		<Top>85</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>4</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>5</name>
+		<Left>120</Left>
+		<Top>85</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>5</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>6</name>
+		<Left>155</Left>
+		<Top>85</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>6</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>1</name>
+		<Left>85</Left>
+		<Top>120</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>1</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>2</name>
+		<Left>120</Left>
+		<Top>120</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>2</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>3</name>
+		<Left>155</Left>
+		<Top>120</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>3</Caption>	
+	</TButton>	
+
+		
+	<TButton>
+		<name>0</name>
+		<Left>85</Left>
+		<Top>155</Top>
+		<Width>67</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>0</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>dec</name>
+		<Left>155</Left>
+		<Top>155</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>.</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>minus</name>
+		<Left>190</Left>
+		<Top>15</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>-</Caption>	
+	</TButton>	
+
+	<TButton>
+		<name>plus</name>
+		<Left>190</Left>
+		<Top>50</Top>
+		<Width>32</Width>
+		<Height>67</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>+</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>mult</name>
+		<Left>155</Left>
+		<Top>15</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>*</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>div</name>
+		<Left>120</Left>
+		<Top>15</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>/</Caption>	
+	</TButton>	
+	
+	<TButton>
+		<name>Del</name>
+		<Left>85</Left>
+		<Top>15</Top>
+		<Width>32</Width>
+		<Height>32</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>⌫</Caption>	
+		<Style>text-align: left;</Style>
+	</TButton>	
+	
+	<TButton>
+		<name>equal</name>
+		<Left>190</Left>
+		<Top>120</Top>
+		<Width>32</Width>
+		<Height>67</Height>
+		<OnClick>Calc</OnClick>
+		<Caption>=</Caption>	
+	</TButton>	
+
+
+		<TButton>
+		<name>RESET</name>
+		<Caption>Reset</Caption>
+		<Left>8</Left>
+		<Top>16</Top>
+		<OnClick>RESET</OnClick>
+		</TButton>
+
+	<TButton>
+		<name>ClOSE</name>
+		<Caption>Close</Caption>
+		<Left>8</Left>
+		<Top>48</Top>
+		<OnClick>CLOSE</OnClick>
+	</TButton>
+	
+	
+	<TButton>
+		<name>Previous</name>
+		<Caption>Last</Caption>
+		<Left>8</Left>
+		<Top>80</Top>
+		<OnClick>PRE</OnClick>
+	</TButton>
+	
+
+
+	<TEdit>
+		<name>DisplayOP1</name>
+		<Left>235</Left>
+		<Top>15</Top>
+		<Width>150</Width>
+		<Height>32</Height>
+		<Caption>DisplayOP1</Caption>
+		<text_align>center</text_align>
+		<Style>text-align: center; box-shadow: 0px 0px 0px; background-color: initial; border-radius: 0px;</Style>	
+		
+		
+	</TEdit>	
+	
+	<TEdit>
+		<name>DisplayOP</name>
+		<Left>235</Left>
+		<Top>40</Top>
+		<Width>150</Width>
+		<Height>32</Height>
+		<Caption>DisplayOP</Caption>
+		<text_align>center</text_align>
+		<Style>text-align: center; box-shadow: 0px 0px 0px; background-color: initial; border-radius: 0px;</Style>	
+		
+		
+	</TEdit>	
+	
+	<TEdit>
+		<name>DisplayOP2</name>
+		<Left>235</Left>
+		<Top>68</Top>
+		<Width>150</Width>
+		<Height>32</Height>
+		<Caption>DisplayOP1</Caption>
+		<Style>text-align: center; box-shadow: 0px 0px 0px; background-color: initial; border-radius: 0px;</Style>
+		<text_align>center</text_align>	
+		
+		
+	</TEdit>	
+	
+	<TEdit>
+		<name>DisplayEGAL</name>
+		<Left>235</Left>
+		<Top>105</Top>
+		<Width>150</Width>
+		<Height>32</Height>
+		<Caption>DisplayEGAL</Caption>
+		<text_align>center</text_align>
+		<Style>text-align: center; box-shadow: 0px 0px 0px; background-color: initial; border-radius: 0px;</Style>	
+	</TEdit>
+
+	<TEdit>
+		<name>DisplayREZ</name>
+		<Left>235</Left>
+		<Top>130</Top>
+		<Width>150</Width>
+		<Height>45</Height>
+		<Caption>=</Caption>
+		<text_align>center</text_align>	
+		<Style>text-align: center; box-shadow: 0px 0px 0px; background-color: initial; border-radius: 0px;</Style>
+		
+		
+		
+	</TEdit>	
+	
+	<TEdit>
+		<name>DisplayPREV</name>
+		<Left>85</Left>
+		<Top>200</Top>
+		<Width>290</Width>
+		<Height>45</Height>
+		<Caption>=</Caption>
+		<text_align>center</text_align>
+		<Style>text-align: center; box-shadow: 0px 0px 0px; background-color: initial; border-radius: 0px;</Style>
+		
+		
+		
+		
+	</TEdit>	
+
+</Tfrm_Calculator>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_StorageReports>
+	<Name>frm_StorageReports</Name>
+	<theme>sale</theme>
+	
+	<Caption>Storage Reports</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>400</Width>
+	<Height>275</Height>
+	<BorderStyle>bsNone</BorderStyle>
+	<Position>poFillContainer</Position>
+	
+	<TButton>
+		<Name>btn_NewStorageReport</Name>
+		<Caption>New Storage Report</Caption>]
+		<Left>24</Left>
+		<Top>28</Top>
+		<OnClick>btn_NewStorageReportOnClick</OnClick>
+	</TButton>
+		
+	<TDataGrid>
+		<Name>dg_StorageReports</Name>
+		<Left>24</Left>
+		<Top>80</Top>
+		<Width>1000</Width>
+		<Height>256</Height>
+		<ColsCount>5</ColsCount>
+		<RowsCount>5</RowsCount>
+		<FixedCols>1</FixedCols>
+		<FixedRows>1</FixedRows>
+		<RowsPerPage>10</RowsPerPage>
+		<DefaultColWidth>120</DefaultColWidth>
+		<OnFilter>OnFilter</OnFilter>
+	</TDataGrid>
+		
+</Tfrm_StorageReports>

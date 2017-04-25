@@ -1,0 +1,243 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_StorageParticipantActivityReportDLG>
+	<Name>frm_StorageParticipantActivityReportDLG</Name>
+	<theme>sale</theme>
+
+	<Caption>REMIT Storage Participant Activity Report Definition</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>820</Width>
+	<Height>260</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	<CSSClass>rotund</CSSClass>
+
+
+	<TLabel>
+		<Name>lbl_GasDayStart</Name>
+		<Left>32</Left>
+		<Top>32</Top>
+		<Caption>Gas Day Start:</Caption>
+	</TLabel>
+
+	<TDatePicker>
+		<Name>dp_GasDayStart</Name>
+		<Left>152</Left>
+		<Top>32</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Gas Day Start</Hint>
+		<CSSClass>required</CSSClass>
+	</TDatePicker>
+
+	<TEdit>
+		<Name>ed_GasDayStart</Name>
+		<Left>258</Left>
+		<Top>32</Top>
+		<Height>24</Height>
+		<Width>100</Width>
+		<Hint>hh:mm</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9:]+$</Mask>
+	</TEdit>
+
+
+	<TLabel>
+		<Name>lbl_GasDayEnd</Name>
+		<Left>32</Left>
+		<Top>64</Top>
+		<Caption>Gas Day End:</Caption>
+	</TLabel>
+
+	<TDatePicker>
+		<Name>dp_GasDayEnd</Name>
+		<Left>152</Left>
+		<Top>64</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Gas Day End</Hint>
+		<CSSClass>required</CSSClass>
+	</TDatePicker>
+
+	<TEdit>
+		<Name>ed_GasDayEnd</Name>
+		<Left>258</Left>
+		<Top>64</Top>
+		<Height>24</Height>
+		<Width>100</Width>
+		<Hint>hh:mm</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9:]+$</Mask>
+	</TEdit>
+
+
+	<TLabel>
+		<Name>lbl_StorageFacilityIdentifier</Name>
+		<Left>400</Left>
+		<Top>32</Top>
+		<Caption>Storage Facility ID: </Caption>
+	</TLabel>
+
+	<TComboBox>
+		<Name>cb_StorageFacilityIdentifierType</Name>
+		<Left>720</Left>
+		<Top>32</Top>
+		<Width>66</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility Identifier Type</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>ACER, LEI, EIC</Items>
+	</TComboBox>
+
+	<TEdit>
+		<Name>ed_StorageFacilityIdentifier</Name>
+		<Left>616</Left>
+		<Top>32</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility ID</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[a-zA-Z.0-9]+$</Mask>
+	</TEdit>
+
+
+	<TLabel>
+		<Name>lbl_StorageFacilityOperatorIdentifier</Name>
+		<Left>400</Left>
+		<Top>64</Top>
+		<Caption>Storage Facility Operator ID:</Caption>
+	</TLabel>
+
+	<TComboBox>
+		<Name>cb_StorageFacilityOperatorIdentifierType</Name>
+		<Left>720</Left>
+		<Top>64</Top>
+		<Width>66</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility Operator Identifier Type</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>ACER, LEI, EIC</Items>
+	</TComboBox>
+
+	<TEdit>
+		<Name>ed_StorageFacilityOperatorIdentifier</Name>
+		<Left>616</Left>
+		<Top>64</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility Operator ID</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[a-zA-Z.0-9]+$</Mask>
+	</TEdit>
+
+
+	<TLabel>
+		<Name>lbl_MarketParticipantIdentifier</Name>
+		<Left>400</Left>
+		<Top>98</Top>
+		<Caption>Market Participant ID:</Caption>
+	</TLabel>
+
+	<TComboBox>
+		<Name>cb_MarketParticipantIdentifierType</Name>
+		<Left>720</Left>
+		<Top>98</Top>
+		<Width>66</Width>
+		<Height>24</Height>
+		<Hint>Market Participant Identifier Type</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>ACER, LEI, EIC</Items>
+	</TComboBox>
+
+	<TEdit>
+		<Name>ed_MarketParticipantIdentifier</Name>
+		<Left>616</Left>
+		<Top>98</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Market Participant ID :</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[a-zA-Z.0-9]+$</Mask>
+	</TEdit>
+
+
+<!-- 	<TLabel>
+		<Name>lbl_ReportingEntityReferenceID</Name>
+		<Left>344</Left>
+		<Top>124</Top>
+		<Caption>Reporting Entity Reference ID:</Caption>
+	</TLabel>
+
+	<TEdit>
+		<Name>ed_ReportingEntityReferenceID</Name>
+		<Left>576</Left>
+		<Top>124</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Reporting Entity Reference ID :</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[a-zA-Z0-9]+$</Mask>
+	</TEdit> -->
+
+
+	<TLabel>
+		<Name>lbl_Storage</Name>
+		<Left>32</Left>
+		<Top>98</Top>
+		<Caption>Quantity:</Caption>
+	</TLabel>
+
+
+	<TEdit>
+		<Name>ed_Storage</Name>
+		<Left>152</Left>
+		<Top>98</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Storage</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+
+	<TComboBox>
+		<Name>cb_StorageMU</Name>
+		<Left>258</Left>
+		<Top>98</Top>
+		<Width>100</Width>
+		<Height>24</Height>
+		<Hint>Measuring Unit</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>cm, cm/d, mcm, mcm/d, kWh, kWh/h, kWh/d, GW, GWh, GW/h, GW/d, MW, MWh, MWh/h, MWh/d, TWh, Therm/d, kTherm/d, MTherm/d, Therm, kTherm, MTherm, %</Items>
+		<DataField>NameTR</DataField>
+    	<KeyField>ID</KeyField>
+	</TComboBox>
+
+	<!-- 	<TLabel>
+		<Name>lbl_StorageMU</Name>
+		<Left>258</Left>
+		<Top>98</Top>
+		<Caption>(MWh)</Caption>
+	</TLabel> -->
+
+	<TButton>
+		<Name>btn_Save</Name>
+		<Caption>Save</Caption>]
+		<Left>200</Left>
+		<Top>160</Top>
+		<Width>80</Width>
+		<OnClick>btn_SaveOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>
+
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Caption>Cancel</Caption>]
+		<Left>500</Left>
+		<Top>160</Top>
+		<Width>80</Width>
+		<OnClick>btn_CancelOnClick</OnClick>
+		<CSSClass>red</CSSClass>
+	</TButton>
+
+</Tfrm_StorageParticipantActivityReportDLG>

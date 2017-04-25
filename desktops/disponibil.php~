@@ -1,0 +1,1373 @@
+<?php
+class TdisponibilDesktop extends TDesktop
+{
+	var $lbl_FormCaption = null;
+	var $lbl_LoginName = null;
+	var $lbl_UserName = null;
+	var $lbl_CompanyName = null;
+	var $btn_Logout = null;
+
+	function OnLoad()
+	{
+		TQuark::instance()->viewports = Array();
+		TQuark::instance()->viewports[0] = 'disponibilDesktop_viewport';
+		TQuark::instance()->currentViewport = 'disponibilDesktop_viewport';
+
+		$this->lbl_FormCaption = new TLabel($this);
+		$this->lbl_FormCaption->Name = 'lbl_FormCaption';
+		$this->lbl_FormCaption->Caption = 'REMIT';
+		$this->lbl_FormCaption->Left = 264;
+		$this->lbl_FormCaption->Top = 104;
+		$this->lbl_FormCaption->CSSClass = 'formcaption';
+
+		$this->lbl_LoginName = new TLabel($this);
+		$this->lbl_LoginName->Name = 'lbl_LoginName';
+		$this->lbl_LoginName->Caption = 'loginname';
+		$this->lbl_LoginName->Style = '
+		display: block;
+		position: relative;
+		max-width 170px;
+		max-width: 170px;
+    margin: 0;
+		font-size: 13px;
+		padding: 0px !important;
+		margin: 0px !important;
+		line-height: 1.5;
+		font-style: normal;
+		font-weight: normal;
+		color: black;
+		';
+
+		$this->lbl_UserName = new TLabel($this);
+		$this->lbl_UserName->Name = 'lbl_UserName';
+		$this->lbl_UserName->Caption = 'firstname lastname';
+		$this->lbl_UserName->Style = '
+		display: block;
+		position: relative;
+		max-width 170px;
+		max-width: 170px;
+		padding: 0px !important;
+		margin: 0px !important;
+		line-height: 1.5;
+		font-style: normal;
+		color: #999;
+		font-weight: 600;
+		font-size: 11px;
+		font-style: italic;
+		';
+
+
+		$this->lbl_CompanyName = new TLabel($this);
+		$this->lbl_CompanyName->Name = 'lbl_CompanyName';
+		$this->lbl_CompanyName->Caption = 'company';
+		$this->lbl_CompanyName->Style = '
+		display: block;
+		position: relative;
+		max-width 170px;
+		max-width: 170px;
+		padding: 0px !important;
+		margin: 0px !important;
+		line-height: 1.5;
+		font-style: normal;
+		color: #999;
+		font-weight: 600;
+		font-size: 11px;
+		font-style: italic;
+		';
+
+
+
+		$this->btn_Logout = new TButton($this);
+		$this->btn_Logout->Name = 'btn_Logout';
+		$this->btn_Logout->OnClick = 'btn_LogoutOnClick';
+		$this->btn_Logout->CSSClass = 'transparent';
+
+
+
+	}
+
+	function generateHTML()
+	{
+		$s = $this->innerHTML();
+		$s = str_replace('%parent%', $this->Name, $s);
+
+		$class = '';
+		if ($this->Theme != '') $class = $this->Theme.'_TdisponibilDesktop';
+
+		$style = 	'';//'display: block; '.
+		//'position: absolute; '.
+		//'left: '.$this->Left.'px; '.
+		//'top: '.$this->Top.'px; '.
+		//'width: '.$this->Width.'px; '.
+		//'height: '.$this->Height.'px;';
+
+		$html = '';
+
+		return	//'<span style="font-size: 56px; color: white">'.$this->Caption.'</span>'.
+				//'<a style="position: absolute; right: 12px; top: 12px;" onclick="callBack(\'shutdown_onclick\', \''.$this->Name.'\', \'\');"><img src="images/shutdown-48_white.png"></img></a>'.
+				'
+!DOCTYPE html>
+<html>
+  <head>
+	<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+	<meta charset="utf-8" />
+    <title>Disponibil.ro</title>
+
+    <!-- Viewport mobile tag for sensible mobile support -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
+
+	<!-- BEGIN CORE CSS FRAMEWORK -->
+
+
+	<!--<link href="themes/sale/assetsDisponibil/plugins/pace/pace-theme-flash.css" rel="stylesheet" type="text/css" media="screen"/>-->
+	<link href="themes/sale/assetsDisponibil/plugins/boostrapv3/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+	<link href="themes/sale/assetsDisponibil/plugins/boostrapv3/css/bootstrap-theme.min.css" rel="stylesheet" type="text/css"/>
+	<link href="themes/sale/assetsDisponibil/plugins/bootstrap-datepicker/css/datepicker.css" rel="stylesheet" type="text/css" />
+	<link href="themes/sale/assetsDisponibil/plugins/bootstrap-timepicker/css/bootstrap-timepicker.css" rel="stylesheet" type="text/css" />
+	<link href="themes/sale/assetsDisponibil/plugins/bootstrap-select2/select2.css" rel="stylesheet" type="text/css" media="screen"/>
+	<link href="themes/sale/assetsDisponibil/plugins/font-awesome/css/font-awesome.css" rel="stylesheet" type="text/css"/>
+	<link href="themes/sale/assetsDisponibil/css/animate.min.css" rel="stylesheet" type="text/css"/>
+	<link href="themes/sale/assetsDisponibil/plugins/footable/css/footable.core.css" rel="stylesheet" type="text/css" media="screen"/>
+	<!-- END CORE CSS FRAMEWORK -->
+	<!-- BEGIN CSS TEMPLATE -->
+	<link href="themes/sale/assetsDisponibil/css/style.css?_v=3.6" rel="stylesheet" type="text/css"/>
+	<link href="themes/sale/assetsDisponibil/css/responsive.css" rel="stylesheet" type="text/css"/>
+	<link href="themes/sale/assetsDisponibil/css/custom-icon-set.css" rel="stylesheet" type="text/css"/>
+	<!-- END CSS TEMPLATE -->
+  </head>
+
+	<body class="error-body no-top wide">
+	<div class="header navbar navbar-inverse wide">
+  <ul class="nav pull-left notifcation-center" id="main-menu-toggle-wrapper" style="display: flex;">
+    <li class="dropdown">
+      <a id="main-menu-toggle" href="#main-menu" class="">
+        <div class="iconset top-menu-toggle-white"></div>
+      </a>
+    </li>
+  </ul>
+  <div class="container">
+    <div class="row page-sidebar" id="main-menu">
+      <!-- BEGIN MINI-PROFILE -->
+      <div class="page-sidebar-wrapper" id="main-menu-wrapper">
+        <!-- BEGIN SIDEBAR MENU -->
+        <ul>
+
+          <li class="start">
+
+              <span class="title">Alege widget</span>
+            </a>
+          </li>
+
+
+          <!--<li>-->
+
+              <!--<span class="title">Active disponibile</span>-->
+            <!--</a>-->
+          <!--</li>-->
+
+
+
+          <li>
+
+              <span class="title">Ordinele mele</span>
+            </a>
+          </li>
+
+
+
+
+
+          <li>
+
+              <span class="title">Panou chat</span>
+            </a>
+          </li>
+
+
+
+
+          <li>
+
+              <span class="title">Tranzactiile mele de astazi</span>
+            </a>
+          </li>
+
+
+
+
+          <!--<li>-->
+
+              <!--<span class="title">Documente</span>-->
+            <!--</a>-->
+          <!--</li>-->
+
+
+
+          <!--<li>-->
+
+              <!--<span class="title">Active</span>-->
+            <!--</a>-->
+          <!--</li>-->
+
+
+
+          <li>
+
+              <span class="title">Alte active in tranzactionare</span>
+            </a>
+          </li>
+
+
+
+
+        </ul>
+        <!-- END SIDEBAR MENU -->
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-1 col-xs-11 top-section" id="logo-box">
+        <a href="javascript:void(0)"><img src="themes/sale/assetsDisponibil/img/logo.png" class="logo" alt="" data-src="themes/sale/assetsDisponibil/img/logo.png" width="60" height="60"/></a>
+
+        <div id="time-container"><span id="server-time" class="server-time" class=""></span></div>
+      </div>
+      <div class="col-md-5 col-xs-11 top-section" id="stats-box">
+        <div id="session-container">
+          <div id="session-context">vP1.0 Disponibil.ro <span id="session-ring"></span> <span id="session-asset"></span></div>
+          <table border="0" cellpadding="0" cellspacing="0" id="session-details" style="display:none;width:100%">
+            <tbody>
+            <tr>
+              <td>
+                <div id="session-status"></div>
+              </td>
+              <td>
+                <div class="session-price"><span class="muted">Pret BID:</span>
+                  <strong id="session-bid-price"></strong> <span>Lei</span></div>
+              </td>
+              <td>
+                <div class="session-price"><span class="muted">Pret ASK:</span>
+                  <strong id="session-ask-price"></strong> <span>Lei</span></div>
+              </td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+        <div id="alerts-container">
+          <div class="popover alert fade in" id="alerts-popup">
+            <div class="popover-content">
+              <ul id="alerts-list"></ul>
+            </div>
+          </div>
+          <div id="main-alert"></div>
+        </div>
+      </div>
+      <div class="col-md-2 col-xs-11 top-section" id="menu-box">
+        <ul class="nav second-menu">
+          <li class="">
+            <a href="javascript:void(0)"
+               class="selected"><i
+                class="fa fa-bookmark"></i>&nbsp;&nbsp;Ecran principal</a>
+          </li>
+          <li class="">
+            <a href="reports"
+               class=""><i
+                class="fa fa-bar-chart-o"></i>&nbsp;&nbsp;Rapoarte si statistici</a>
+          </li>
+          <li class="">
+            <a href="account"
+               class=""><i
+                class="fa fa-gear"></i>&nbsp;&nbsp;Administrare cont</a>
+          </li>
+          <li class="">
+            <a href="account/agency_assets"
+               class=""><i
+                class="fa fa-bars"></i>&nbsp;&nbsp;Active</a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-2 col-xs-5 top-section" id="account-box">
+        <i id="account-picture" class="fa fa-user fa-3x"></i>
+
+        <p class="user-info">
+        '.
+					$this->lbl_LoginName->generateHTML().
+					$this->lbl_UserName->generateHTML().
+					$this->lbl_CompanyName->generateHTML().
+				'
+				</p>
+
+
+        <div class="user-data-box">
+          <a href="account/notifications" id="user-messages" data-count="0"
+             class="user-account-link "><i
+              class="fa fa-envelope"></i> Mesaje <span class="badge"></span></a>
+        </div>
+        <div class="popover fade bottom in" id="user-messages-list">
+          <div class="arrow"></div>
+          <div class="popover-content">
+            <ul class="message-list">
+            </ul>
+          </div>
+          <div class="p-b-10 text-center bold"><a
+              href="account/notifications">Vezi toate</a></div>
+        </div>
+
+      </div>
+      <div class="col-md-2 col-xs-4 top-section" id="logout-box">
+        <a class="user-logout-link" title="Logout">
+				<i class="fa fa-power-off fa-2x"></i><br/>Logout
+						'."\n".
+										str_replace('%parent%', $this->Name, $this->btn_Logout->generateHTML()).
+						'</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- END HEADER -->
+
+
+		<!-- BEGIN CONTAINER -->
+		<div class="container wide">
+			<div class="page-container row-fluid">
+				<div class="page-content">
+					<div class="content">
+						<div class="row m-b-10">
+	<div class="col-md-3 col-sm-3 col-xs-12">
+
+			<div class="tile m-b-10" id="context-container">
+	<div class="tile-title">
+		<h3 class="m-t-0 p-r-20">Active disponibile</h3>
+	</div>
+	<div class="tile-body">
+		<ul id="ring-list"
+			data-prototype="&lt;li id=&quot;ring-__ID__&quot; data-id=&quot;__ID__&quot; class=&quot;collapsed ring-item&quot;&gt;&lt;div class=&quot;ring-title&quot;&gt;&lt;a class=&quot;expand-toggle&quot;&gt;&lt;i class=&quot;fa&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;a class=&quot;ring-name&quot;&gt;__NAME__&lt;/a&gt;&lt;/div&gt;&lt;ul class=&quot;ring-assets&quot;&gt;&lt;/ul&gt;&lt;/li&gt;"
+			data-prototype-asset="&lt;li class=&quot;asset-item&quot; id=&quot;asset-__ID__&quot; data-id=&quot;__ID__&quot; data-ring-id=&quot;__ID_RING__&quot;&gt;&lt;div class=&quot;asset-data&quot; title=&quot;&quot;&gt;&lt;a class=&quot;asset-name&quot;&gt;[__CODE__] __NAME__&lt;/a&gt; &lt;span class=&quot;asset-status&quot;&gt;&lt;i class=&quot;fa fa-square&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/div&gt;&lt;/li&gt;"></ul>
+		<div class="text-center padding-20 loader"><img src="themes/sale/assetsDisponibil/img/loader-white.gif"></div>
+		<div id="legend2" data-toggle="popup" data-target="#legend-box" data-trigger="hover">
+			<div class="">
+				<i class="fa fa-info-circle fa-1x"></i> Legenda
+			</div>
+			<div class="" id="legend-box" style="display:none">
+				<ul class="message-list">
+					<li><span class="ring-status"><i class="fa fa-square"></i></span> Sedinta viitoare</li>
+					<li><span class="ring-status opening"><i class="fa fa-square"></i></span> Sedinta in deschidere</li>
+					<li><span class="ring-status opened"><i class="fa fa-square"></i></span> Tranzactii</li>
+					<li><span class="ring-status closing"><i class="fa fa-square"></i></span> Sedinta in inchidere</li>
+					<li><span class="ring-status closed"><i class="fa fa-square"></i></span> Sedinta inchisa</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+
+
+<div class="orders toggleable-widget" id="orders-container">
+	<div class="tile m-b-10 collapsed">
+		<div class="tile-title">
+			<div class="controller">
+				<a href="javascript:void(0)" class="collapse pull-right m-l-15">&nbsp;</a>
+			</div>
+			<h3 id="orders-title" class="m-t-0">Ordinele mele</h3>
+		</div>
+		<div class="tile-body">
+			<div class="text-center padding-20 loader"><img src="themes/sale/assetsDisponibil/img/loader-white.gif"></div>
+			<ul class="asset-orders-list" id="orders-list" data-prototype="&lt;li&gt; 				&lt;div id=&quot;order-__ID__&quot; class=&quot;order-item self&quot;&gt; 					&lt;div&gt; 						&lt;h5 class=&quot;order-asset-name m-t-5 m-b-5&quot;&gt; 							&lt;a class=&quot;market-asset-context own-order-asset-name&quot; data-ring-id=&quot;__ID_RING__&quot; data-id=&quot;__ID_ASSET__&quot;&gt;&lt;/a&gt; 						&lt;/h5&gt; 						&lt;p style=&quot;line-height:1.2&quot;&gt; 							&lt;span class=&quot;own-order-id&quot;&gt;&lt;/span&gt; 							&lt;span&gt;|&lt;/span&gt; 							&lt;span class=&quot;own-order-direction&quot;&gt;&lt;/span&gt; 							&lt;span&gt;|&lt;/span&gt; 							&lt;span class=&quot;order-quantity&quot; data-value=&quot;&quot;&gt;&lt;strong class=&quot;own-order-quantity&quot;&gt;&lt;/strong&gt; 							&lt;span class=&quot;muted own-order-measuring-unit&quot;&gt;&lt;/span&gt; 							&lt;span class=&quot;own-order-price-set&quot;&gt; 								&lt;span&gt;&nbsp;la&nbsp;&lt;/span&gt; 								&lt;span class=&quot;order-col-price&quot; data-value=&quot;&quot;&gt;&lt;strong class=&quot;own-order-price&quot;&gt;&lt;/strong&gt; 								&lt;span class=&quot;muted&quot;&gt; 									&lt;span class=&quot;own-order-currency&quot;&gt;&lt;/span&gt;/&lt;span class=&quot;own-order-measuring-unit&quot;&gt;&lt;/span&gt; 								&lt;/span&gt; 							&lt;/span&gt; 						&lt;/p&gt; 						&lt;p style=&quot;font-size:0.9em;line-height:1.2&quot; class=&quot;own-order-initial&quot;&gt; 							&lt;span&gt;pentru &lt;/span&gt; 							&lt;span class=&quot;order-asset-order&quot; data-value=&quot;&quot;&gt; 								&lt;strong&gt;&lt;u&gt;&lt;span class=&quot;own-order-initial-direction&quot;&gt;&lt;/span&gt;&lt;/u&gt;&lt;/strong&gt; 								&lt;span&gt; de &lt;/span&gt; 								&lt;span class=&quot;order-col-quantity&quot; data-value=&quot;&quot;&gt; 									&lt;strong class=&quot;own-order-initial-quantity&quot;&gt;&lt;/strong&gt; 								&lt;/span&gt; 								&lt;span class=&quot;muted own-order-measuring-unit&quot;&gt;&lt;/span&gt; 								&lt;span class=&quot;own-order-initial-price-set&quot;&gt; 									&lt;span&gt;&nbsp;la&nbsp;&lt;/span&gt; 									&lt;span class=&quot;order-col-price&quot; data-value=&quot;&quot;&gt; 										&lt;strong class=&quot;own-order-initial-price&quot;&gt;&lt;/strong&gt; 										&lt;span class=&quot;muted own-order-initial-currency&quot;&gt;&lt;/span&gt;/&lt;span class=&quot;own-order-initial-measuring-unit&quot;&gt;&lt;/span&gt; 									&lt;/span&gt; 								&lt;/span&gt; 							&lt;/span&gt; 						&lt;/p&gt; 						&lt;p style=&quot;font-size:0.9em;line-height:1.2&quot;&gt; 							&lt;span class=&quot;order-col-date&quot; data-value=&quot;&quot;&gt;Valabil pana la &lt;strong class=&quot;own-order-expiration-date&quot;&gt;&lt;/strong&gt;&lt;/span&gt; 						&lt;/p&gt; 					&lt;/div&gt; 					&lt;div class=&quot;order-actions&quot;&gt; 						&lt;a href=&quot;&quot; class=&quot;tip edit-order-button&quot; data-value=&quot;__ID__&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; data-original-title=&quot;Modifica ordin&quot; title=&quot;Modifica ordin&quot;&gt;M&lt;/a&gt; 						&lt;a href=&quot;/order/cancel/__ID__&quot; data-value=&quot;__ID__&quot; class=&quot;tip cancel-order-button&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; data-original-title=&quot;Anuleaza ordin&quot; title=&quot;Anuleaza ordin&quot;&gt;A&lt;/a&gt; 					&lt;/div&gt; 					&lt;div class=&quot;clearfix&quot;&gt;&lt;/div&gt; 				&lt;/div&gt; 			&lt;/li&gt;">
+			</ul>
+
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>
+
+
+
+
+			<div class="tile white m-b-10 toggleable-widget" id="chat-container">
+	<div class="tile-title">
+		<div class="controller">
+			<a href="javascript:void(0)" class="extract pull-right m-l-15" title="Deschide in popup" onclick="chatToggle()"><i class="fa fa-external-link"></i></a>
+		</div>
+		<h3 class="no-margin m-b-10"><i class="fa fa-comments"></i> Panou chat</h3>
+	</div>
+	<div class="tile-body">
+		<div class="chat-holder">
+			<div class="chat-box-holder">
+				<div class="chat-box scroller" data-height="250">
+					<ul class="chat-list" id="chat-list" data-timestamp="" data-prototype="&lt;li class=&quot;chat-message&quot; id=&quot;chat-item-__ID__&quot;&gt;&lt;div class=&quot;timestamp&quot;&gt;__TIMESTAMP__&lt;/div&gt;&lt;div class=&quot;message&quot;&gt;__MESSAGE__&lt;/div&gt;&lt;/li&gt;">
+					</ul>
+					<div class="text-center padding-20 loader" style="display:none"><img src="themes/sale/assetsDisponibil/img/loader-white.gif"></div>
+				</div>
+			</div>
+
+			<div class="row no-margin">
+				<div class="col-md-12">
+					<input type="text" id="chat-input" placeholder="Mesajul tau.." autocomplete="off" />
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+
+
+
+
+				<div class="tile m-b-10 toggleable-widget" id="transactions-container">
+	<div class="tile-title">
+		<div class="controller">
+			<a href="javascript:void(0)" class="collapse pull-right m-l-15">&nbsp;</a>
+		</div>
+		<h3 class="m-t-0 p-r-20">Tranzactiile mele de astazi</h3>
+	</div>
+	<div class="tile-body">
+		<table class="table no-more-tables no-margin tablesorter" id="transaction-list" data-prototype="&lt;tr id=&quot;transaction-__ID__&quot;&gt;&lt;td class=&quot;v-align-middle trans-hour&quot;&gt;__TIME__&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;&lt;span class=&quot;__DIRECTION_LABEL__ semi-bold&quot;&gt;__DIRECTION_STRING__&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;__ASSET__&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;__QUANTITY_NO__&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;__PRICE_NO__&lt;/td&gt;&lt;/tr&gt;">
+			<thead>
+				<tr>
+					<th style="width:5%" class="trans-hour">Ora</th>
+					<th style="width:5%" class="{sorter:\'text\'}">Tip</th>
+					<th style="width:20%" class="{sorter: false} no-sort">Activ</th>
+					<th style="width:20%">Cant.</th>
+					<th style="width:20%" class="">Pret</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<div class="text-center padding-20 loader" style="display:none"><img src="themes/sale/assetsDisponibil/img/loader-white.gif"></div>
+	</div>
+</div>
+
+
+
+	</div>
+	<div class="col-md-9 col-sm-9 col-xs-12">
+
+
+		<div id="asset-orders-container" style="display:none" class="">
+			<div class="row no-margin">
+				<div class="col-md-12 col-sm-12" style="padding:0 !important">
+					<div class="tile yellow m-b-10" id="asset-details-container">
+						<h4 class="m-t-0">Activ: <strong id="asset-name"></strong></h4>
+						<p id="asset-description"></p>
+						<a class="download-docs" data-toggle="modal" data-target="#documents-modal" title="Documente">Documente <i class="fa fa-download"></i></a>
+						<div class="row no-margin">
+							<div class="col-md-2">
+								<h4 class="session-time"><span class="server-time"></span></h4>
+								<h4 class="session-delta">&#916;T: <strong><span id="delta-t"></span></strong></h4>
+								<h4 class="session-delta">
+                  &#916;T1: <strong><span id="delta-t1"></span></strong>
+                  <span class="delta-tooltip">(pana la tranzactie)</span>
+                </h4>
+							</div>
+							<div class="col-md-10">
+								<div class="progress" id="asset-schedule">
+									<span class="progress-time t1"></span>
+									<span class="progress-time t2"></span>
+									<span class="progress-time t3"></span>
+									<span class="progress-time t4"></span>
+									<span class="progress-interval i1">Faza 1 (Deschidere)</span>
+									<span class="progress-interval i2">Faza 2 (in tranzactionare)</span>
+									<span class="progress-interval i3">Faza 3 (Inchidere)</span>
+									<div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" style="width:0%">
+										<span class="sr-only"></span>
+									</div>
+								</div>
+								<div id="session-restrictions">
+								</div>
+							</div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+
+			<div class="tile m-b-10" id="order-form-container" style="display:none">
+	<div class="tile-title">
+		<h5 class="no-margin m-b-10 bold"><span class="order-action-title">Adauga </span> ordin de <span class="order-direction-holder"></span><span class="order-asset-holder"></span></h5>
+		<br/>
+	</div>
+	<div class="tile-body">
+		<form class="my-form" id="order-form" method="post">
+			<input type="hidden" id="order-Direction" name="Direction" value="" />
+			<input type="hidden" id="order-ID" name="ID" value="" />
+			<input type="hidden" id="order-ID_Ring" name="ID_Ring" value="" />
+			<input type="hidden" id="order-isInitial" name="isInitial" value="0" />
+			<input type="hidden" id="order-ID_Asset" name="ID_Asset" value="" />
+			<input type="hidden" id="order-SubmitTime" name="SubmitTime" value="" />
+			<div class="row form-row no-margin" id="new-asset-form" style="display:none">
+				<label class="form-label">Activ</label>
+				<div class="padding-10 clearfix">
+					<div class="clearfix m-b-10">
+						<div class="col-md-2">
+							<label class="form-label">Nume</label>
+						</div>
+						<div class="col-md-4">
+							<div class="controls">
+								<input type="text" class="input-sm form-control required bold" name="AssetName" id="order-AssetName" />
+							</div>
+						</div>
+						<div class="col-md-2 col-md-offset-1">
+							<label class="form-label">Cod</label>
+						</div>
+						<div class="col-md-2">
+							<div class="controls">
+								<input type="text" class="input-sm form-control required bold" name="AssetCode" id="order-AssetCode" />
+							</div>
+						</div>
+					</div>
+					<div class="clearfix">
+						<div class="col-md-2">
+							<label class="form-label">Activ suport</label>
+						</div>
+						<div class="col-md-4">
+							<div class="controls">
+								<select name="ID_AssetType" id="ID_AssetType" class="input-sm form-control">
+
+								</select>
+							</div>
+						</div>
+						<div class="col-md-2 col-md-offset-1">
+							<label class="form-label">Unitate de masura</label>
+						</div>
+						<div class="col-md-2">
+							<div class="controls">
+								<input type="text" class="input-sm form-control required bold" name="AssetMeasuringUnit" id="order-AssetMeasuringUnit" />
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="">
+				<div class="m-b-10 clearfix">
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-4">
+								<label class="form-label">Cantitate</label>
+							</div>
+							<div class="col-md-8">
+								<div class="controls">
+									<input type="text" class="input-sm form-control required bold numeric" min="0" step="any" name="Quantity" id="order-Quantity" data-a-sep="." data-a-dec="," data-m-dec="3" data-l-zero="deny" autocomplete="off" />
+									<span class="muted" id="quantity-stepping-placeholder">(#,## / 0,001)</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-5" style="text-align:right">
+								<label class="form-label">Pret</label>
+								<span class="muted" id="DifferentialPriceLabel"></span>
+							</div>
+							<div class="col-md-7">
+								<div class="controls">
+									<input type="text" class="input-sm form-control required bold numeric" min="0" step="any" name="Price" id="order-Price" data-a-sep="." data-a-dec="," data-m-dec="2" data-l-zero="deny" autocomplete="off" />
+									<span class="muted" id="price-stepping-placeholder">Lei / UM (#,## / 0,01)</span>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4">
+						<div class="row">
+							<div class="col-md-4">
+								<label class="form-label">Client</label>
+							</div>
+							<div class="col-md-8">
+								<div class="controls">
+									<select name="ID_Client" id="order-ID_Client" class="input-sm required form-control">
+									</select>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col-md-12">
+								<p class="p-l-10">Garantii disponibile: <span id="clientWarranties"></span></p>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="m-b-10 clearfix">
+					<div class="col-md-8">
+						<div class="row">
+							<div class="col-md-2">
+								<label class="form-label">Valabilitate</label>
+							</div>
+							<div class="col-md-10">
+								<div class="clearfix">
+									<div class="col-md-6">
+										<div class="input-group">
+											<input type="text" class="input-sm form-control required" id="order-Date" name="Date" data-date-format="dd M yyyy" />
+											<span class="input-group-addon primary">
+												<span class="arrow"></span>
+												<i class="fa fa-calendar"></i>
+											</span>
+										</div>
+										<span class="muted">data (zz Luna aaa)</span>
+									</div>
+									<div class="col-md-6">
+										<div class="input-group">
+											<input type="text" class="input-sm form-control required timepicker-24" id="order-Time" name="Time" />
+											<span class="input-group-addon">
+												<span class="arrow"></span>
+												<i class="fa fa-clock-o"></i>
+											</span>
+										</div>
+										<span class="muted">ora (oo:mm)</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-4 isPartial-holder">
+						<div class="controls">
+							<div class="radio">
+								<input id="total" type="radio" name="isPartial" value="0" checked="checked" />
+								<label for="total">Total</label>
+								<input id="partial" type="radio" name="isPartial" value="1" />
+								<label for="partial">Partial</label>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row no-margin form-row">
+				<div class="col-md-12">
+					<div class="pull-left">
+						<button class="btn btn-primary btn-cons btn-small" type="submit" id="order-submit">Lanseaza ordin</button>
+						<button class="btn btn-cancel btn-cons btn-small" id="order-cancel">Renunta</button>
+					</div>
+				</div>
+			</div>
+		</form>
+		<div class="clearfix"></div>
+	</div>
+</div>
+
+
+			<div class="row no-margin">
+				<div class="col-md-6 col-sm-6" style="padding-left:0 !important" id="buy-orders">
+					<div class="tile white m-b-10">
+						<div class="tile-title">
+							 id="add-bid-button" class="btn btn-small btn-primary no-margin add-order-button pull-right" data-type="B">Cumpara</a>
+							<h3 class="m-t-0" class="asset-orders-title">Ordine cumparare (BID)</h3>
+						</div>
+						<div class="tile-body">
+							<table class="table no-more-tables no-margin tablesorter" id="buy-orders-list" data-prototype="&lt;tr id=&quot;asset-order-__ID__&quot; class=&quot;osimple&quot;&gt;&lt;td class=&quot;v-align-middle asset-order-timestamp&quot; style=&quot;display:none&quot;&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle asset-order-quantity&quot;&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle asset-order-price&quot;&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle asset-order-partial&quot;&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle asset-order-expiration-date&quot;&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;&lt;div class=&quot;order-actions&quot;&gt;&lt;a class=&quot;tip add-matching-order&quot; data-value=&quot;__ID__&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; data-original-title=&quot;Adauga ordin corespondent&quot; title=&quot;Adauga ordin corespondent&quot; style=&quot;display:none&quot;&gt;T&lt;/a&gt;&lt;a data-value=&quot;__ID__&quot; class=&quot;tip edit-order-button&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; data-original-title=&quot;Modifica ordin&quot; title=&quot;Modifica ordin&quot; style=&quot;display:none&quot;&gt;M&lt;/a&gt;&lt;a href=&quot;/order/cancel/__ID__&quot; data-value=&quot;__ID__&quot; class=&quot;tip cancel-order-button&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; data-original-title=&quot;Anuleaza ordin&quot; title=&quot;Anuleaza ordin&quot; style=&quot;display:none&quot;&gt;A&lt;/a&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;">
+								<thead>
+									<tr>
+										<th style="display:none">&nbsp;</th>
+
+										<th style="width:10%">Cantitate</th>
+										<th style="width:9%" class="">Pret</th>
+										<th style="width:8%" class="{sorter:\'text\'}">T/P</th>
+										<th style="width:10%" class="{sorter:\'text\'}">Valabilitate</th>
+										<th style="width:5%" class="{sorter: false} no-sort">Actiuni</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+							<div class="text-center padding-20 loader"><img src="themes/sale/assetsDisponibil/img/loader-white.gif"></div>
+							<p class="empty-message text-center p-t-10 m-b-0" style="display:none">Nici un ordin disponibil</p>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+				<div class="col-md-6 col-sm-6" style="padding-right:0 !important" id="sell-orders">
+					<div class="tile white m-b-10">
+						<div class="tile-title">
+							 id="add-ask-button" class="btn btn-small btn-primary no-margin add-order-button pull-right" data-type="S">vanzare</a>
+							<h3 class="m-t-0" class="asset-orders-title">Ordine vanzare (ASK)</h3>
+						</div>
+						<div class="tile-body">
+							<table class="table no-more-tables no-margin tablesorter" id="sell-orders-list" data-prototype="&lt;tr id=&quot;asset-order-__ID__&quot; class=&quot;osimple&quot;&gt;&lt;td class=&quot;v-align-middle asset-order-timestamp&quot; style=&quot;display:none&quot;&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle asset-order-quantity&quot;&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle asset-order-price&quot;&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle asset-order-partial&quot;&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle asset-order-expiration-date&quot;&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;&lt;div class=&quot;order-actions&quot;&gt;&lt;a class=&quot;tip add-matching-order&quot; data-value=&quot;__ID__&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; data-original-title=&quot;Adauga ordin corespondent&quot; title=&quot;Adauga ordin corespondent&quot; style=&quot;display:none&quot;&gt;T&lt;/a&gt;&lt;a data-value=&quot;__ID__&quot; class=&quot;tip edit-order-button&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; data-original-title=&quot;Modifica ordin&quot; title=&quot;Modifica ordin&quot; style=&quot;display:none&quot;&gt;M&lt;/a&gt;&lt;a href=&quot;/order/cancel/__ID__&quot; data-value=&quot;__ID__&quot; class=&quot;tip cancel-order-button&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; data-original-title=&quot;Anuleaza ordin&quot; title=&quot;Anuleaza ordin&quot; style=&quot;display:none&quot;&gt;A&lt;/a&gt;&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;">
+								<thead>
+									<tr>
+										<th style="display:none">&nbsp;</th>
+
+										<th style="width:10%">Cantitate</th>
+										<th style="width:9%" class="">Pret</th>
+										<th style="width:8%" class="{sorter:\'text\'}">T/P</th>
+										<th style="width:10%" class="{sorter:\'text\'}">Valabilitate</th>
+										<th style="width:5%" class="{sorter: false} no-sort">Actiuni</th>
+									</tr>
+								</thead>
+								<tbody>
+								</tbody>
+							</table>
+							<div class="text-center padding-20 loader"><img src="themes/sale/assetsDisponibil/img/loader-white.gif"></div>
+							<p class="empty-message text-center p-t-10 m-b-0" style="display:none">Nici un ordin disponibil</p>
+							<div class="clearfix"></div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+			<div class="tile collapsed m-b-10 toggleable-widget" id="market-assets-container">
+	<div class="tile-title">
+		<div class="controller">
+			<a class="collapse pull-right m-l-15" id="toggle-arrow-market-assets-container" style="cursor:pointer" onclick="showToggle('."'ring-details'".','."'toggle-arrow-market-assets-container'".')">&nbsp;</a>
+		</div>
+		<h3 id="rings-title" class="m-t-0">Alte active in tranzactionare</h3>
+	</div>
+	<div class="tile-body" id="ring-details">
+		<div class="row market-assets-filters no-margin">
+			<div class="pull-left m-r-10">
+				<select id="Ring-filter" class="market-asset-filter" data-filter="ring">
+					<option value="-1">Toate ringurile</option>
+
+					<option value="2">ENERGIE</option>
+
+					<option value="12">Marfuri generale</option>
+
+				</select>
+			</div>
+			<div class="pull-left m-r-10" style="display:none">
+				<select id="AssetType-filter" class="market-asset-filter" data-filter="assetType">
+					<option value="-1">Toate activele suport</option>
+
+				</select>
+			</div>
+		</div>
+		<table class="table no-more-tables" id="market-assets-list" data-prototype="&lt;tr id=&quot;market-asset-__ID_ASSET__&quot; class=&quot;market-asset-context&quot; data-ring-id=&quot;__ID_RING__&quot; data-id=&quot;__ID_ASSET__&quot;&gt;&lt;td class=&quot;v-align-middle asset-status-col&quot;&gt;&lt;span class=&quot;asset-status __ASSET_STATUS__&quot;&gt;&lt;i class=&quot;fa fa-square&quot;&gt;&lt;/i&gt;&lt;/span&gt;&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;__RINGNAME__&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;__ASSETNAME__&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;__PREOPENINGTIME__&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;__CLOSINGTIME__&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;__BIDQUANTITY__&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;__BIDPRICE__&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&gt;__ASKQUANTITY__&lt;/td&gt;&lt;td class=&quot;v-align-middle&quot;&ggt;__ASKPRICE__&lt;/td&gt;&lt;/tr&gt;">
+			<thead>
+				<tr>
+					<th class="asset-status-col">&nbsp;</th>
+					<th>Ring</th>
+					<th>Activ</th>
+					<th>Ora incepere</th>
+					<th>Ora sfarsit</th>
+					<th>Cant. BID</th>
+					<th>Pret BID</th>
+					<th>Cant. ASK</th>
+					<th>Pret ASK</th>
+				</tr>
+			</thead>
+			<tbody>
+			</tbody>
+		</table>
+		<div class="text-center padding-20 loader"><img src="themes/sale/assetsDisponibil/img/loader-white.gif"></div>
+	</div>
+	<div class="clearfix"></div>
+</div>
+
+
+
+	</div>
+  <div class="col-md-3 col-sm-3 col-xs-12 secondary-widgets">
+  </div>
+</div>
+<div id="legend" data-toggle="popup" data-target="#legend-container" data-trigger="hover"  onmouseover="showMessageList()" onmouseout="hideMessageList()">
+	<div class="text-center">
+		<i class="fa fa-info-circle fa-2x"></i><br/>
+		Legenda
+	</div>
+	<div class="popover fade left in" id="legend-container">
+		<div class="arrow"></div>
+		<div class="popover-content">
+			<ul class="message-list">
+				<li><span class="ring-status"><i class="fa fa-square"></i></span> Sedinta viitoare</li>
+				<li><span class="ring-status opening"><i class="fa fa-square"></i></span> Sedinta in deschidere</li>
+				<li><span class="ring-status opened"><i class="fa fa-square"></i></span> Sedinta in tranzactionare</li>
+				<li><span class="ring-status closing"><i class="fa fa-square"></i></span> Sedinta in inchidere</li>
+				<li><span class="ring-status closed"><i class="fa fa-square"></i></span> Sedinta inchisa</li>
+				<li><strong>ΔT</strong> - Interval in care se permite introducerea sau modificarea ordinului</li>
+				<li><strong>ΔT1</strong> - Timpul dupa care se realizeaza tranzactia intre doua ordine potrivite</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" id="documents-modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<h4 id="myModalLabel" class="semi-bold">Documente</h4>
+			</div>
+			<div class="modal-body">
+				<div class="pull-right p-b-20 row" id="documents-table-filter" style="display:none">
+					<div class="col-md-6">
+						<label>Filtreaza:</label>
+					</div>
+					<div class="col-md-6">
+						<input id="table-filter" type="text" class="form-control input-sm" />
+					</div>
+				</div>
+				<table class="table table-hover table-condensed admin-table footable" id="documents-table" data-filter="#table-filter" style="display:none">
+					<thead>
+						<tr>
+							<th style="width:30%">Nume</th>
+							<th style="width:30%">Tip</th>
+							<th class="v-align-middle" style="width:5%" data-sort-ignore="true">Download</th>
+						</tr>
+					</thead>
+					<tbody>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td colspan="7">
+								<div class="pagination pagination-centered hide-if-no-paging"></div>
+							</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Inchide</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+<div class="modal fade" id="parameters-modal" tabindex="-1" role="dialog" aria-labelledby="parametersModalLabel" aria-hidden="true">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header">
+				<button type="button" class="close" data-dismiss="modal" aria-hidden="true">x</button>
+				<h4 id="parametersModalLabel" class="semi-bold">Parametri tranzactionare</h4>
+			</div>
+			<div class="modal-body">
+				<form id="parameters-form">
+					<input type="hidden" id="params_ID_Asset" name="ID_Asset" value="" />
+					<div class="row">
+						<div class="row form-row">
+							<div class="col-md-9">
+								<h4>Orar</h4>
+								<div class="row form-row">
+									<div class="col-md-3">
+
+										<label class="form-label">Data inceput</label>
+										<div class="controls">
+											<div class="input-group m-b-5">
+												<input type="text" class="form-control required" id="params_StartDate" name="StartDate" data-date-format="dd M yyyy" value="" />
+												<span class="input-group-addon primary">
+													<span class="arrow"></span>
+													<i class="fa fa-calendar"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<label class="form-label">Data sfarsit</label>
+										<div class="controls">
+											<div class="input-group m-b-5">
+												<input type="text" class="form-control required" id="params_EndDate" name="EndDate" data-date-format="dd M yyyy" value="" />
+												<span class="input-group-addon primary">
+													<span class="arrow"></span>
+													<i class="fa fa-calendar"></i>
+												</span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row form-row">
+									<div class="col-md-3">
+										<label class="form-label">Faza 1</label>
+										<div class="controls">
+											<div class="input-append bootstrap-timepicker">
+												<input type="time" class="form-control timepicker" name="PreOpeningTime" id="params_PreOpeningTime" value="" placeholder="00:00" data-placement="top" />
+												<span class="add-on"><i class="fa fa-clock-o"></i></span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<label class="form-label">Faza 2</label>
+										<div class="controls">
+											<div class="input-append bootstrap-timepicker">
+												<input type="time" class="form-control timepicker" name="OpeningTime" id="params_OpeningTime" value="" placeholder="00:00" data-placement="top" />
+												<span class="add-on"><i class="fa fa-clock-o"></i></span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<label class="form-label">Faza 3</label>
+										<div class="controls">
+											<div class="input-append bootstrap-timepicker">
+												<input type="time" class="form-control timepicker" name="PreClosingTime" id="params_PreClosingTime" value="" placeholder="00:00" data-placement="bottom" />
+												<span class="add-on"><i class="fa fa-clock-o"></i></span>
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<label class="form-label">Sfarsit</label>
+										<div class="controls">
+											<div class="input-append bootstrap-timepicker">
+												<input type="time" class="form-control timepicker" name="ClosingTime" id="params_ClosingTime" value="" placeholder="00:00" data-placement="bottom" />
+												<span class="add-on"><i class="fa fa-clock-o"></i></span>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="row form-row">
+									<div class="col-md-3">
+										<label class="form-label">Delta T (min)</label>
+										<div class="controls row">
+											<div class="col-md-6">
+												<input type="text" class="form-control required" name="DeltaT" id="params_DeltaT" value="" />
+											</div>
+										</div>
+									</div>
+									<div class="col-md-3">
+										<label class="form-label">Delta T1 (min)</label>
+										<div class="controls row">
+											<div class="col-md-6">
+												<input type="text" class="form-control required" name="DeltaT1" id="params_DeltaT1" value="" />
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3" style="margin-top:40px;">
+								<h4>Programare pe zile</h4>
+								<div class="row form-row">
+										<div class="checkbox check-default">
+											<input id="params_dayMonday" name="DaysOfWeek_dayMonday" type="checkbox" value="1" />
+											<label for="params_dayMonday">Luni</label>
+										</div>
+								</div>
+								<div class="row form-row">
+										<div class="checkbox check-default">
+											<input id="params_dayTuesday" name="DaysOfWeek_dayTuesday" type="checkbox" value="1" />
+											<label for="params_dayTuesday">Marti</label>
+										</div>
+								</div>
+								<div class="row form-row">
+										<div class="checkbox check-default">
+											<input id="params_dayWednesday" name="DaysOfWeek_dayWednesday" type="checkbox" value="1" />
+											<label for="params_dayWednesday">Miercuri</label>
+										</div>
+								</div>
+								<div class="row form-row">
+										<div class="checkbox check-default">
+											<input id="params_dayThursday" name="DaysOfWeek_dayThursday" type="checkbox" value="1" />
+											<label for="params_dayThursday">Joi</label>
+										</div>
+								</div>
+								<div class="row form-row">
+										<div class="checkbox check-default">
+											<input id="params_dayFriday" name="DaysOfWeek_dayFriday" type="checkbox" value="1" />
+											<label for="params_dayFriday">Vineri</label>
+										</div>
+								</div>
+								<div class="row form-row">
+										<div class="checkbox check-default">
+											<input id="params_daySaturday" name="DaysOfWeek_daySaturday" type="checkbox" value="1" />
+											<label for="params_daySaturday">Sambata</label>
+										</div>
+								</div>
+								<div class="row form-row">
+										<div class="checkbox check-default">
+											<input id="params_daySunday" name="DaysOfWeek_daySunday" type="checkbox" value="1" />
+											<label for="params_daySunday">Duminica</label>
+										</div>
+								</div>
+							</div>
+						</div>
+
+						<h4>Restrictii</h4>
+						<div class="row form-row">
+
+						  <div class="col-md-12">
+								<div class="checkbox check-default" style="margin-top:10px">
+									<input id="params_PartialFlagChangeAllowed" name="PartialFlagChangeAllowed" type="checkbox" value="1" />
+									<label for="params_PartialFlagChangeAllowed">Permite modificarea atributului de total/partial la modificarea ordinelor</label>
+								</div>
+						  </div>
+
+						  <div class="col-md-12">
+								<div class="checkbox check-default" style="margin-top:10px">
+									<input id="params_InitialPriceMandatory" name="InitialPriceMandatory" type="checkbox" value="1" />
+									<label for="params_InitialPriceMandatory">Pretul unui ordin initiator este obligatoriu</label>
+								</div>
+						  </div>
+
+						  <div class="col-md-12">
+								<div class="checkbox check-default" style="margin-top:10px">
+									<input id="params_InitialPriceMaintenance" name="InitialPriceMaintenance" type="checkbox" value="1" />
+									<label for="params_InitialPriceMaintenance">Permite intretinerea pretului in ordinul initiator in faza 1 si 2 (deschidere si tranzactionare)</label>
+								</div>
+						  </div>
+
+						  <div class="col-md-12">
+								<div class="checkbox check-default" style="margin-top:10px">
+									<input id="params_DiminishedQuantityAllowed" name="DiminishedQuantityAllowed" type="checkbox" value="1" />
+									<label for="params_DiminishedQuantityAllowed">Permite inrautatirea cantitatii</label>
+								</div>
+						  </div>
+
+						  <div class="col-md-12">
+								<div class="checkbox check-default" style="margin-top:10px">
+									<input id="params_DiminishedPriceAllowed" name="DiminishedPriceAllowed" type="checkbox" value="1" />
+									<label for="params_DiminishedPriceAllowed">Permite inrautatirea pretului</label>
+								</div>
+						  </div>
+
+						  <div class="col-md-12">
+								<div class="checkbox check-default" style="margin-top:10px">
+									<input id="params_DifferentialPriceAllowed" name="DifferentialPriceAllowed" type="checkbox" value="1" />
+									<label for="params_DifferentialPriceAllowed">Permite pret referinta</label>
+								</div>
+						  </div>
+
+						</div>
+						<div class="row form-row" id="DifferentialPriceText-holder" style="display:none">
+							<label class="form-label">Text pret diferential</label>
+							<div class="controls">
+								<div class="col-md-8">
+									<input type="text" class="form-control" name="DifferentialPriceText" id="params_DifferentialPriceText" value="" />
+								</div>
+							</div>
+						</div>
+
+						<h4>Validare ordine</h4>
+						<div class="row form-row">
+							<div class="col-md-3">
+								<label class="form-label">Incrementare pret</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="text" class="form-control numeric" name="PriceStepping" id="params_PriceStepping" value="" data-a-sep="." data-a-dec="," data-m-dec="5" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<label class="form-label">Variatia maxima a pretului</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="number" class="form-control" min="0" max="100" step="any" name="MaxPriceVariation" id="params_MaxPriceVariation" value="" />
+									</div>
+									<div class="col-md-6 no-padding">
+										<span class="muted">%</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<label class="form-label">Pret minim</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="text" class="form-control numeric" name="MinPrice" id="params_MinPrice" value="" data-a-sep="." data-a-dec="," data-m-dec="5" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<label class="form-label">Pret maxim</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="text" class="form-control numeric" name="MaxPrice" id="params_MaxPrice" value="" data-a-sep="." data-a-dec="," data-m-dec="5" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row form-row">
+							<div class="col-md-3">
+								<label class="form-label">Incrementare cantitate</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="text" class="form-control numeric" name="QuantityStepping" id="params_QuantityStepping" value="" data-a-sep="." data-a-dec="," data-m-dec="5" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-3">
+								<label class="form-label">Cantitate minima</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="text" class="form-control numeric" name="MinQuantity" id="params_MinQuantity" value="" data-a-sep="." data-a-dec="," data-m-dec="5" />
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<h4>Garantii</h4>
+						<div class="row form-row">
+							<div class="col-md-4">
+								<label class="form-label">Procent garantie la vanzare (%)</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="number" class="form-control" min="0" max="100" step="any" name="SellWarrantyPercent" id="params_SellWarrantyPercent" value="" />
+									</div>
+									<div class="col-md-6 no-padding">
+										<span class="muted">%</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label class="form-label">Parte fixa garantie la vanzare (RON)	</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="text" class="form-control numeric" name="SellWarrantyFixed" id="params_SellWarrantyFixed" value="" data-a-sep="." data-a-dec="," data-m-dec="2" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label class="form-label">Valoare garantie pe UM la vanzare (RON)</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="text" class="form-control numeric" name="SellWarrantyMU" id="params_SellWarrantyMU" value="" data-a-sep="." data-a-dec="," data-m-dec="2" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row form-row">
+							<div class="col-md-4">
+								<label class="form-label">Procent garantie la cumparare (%)</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="number" class="form-control" min="0" max="100" step="any" name="BuyWarrantyPercent" id="params_BuyWarrantyPercent" value="" />
+									</div>
+									<div class="col-md-6 no-padding">
+										<span class="muted">%</span>
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label class="form-label">Parte fixa garantie la cumparare (RON)</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="text" class="form-control numeric" name="BuyWarrantyFixed" id="params_BuyWarrantyFixed" value="" data-a-sep="." data-a-dec="," data-m-dec="2" />
+									</div>
+								</div>
+							</div>
+							<div class="col-md-4">
+								<label class="form-label">Valoare garantie pe UM la cumparare (RON)</label>
+								<div class="controls row">
+									<div class="col-md-6">
+										<input type="text" class="form-control numeric" name="BuyWarrantyMU" id="params_BuyWarrantyMU" value="" data-a-sep="." data-a-dec="," data-m-dec="2" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</form>
+			</div>
+			<div class="modal-footer">
+			  <button type="button" class="btn btn-primary" id="save-parameters">Salveaza</button>
+			  <button type="button" class="btn btn-default" data-dismiss="modal">Inchide</button>
+			</div>
+		</div>
+		<!-- /.modal-content -->
+	</div>
+	<!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+		<!-- END CONTAINER -->
+
+
+
+
+		<script>
+
+		// Display Server Time
+			window.setInterval(function(){
+			var today = new Date(),
+			h = ("0"+today.getHours()).slice(-2);
+			m = ("0"+today.getMinutes()).slice(-2);
+			s = ("0"+today.getSeconds()).slice(-2);
+			document.getElementById("server-time").innerHTML = h + ":" + m + ":" + s;
+		}, 1000);
+
+
+
+
+		//HoverLegend
+		function showMessageList()
+		{
+				document.getElementById("legend-container").style.display = "block";
+		}
+		function hideMessageList()
+		{
+			document.getElementById("legend-container").style.display = "none";
+		}
+
+
+		//General show toggle
+		function showToggle(id,toggle)
+		{
+			var d = document.getElementById(toggle)
+   		var e = document.getElementById(id);
+			if(e.style.display == "block")
+        {
+					d.style = "background:url(themes/sale/assetsDisponibil/img/collapse.png) no-repeat left top;cursor:pointer";
+					e.style.display = "none";
+				}
+       else
+			 {
+				 	d.style = "background:url(themes/sale/assetsDisponibil/img/collapse.png) no-repeat left bottom;cursor:pointer";
+				  e.style.display = "block";
+			 }
+
+		}
+
+
+		function chatToggle()
+		{
+			var e = document.getElementById("chat-container");
+			if(e.className == "tile white m-b-10 toggleable-widget")
+				{
+					e.className = "tile white m-b-10 toggleable-widget flyout";
+				}
+			 else
+			 {
+				 e.className = "tile white m-b-10 toggleable-widget";
+			 }
+
+		}
+
+		</script>
+
+
+
+
+
+';
+
+	}
+
+	function generateJS()
+	{
+		$js =	'getJSform("'.$this->Name.'").thumbMouseDown = function(id)'."\n".
+				'{'."\n".
+				'	$addClass(id, "fg-yellow");'."\n".
+				'	$addClass(id, "bg-black");'."\n".
+				//'	$addClass(id, "tile-transform-right");'."\n".
+				'};'."\n".
+				'getJSform("'.$this->Name.'").thumbMouseUp = function(id)'."\n".
+				'{'."\n".
+				'	$removeClass(id, "fg-yellow");'."\n".
+				'	$removeClass(id, "bg-black");'."\n".
+				//'	$removeClass(id, "tile-transform-right");'."\n".
+				'};'."\n";
+
+		return $js;
+	}
+
+	function ThumbExists($FormName)
+	{
+		$b = false;
+		foreach ($this->Controls as $ctrl)
+		{
+			if ($ctrl instanceof TFormThumb)
+			{
+				if ($ctrl->FormName == $FormName) $b = true;
+			}
+		}
+
+		return $b;
+	}
+
+	function FormExists($FormName)
+	{
+		$b = false;
+		$frm = TQuark::instance()->firstForm();
+		while ($frm != null && !$b)
+		{
+			if ($frm->Name == $FormName) $b = true;
+
+			$frm = TQuark::instance()->nextForm();
+		}
+
+		return $b;
+	}
+
+	function refreshThumbs()
+	{
+		$frm = TQuark::instance()->firstForm();
+		while ($frm != null)
+		{
+			if (!$this->ThumbExists($frm->Name) && $frm->ThumbVisible)
+			{
+				$thumb = new TFormThumb($this, $frm->Name);
+				$thumb->Name = $frm->Name.'_thumb';
+				$thumb->OnClick = 'thumb_onclick';
+				$this->Controls[] = $thumb;
+
+				$html = $thumb->generateHTML();
+				TQuark::instance()->browserAppend($this->Name.'_iconbar', $html);
+			}
+
+			$frm = TQuark::instance()->nextForm();
+		}
+
+		foreach ($this->Controls as $key => $ctrl)
+		{
+			if ($ctrl instanceof TFormThumb)
+			{
+				if (!$this->FormExists($ctrl->FormName))
+				{
+					TQuark::instance()->browserDelete($ctrl->id);
+					unset($this->Controls[$key]);
+					$this->Controls = array_values($this->Controls);
+				}
+			}
+		}
+	}
+
+	function setLoginInfo($LoginName, $UserName, $CompanyName)
+	{
+		$this->lbl_LoginName->Caption = $LoginName;
+		$this->lbl_UserName->Caption = $UserName;
+		$this->lbl_CompanyName->Caption = $CompanyName;
+	}
+
+	function btn_LogoutOnClick()
+	{
+		TQuarkOS::instance()->sendMessage(0, 'logout');
+	}
+
+	function thumb_onclick($sender)
+	{
+		if ($sender == null) return;
+		//TQuark::instance()->addAjaxStack('', 'alert', $sender);
+
+		$frm_name = '';
+		$thumb = null;
+		foreach ($this->Controls as $ctrl)
+		{
+			if ($ctrl instanceof TFormThumb)
+			{
+				TQuark::instance()->browserRemoveClass($ctrl->id, 'thumbActive');
+
+				if ($ctrl->Name == $sender)
+				{
+					$frm_name = $ctrl->FormName;
+					$thumb = $ctrl;
+				}
+			}
+		}
+
+		if ($frm_name != '')
+		{
+			$frm_selected = TQuark::instance()->getForm($frm_name);
+			if ($frm_selected != null && !$frm_selected->Visible)
+			{
+				$frm = TQuark::instance()->firstForm();
+				while ($frm != null)
+				{
+					if ($frm != $frm_selected) $frm->hide();
+					$frm = TQuark::instance()->nextForm();
+				}
+
+				$frm_selected->show();
+				$this->lbl_FormCaption->Caption = $frm_selected->Caption;
+				if ($thumb != null) TQuark::instance()->browserAddClass($thumb->id, 'thumbActive');
+			}
+		}
+	}
+
+
+}
+?>

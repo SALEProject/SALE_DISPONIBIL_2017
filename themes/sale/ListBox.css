@@ -1,0 +1,24 @@
+div.sale_TListBox_wrapper
+{
+	
+}
+
+ul.sale_TListBox
+{
+	padding-left: 0px;	
+}
+
+ul.sale_TListBox li
+{
+	list-style-type: none;
+	padding: 4px;
+	margin: 4px;	
+	cursor: pointer;
+}
+
+ul.sale_TListBox li.selected
+{
+	background-color: white;
+	border: 1px solid silver;
+	border-radius: 3px;
+}

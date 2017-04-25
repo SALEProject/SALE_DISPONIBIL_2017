@@ -1,0 +1,12 @@
+span.disponibil_TClock
+{
+	font-size: 18px;	
+}
+
+span.disponibil_TClock.formcaption
+{
+	font-weight: 300;
+	color: #3B4249;
+	font-size: 18px;
+	line-height: 26px;
+}

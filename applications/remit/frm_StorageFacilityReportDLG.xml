@@ -1,0 +1,429 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_StorageFacilityReportDLG>
+	<Name>frm_StorageFacilityReportDLG</Name>
+	<theme>sale</theme>
+	
+	<Caption>REMIT Storage Facility Report Definition</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>792</Width>
+	<Height>360</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	<CSSClass>rotund</CSSClass>
+
+
+	<TLabel>
+		<Name>lbl_GasDayStart</Name>
+		<Left>32</Left>
+		<Top>16</Top>
+		<Caption>Gas Day Start:</Caption>
+	</TLabel>
+	
+	<TDatePicker>
+		<Name>dp_GasDayStart</Name>
+		<Left>152</Left>
+		<Top>16</Top>
+		<Width>90</Width>
+		<Height>24</Height>
+		<Hint>Gas Day Start</Hint>
+		<CSSClass>required</CSSClass>
+	</TDatePicker>
+	
+	<TEdit>
+		<Name>ed_GasDayStart</Name>
+		<Left>248</Left>
+		<Top>16</Top>
+		<Height>24</Height>
+		<Width>74</Width>
+		<Hint>hh:mm</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9:]+$</Mask>
+	</TEdit>
+	
+	
+	<TLabel>
+		<Name>lbl_GasDayEnd</Name>
+		<Left>32</Left>
+		<Top>52</Top>
+		<Caption>Gas Day End:</Caption>
+	</TLabel>
+	
+	<TDatePicker>
+		<Name>dp_GasDayEnd</Name>
+		<Left>152</Left>
+		<Top>52</Top>
+		<Width>90</Width>
+		<Height>24</Height>
+		<Hint>Gas Day End</Hint>
+		<CSSClass>required</CSSClass>
+	</TDatePicker>
+	
+	<TEdit>
+		<Name>ed_GasDayEnd</Name>
+		<Left>248</Left>
+		<Top>52</Top>
+		<Width>74</Width>
+		<Height>24</Height>
+		<Hint>hh:mm</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9:]+$</Mask>
+	</TEdit>
+	
+	
+	<TLabel>
+		<Name>lbl_StorageFacilityIdentifier</Name>
+		<Left>344</Left>
+		<Top>16</Top>
+		<Caption>Storage Facility ID: </Caption>
+	</TLabel>
+	
+	<TComboBox>
+		<Name>cb_StorageFacilityIdentifierType</Name>
+		<Left>556</Left>
+		<Top>16</Top>
+		<Width>64</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility Identifier Type</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>ACER, LEI, EIC</Items>
+	</TComboBox>
+	
+	<TEdit>
+		<Name>ed_StorageFacilityIdentifier</Name>
+		<Top>16</Top>
+		<Left>624</Left>
+		<Width>136</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility ID</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[a-zA-Z.0-9]+$</Mask>
+	</TEdit>
+	
+	
+	<TLabel>
+		<Name>lbl_StorageFacilityOperatorIdentifier</Name>
+		<Left>344</Left>
+		<Top>52</Top>
+		<Caption>Storage Facility Operator ID:</Caption>
+	</TLabel>
+	
+	<TComboBox>
+		<Name>cb_StorageFacilityOperatorIdentifierType</Name>
+		<Left>556</Left>
+		<Top>52</Top>
+		<Width>64</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility Operator Identifier Type</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>ACER, LEI, EIC</Items>
+	</TComboBox>
+	
+	<TEdit>
+		<Name>ed_StorageFacilityOperatorIdentifier</Name>
+		<Top>52</Top>
+		<Left>624</Left>
+		<Width>136</Width>
+		<Height>24</Height>
+		<Hint>Storage Facility Operator ID</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[a-zA-Z.0-9]+$</Mask>
+	</TEdit>
+	
+	
+	<!--
+	<TLabel>
+		<Name>lbl_ReportingEntityReferenceID</Name>
+		<Left>344</Left>
+		<Top>88</Top>
+		<Caption>Reporting Entity Reference ID:</Caption>
+	</TLabel>
+	
+ 	<TEdit>
+		<Name>ed_ReportingEntityReferenceID</Name>
+		<Left>576</Left>
+		<Top>88</Top>
+		<Width>128</Width>
+		<Height>24</Height>
+		<Hint>Reporting Entity Reference ID :</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[a-zA-Z0-9]+$</Mask>
+	</TEdit> -->
+	
+	
+	<TLabel>
+		<Name>lbl_StorageType</Name>
+		<Left>32</Left>
+		<Top>136</Top>
+		<Caption>Storage Type:</Caption>
+	</TLabel>
+	
+	<TComboBox>
+		<Name>cb_StorageType</Name>
+		<Left>152</Left>
+		<Top>136</Top>
+		<Width>172</Width>
+		<Height>24</Height>
+		<Hint>Storage Type</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>DSR, ASR, ASF, SGL, PPC, GHT, SRC</Items>
+	</TComboBox>
+	
+	
+	<TLabel>
+		<Name>lbl_Storage</Name>
+		<Left>32</Left>
+		<Top>172</Top>
+		<Caption>Storage:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_Storage</Name>
+		<Left>152</Left>
+		<Top>172</Top>
+		<Width>104</Width>
+		<Height>24</Height>
+		<Hint>Storage</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+	
+	<!-- 	<TLabel>
+		<Name>lbl_StorageMU</Name>
+		<Left>260</Left>
+		<Top>172</Top>
+		<Caption>(MWh)</Caption>
+	</TLabel> -->
+	
+	<TComboBox>
+		<Name>cb_StorageMU</Name>
+		<Left>260</Left>
+		<Top>172</Top>
+		<Width>66</Width>
+		<Height>24</Height>
+		<Hint>Measuring Unit</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>cm, cm/d, mcm, mcm/d, kWh, kWh/h, kWh/d, GW, GWh, GW/h, GW/d, MW, MWh, MWh/h, MWh/d, TWh, Therm/d, kTherm/d, MTherm/d, Therm, kTherm, MTherm, %</Items>
+		<DataField>NameTR</DataField>
+        <KeyField>ID</KeyField>
+	</TComboBox>
+	
+	
+	<TLabel>
+		<Name>lbl_Injection</Name>
+		<Left>32</Left>
+		<Top>208</Top>
+		<Caption>Injection:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_Injection</Name>
+		<Left>152</Left>
+		<Top>208</Top>
+		<Width>104</Width>
+		<Height>24</Height>
+		<Hint>Injection</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+	
+	<!-- 	<TLabel>
+		<Name>lbl_InjectionMU</Name>
+		<Left>260</Left>
+		<Top>208</Top>
+		<Caption>(MWh)</Caption>
+	</TLabel> -->
+	
+	<TComboBox>
+		<Name>cb_InjectionMU</Name>
+		<Left>260</Left>
+		<Top>208</Top>
+		<Width>66</Width>
+		<Height>24</Height>
+		<Hint>Measuring Unit</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>cm, cm/d, mcm, mcm/d, kWh, kWh/h, kWh/d, GW, GWh, GW/h, GW/d, MW, MWh, MWh/h, MWh/d, TWh, Therm/d, kTherm/d, MTherm/d, Therm, kTherm, MTherm, %</Items>
+		<DataField>NameTR</DataField>
+        <KeyField>ID</KeyField>
+	</TComboBox>
+	
+	
+	<TLabel>
+		<Name>lbl_Withdrawal</Name>
+		<Left>32</Left>
+		<Top>242</Top>
+		<Caption>Withdrawal:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_Withdrawal</Name>
+		<Left>152</Left>
+		<Top>242</Top>
+		<Width>106</Width>
+		<Height>24</Height>
+		<Hint>Withdrawal</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+	
+	<!-- 	<TLabel>
+		<Name>lbl_WithdrawalMU</Name>
+		<Left>260</Left>
+		<Top>242</Top>
+		<Caption>(MWh)</Caption>
+	</TLabel> --> 
+	
+	<TComboBox>
+		<Name>cb_WithdrawalMU</Name>
+		<Left>260</Left>
+		<Top>242</Top>
+		<Width>66</Width>
+		<Height>24</Height>
+		<Hint>Measuring Unit</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>cm, cm/d, mcm, mcm/d, kWh, kWh/h, kWh/d, GW, GWh, GW/h, GW/d, MW, MWh, MWh/h, MWh/d, TWh, Therm/d, kTherm/d, MTherm/d, Therm, kTherm, MTherm, %</Items>
+		<DataField>NameTR</DataField>
+        <KeyField>ID</KeyField>
+	</TComboBox>
+	
+	
+	<TLabel>
+		<Name>lbl_TechnicalCapacity</Name>
+		<Left>344</Left>
+		<Top>136</Top>
+		<Caption>Technical Capacity:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_TechnicalCapacity</Name>
+		<Left>576</Left>
+		<Top>136</Top>
+		<Width>104</Width>
+		<Height>24</Height>
+		<Hint>Technical Capacity</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+	
+	<!--  	<TLabel>
+		<Name>lbl_TechnicalCapacityMU</Name>
+		<Left>684</Left>
+		<Top>136</Top>
+		<Caption>(MWh)</Caption>
+	</TLabel> -->
+	
+	<TComboBox>
+		<Name>cb_TechnicalCapacityMU</Name>
+		<Left>684</Left>
+		<Top>136</Top>
+		<Width>66</Width>
+		<Height>24</Height>
+		<Hint>Measuring Unit</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>cm, cm/d, mcm, mcm/d, kWh, kWh/h, kWh/d, GW, GWh, GW/h, GW/d, MW, MWh, MWh/h, MWh/d, TWh, Therm/d, kTherm/d, MTherm/d, Therm, kTherm, MTherm, %</Items>
+		<DataField>NameTR</DataField>
+        <KeyField>ID</KeyField>
+	</TComboBox>
+	
+	
+	<TLabel>
+		<Name>lbl_ContractedCapacity</Name>
+		<Left>344</Left>
+		<Top>172</Top>
+		<Caption>Contracted Capacity:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_ContractedCapacity</Name>
+		<Left>576</Left>
+		<Top>172</Top>
+		<Width>104</Width>
+		<Height>24</Height>
+		<Hint>Contracted Capacity</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+	
+	<!-- 	<TLabel>
+		<Name>lbl_ContractedCapacityMU</Name>
+		<Left>684</Left>
+		<Top>172</Top>
+		<Caption>(MWh)</Caption>
+	</TLabel> -->
+	
+	<TComboBox>
+		<Name>cb_ContractedCapacityMU</Name>
+		<Left>684</Left>
+		<Top>172</Top>
+		<Width>66</Width>
+		<Height>24</Height>
+		<Hint>Measuring Unit</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>cm, cm/d, mcm, mcm/d, kWh, kWh/h, kWh/d, GW, GWh, GW/h, GW/d, MW, MWh, MWh/h, MWh/d, TWh, Therm/d, kTherm/d, MTherm/d, Therm, kTherm, MTherm, %</Items>
+		<DataField>NameTR</DataField>
+        <KeyField>ID</KeyField>
+	</TComboBox>
+	
+	
+	<TLabel>
+		<Name>lbl_AvailableCapacity</Name>
+		<Left>344</Left>
+		<Top>208</Top>
+		<Caption>Available Capacity:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_AvailableCapacity</Name>
+		<Left>576</Left>
+		<Top>208</Top>
+		<Width>104</Width>
+		<Height>24</Height>
+		<Hint>Available Capacity</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+	
+	<!-- 	<TLabel>
+		<Name>lbl_AvailableMU</Name>
+		<Left>684</Left>
+		<Top>208</Top>
+		<Caption>(MWh)</Caption>
+	</TLabel> -->
+	
+	<TComboBox>
+		<Name>cb_AvailableCapacityMU</Name>
+		<Left>684</Left>
+		<Top>208</Top>
+		<Width>66</Width>
+		<Height>24</Height>
+		<Hint>Measuring Unit</Hint>
+		<CSSClass>required</CSSClass>
+		<Items>cm, cm/d, mcm, mcm/d, kWh, kWh/h, kWh/d, GW, GWh, GW/h, GW/d, MW, MWh, MWh/h, MWh/d, TWh, Therm/d, kTherm/d, MTherm/d, Therm, kTherm, MTherm, %</Items>
+		<DataField>NameTR</DataField>
+        <KeyField>ID</KeyField>
+	</TComboBox>
+	
+	
+	
+	<TButton>
+		<Name>btn_Save</Name>
+		<Caption>Save</Caption>]
+		<Left>64</Left>
+		<Top>304</Top>
+		<Width>80</Width>
+		<OnClick>btn_SaveOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>
+		
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Caption>Cancel</Caption>]
+		<Left>596</Left>
+		<Top>304</Top>
+		<Width>80</Width>
+		<OnClick>btn_CancelOnClick</OnClick>
+		<CSSClass>red</CSSClass>
+	</TButton>
+				
+</Tfrm_StorageFacilityReportDLG>

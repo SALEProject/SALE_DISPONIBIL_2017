@@ -1,0 +1,22 @@
+@CHARSET "UTF-8";
+
+select.disponibil_TComboBox
+{
+  margin-bottom: 5px;
+  font-family: "Open Sans";
+  font-size: 12px !important;
+  font-weight: normal;
+  line-height: 20px;
+  color: #6F7B8A !important;
+
+}
+select.disponibil_TComboBox.required
+{
+  color: #6F7B8A !important;
+  margin-bottom: 5px;
+  font-family: "Open Sans";
+  font-size: 12px !important;
+  font-weight: normal;
+  line-height: 20px;
+  text-align: center;
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_ProcessLogDLG>
+	<Name>frm_ProcessLogDLG</Name>
+	<theme>sale</theme>
+	
+	<Caption>Process Log</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>464</Width>
+	<Height>300</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	<CSSClass>rotund</CSSClass>
+
+	<TLabel>
+		<Name>lbl_ProcessLog</Name>
+		<Left>32</Left>
+		<Top>32</Top>
+		<Caption>Process Log Contents:</Caption>
+	</TLabel>
+	
+	<TMemo>
+		<Name>ed_ProcessLog</Name>
+		<Left>32</Left>
+		<Top>56</Top>
+		<Width>400</Width>
+		<Height>160</Height>
+		<CSSClass>required</CSSClass>
+	</TMemo>	
+	
+	<TButton>
+		<Name>btn_Ok</Name>
+		<Caption>Close</Caption>]
+		<Left>352</Left>
+		<Top>232</Top>
+		<Width>80</Width>
+		<OnClick>btn_OkOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>		
+				
+</Tfrm_ProcessLogDLG>

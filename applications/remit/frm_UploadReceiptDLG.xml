@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_UploadReceiptDLG>
+	<Name>frm_UploadReceiptDLG</Name>
+	<theme>sale</theme>
+	
+	<Caption>REMIT XML Receipt Upload</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>400</Width>
+	<Height>200</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	
+	<TLabel>
+		<Name>lbl_ReceiptStatusLabel</Name>
+		<Left>24</Left>
+		<Top>24</Top>
+		<Caption>Receipt Status:</Caption>
+	</TLabel>
+
+	<TLabel>
+		<Name>lbl_ReceiptStatus</Name>
+		<Left>160</Left>
+		<Top>24</Top>
+		<Caption>lbl_ReceiptStatus</Caption>
+	</TLabel>
+
+	<TButton>
+		<Name>btn_DownloadXML</Name>
+		<Caption>Download</Caption>
+		<Left>264</Left>
+		<Top>14</Top>
+		<Width>104</Width>
+		<OnClick>btn_DownloadXMLOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>
+		
+	<TLabel>
+		<Name>lbl_UploadFileLabel</Name>
+		<Left>24</Left>
+		<Top>72</Top>
+		<Caption>Upload or Replace:</Caption>
+	</TLabel>
+
+	<TFileUpload>
+		<Name>ed_UploadFile</Name>
+		<Left>160</Left>
+		<Top>62</Top>
+		<Height>50</Height>
+		<Caption>browse file to upload...</Caption>
+	</TFileUpload>	
+	
+	<TBevel>
+		<Name>Bevel1</Name>
+		<Left>24</Left>
+		<Top>184</Top>
+		<Width>344</Width>
+		<Height>8</Height>
+		<Shape>bsBottomLine</Shape>
+	</TBevel>
+	
+	<TButton>
+		<Name>btn_Save</Name>
+		<Caption>Save</Caption>
+		<Left>184</Left>
+		<Top>200</Top>
+		<Width>80</Width>
+		<CSSClass>green</CSSClass>		
+		<OnClick>btn_SaveOnClick</OnClick>
+	</TButton>
+		
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Caption>Cancel</Caption>
+		<Left>288</Left>
+		<Top>200</Top>
+		<Width>80</Width>
+		<CSSClass>red</CSSClass>
+		<OnClick>btn_CancelOnClick</OnClick>
+	</TButton>
+				
+</Tfrm_UploadReceiptDLG>

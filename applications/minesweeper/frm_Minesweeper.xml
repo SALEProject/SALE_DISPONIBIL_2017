@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_Minesweeper>
+	<Name>frm_Minesweeper</Name>
+	<theme>bitnova</theme>
+	
+	<Caption>Minesweeper</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>424</Width>
+	<Height>336</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poDesigned</Position>
+	
+	<!-- 
+	<TLabel>
+		<name>Label1</name>
+		<Caption>Below are some rows of data:</Caption>
+		<Left>16</Left>
+		<Top>40</Top>
+	</TLabel>
+	-->
+	
+	<TButton>
+		<name>btn_New</name>
+		<Caption>New Game</Caption>
+		<Left>8</Left>
+		<Top>16</Top>
+	</TButton>
+
+	<TButton>
+		<name>btn_Close</name>
+		<Caption>Close</Caption>
+		<Left>8</Left>
+		<Top>48</Top>
+	</TButton>
+
+
+</Tfrm_Minesweeper>

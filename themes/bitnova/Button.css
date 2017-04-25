@@ -1,0 +1,20 @@
+input[type='button'].bitnova_TButton
+{
+	/*background: url('bluegray_button.png') repeat-x 0px 0px;*/
+	background-color: #808070;
+	height: 24px;
+	border-color: #ffc000;
+	border-style: solid;
+	border-width: 1px;
+	border-radius: 5px;
+	box-shadow: 0px 0px 2px #444444;	
+	color: white;
+	min-width: 25px;
+	text-align: left;
+}
+
+input[type='button'].bitnova_TButton:hover
+{
+	/*background: url('bluegray_button.png') repeat-x 0px -23px;*/
+	background-color: #909080;
+}

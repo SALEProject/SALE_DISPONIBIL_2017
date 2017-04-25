@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_OrderDLG>
+	<Theme>disponibil</Theme>
+	<Name>frm_OrderDLG</Name>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<Width>600</Width>
+	<Height>200</Height>
+	<Caption>Adaugare ordin de %s pe activul %s</Caption>
+	
+	<TLabel>
+		<Name>lbl_QuantityLabel</Name>
+		<Left>16</Left>
+		<Top>16</Top>
+		<Caption>Cantitate:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_Quantity</Name>
+		<Left>112</Left>
+		<Top>16</Top>
+		<Width>112</Width>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+	
+	<TLabel>
+		<Name>lbl_PriceLabel</Name>
+		<Left>240</Left>
+		<Top>16</Top>
+		<Caption>Pret:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_Price</Name>
+		<Left>280</Left>
+		<Top>16</Top>	
+		<Width>112</Width>	
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9.]+$</Mask>
+	</TEdit>
+	
+	<TLabel>
+		<Name>lbl_ClientLabel</Name>
+		<Left>408</Left>
+		<Top>16</Top>
+		<Caption>Client:</Caption>
+	</TLabel>
+	
+	<TComboBox>
+		<Name>cb_Client</Name>
+		<Left>456</Left>
+		<Top>16</Top>
+		<Width>128</Width>
+		<Item>item1, item2, item3</Item>
+	</TComboBox>
+
+	<TLabel>
+		<Name>lbl_ExpirationDateLabel</Name>
+		<Left>16</Left>
+		<Top>56</Top>
+		<Caption>Valabilitate:</Caption>
+	</TLabel>
+	
+	<TDatePicker>
+		<Name>dt_ExpirationDate</Name>
+		<Left>112</Left>
+		<Top>56</Top>
+		<Width>112</Width>
+		<Hint>yyyy-mm-dd</Hint>
+		<CSSClass>required</CSSClass>
+	</TDatePicker>
+	
+	<TEdit>
+		<Name>ed_ExpirationTime</Name>
+		<Left>240</Left>
+		<Top>56</Top>
+		<Width>112</Width>		
+		<Hint>hh:mm</Hint>
+		<CSSClass>required</CSSClass>
+		<Mask>^[0-9:]+$</Mask>
+	</TEdit>
+	
+	<TRadioButton>
+		<Name>rb_Total</Name>
+		<Left>408</Left>
+		<Top>56</Top>
+		<Caption>Total</Caption>
+		<Checked>true</Checked>
+	</TRadioButton>
+	
+	<TRadioButton>
+		<Name>rb_Partial</Name>
+		<Left>480</Left>
+		<Top>56</Top>
+		<Caption>Partial</Caption>
+	</TRadioButton>
+	
+	<TButton>
+		<Name>btn_Launch</Name>
+		<Left>16</Left>
+		<Top>104</Top>
+		<Width>99</Width>
+		<Caption>Lanseaza</Caption>
+		<OnClick>btn_LaunchOnClick</OnClick>
+		<CSSClass>greenish</CSSClass>
+	</TButton>
+	
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Left>128</Left>
+		<Top>104</Top>
+		<Width>99</Width>
+		<Caption>Renunta</Caption>
+		<OnClick>btn_CancelOnClick</OnClick>
+		<CSSClass>silver</CSSClass>
+	</TButton>
+	
+	<TLabel>
+		<Name>lbl_Error</Name>
+		<Left>16</Left>
+		<Top>136</Top>
+		<Style>color: red</Style>
+		<Caption></Caption>
+	</TLabel>
+	
+</Tfrm_OrderDLG>

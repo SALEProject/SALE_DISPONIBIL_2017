@@ -1,0 +1,24 @@
+@CHARSET "UTF-8";
+
+body
+{
+	background-color: #D0D4D7;
+	font-family: 'Open Sans', Sans-Serif, Sans, Arial, Tahoma;
+	font-size: 13px;
+	font-style: normal;
+	font-weight: 400;
+	line-height: 19.5px;
+	margin: 0px;
+	padding: 0px;
+	color: #424C5A;
+}
+
+.hidden
+{
+	visibility: hidden;
+}
+
+.visible
+{
+	visibility: visible;
+}

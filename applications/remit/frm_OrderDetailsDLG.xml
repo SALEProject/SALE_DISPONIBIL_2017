@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_OrderDetailsDLG>
+	<Name>frm_OrderDetailsDLG</Name>
+	<theme>sale</theme>
+	
+	<Caption>Order Details</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>464</Width>
+	<Height>300</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	<CSSClass>rotund</CSSClass>
+
+	<!--  Contract information  -->
+	<TLabel>
+		<Name>lbl_ContractInfo</Name>
+		<Left>32</Left>
+		<Top>32</Top>
+		<Caption>Contract Information</Caption>
+	</TLabel>	
+	
+	<TLabel>
+		<Name>lbl_ContractIDLabel</Name>
+		<Left>48</Left>
+		<Top>56</Top>
+		<Caption>Contract ID:</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_ContractID</Name>
+		<Left>168</Left>
+		<Top>56</Top>
+		<Caption>lbl_ContractID</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_ContractNameLabel</Name>
+		<Left>48</Left>
+		<Top>80</Top>
+		<Caption>Contract Name:</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_ContractName</Name>
+		<Left>168</Left>
+		<Top>80</Top>
+		<Caption>lbl_ContractName</Caption>
+	</TLabel>
+	
+	<!--  Order information  -->
+	<TLabel>
+		<Name>lbl_OrderInfo</Name>
+		<Left>32</Left>
+		<Top>120</Top>
+		<Caption>Order Information</Caption>
+	</TLabel>	
+	
+	<TLabel>
+		<Name>lbl_OrderIDLabel</Name>
+		<Left>48</Left>
+		<Top>144</Top>
+		<Caption>Order ID:</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_OrderID</Name>
+		<Left>168</Left>
+		<Top>144</Top>
+		<Caption>lbl_OrderID</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_OrderDetailsLabel</Name>
+		<Left>48</Left>
+		<Top>168</Top>
+		<Caption>Details:</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_Quantity</Name>
+		<Left>168</Left>
+		<Top>168</Top>
+		<Caption>lbl_Quantity</Caption>
+	</TLabel>
+			
+	<TLabel>
+		<Name>lbl_Price</Name>
+		<Left>320</Left>
+		<Top>168</Top>
+		<Caption>lbl_Price</Caption>
+	</TLabel>
+
+	<TLabel>
+		<Name>lbl_PeriodLabel</Name>
+		<Left>48</Left>
+		<Top>192</Top>
+		<Caption>Period:</Caption>
+	</TLabel>
+	
+	<TLabel>
+		<Name>lbl_StartDeliveryDate</Name>
+		<Left>168</Left>
+		<Top>192</Top>
+		<Caption>lbl_StartDeliveryDate</Caption>
+	</TLabel>
+			
+	<TLabel>
+		<Name>lbl_EndDeliveryDate</Name>
+		<Left>264</Left>
+		<Top>192</Top>
+		<Caption>lbl_EndDeliveryDate</Caption>
+	</TLabel>
+
+	<TButton>
+		<Name>btn_DownloadXML</Name>
+		<Caption>Download REMIT XML</Caption>
+		<Left>32</Left>
+		<Top>224</Top>
+		<Width>160</Width>
+		<OnClick>btn_DownloadXMLOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>
+				
+
+	<TButton>
+		<Name>btn_DownloadReceipt</Name>
+		<Caption>Download Receipt</Caption>
+		<Left>208</Left>
+		<Top>224</Top>
+		<Width>136</Width>
+		<OnClick>btn_DownloadReceiptOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>
+	
+	<TButton>
+		<Name>btn_Close</Name>
+		<Caption>Close</Caption>
+		<Left>352</Left>
+		<Top>224</Top>
+		<Width>80</Width>
+		<OnClick>btn_CloseOnClick</OnClick>
+		<CSSClass>blue</CSSClass>
+	</TButton>
+				
+</Tfrm_OrderDetailsDLG>

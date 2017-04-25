@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_StorageReportDLG>
+	<Name>frm_StorageReportDLG</Name>
+	<theme>sale</theme>
+
+	<Caption>REMIT Storage Report Definition</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>860</Width>
+	<Height>560</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	<CSSClass>rotund</CSSClass>
+
+	<TLabel>
+		<Name>lbl_StorageFacilityReports</Name>
+		<Left>160</Left>
+		<Top>40</Top>
+		<Caption>Storage Facility Reports</Caption>
+	</TLabel>
+
+	<TDataGrid>
+		<Name>dg_StorageFacilityReports</Name>
+		<Left>160</Left>
+		<Top>72</Top>
+		<Width>540</Width>
+		<Height>96</Height>
+		<ShowFilter>false</ShowFilter>
+	</TDataGrid>
+
+	<TButton>
+		<Name>btn_NewStorageFacilityReport</Name>
+		<Caption>New Report</Caption>]
+		<Left>32</Left>
+		<Top>56</Top>
+		<OnClick>btn_NewStorageFacilityReportOnClick</OnClick>
+	</TButton>
+
+	<TLabel>
+		<Name>lbl_StorageParticipantActivityReports</Name>
+		<Left>160</Left>
+		<Top>186</Top>
+		<Caption>Storage Participant Activity Reports</Caption>
+	</TLabel>
+
+	<TDataGrid>
+		<Name>dg_StorageParticipantActivityReports</Name>
+		<Left>160</Left>
+		<Top>218</Top>
+		<Width>540</Width>
+		<Height>96</Height>
+		<ShowFilter>false</ShowFilter>
+	</TDataGrid>
+
+	<TButton>
+		<Name>btn_NewStorageParticipantActivityReport</Name>
+		<Caption>New Report</Caption>]
+		<Left>32</Left>
+		<Top>202</Top>
+		<OnClick>btn_NewStorageParticipantActivityReportOnClick</OnClick>
+	</TButton>
+
+	<TLabel>
+		<Name>lbl_StorageUnavailabilityReports</Name>
+		<Left>160</Left>
+		<Top>332</Top>
+		<Caption>Storage Unavailability Reports</Caption>
+	</TLabel>
+
+	<TDataGrid>
+		<Name>dg_StorageUnavailabilityReports</Name>
+		<Left>160</Left>
+		<Top>364</Top>
+		<Width>540</Width>
+		<Height>96</Height>
+		<ShowFilter>false</ShowFilter>
+	</TDataGrid>
+
+	<TButton>
+		<Name>btn_NewStorageUnavailabilityReport</Name>
+		<Caption>New Report</Caption>]
+		<Left>32</Left>
+		<Top>348</Top>
+		<OnClick>btn_NewStorageUnavailabilityReportOnClick</OnClick>
+	</TButton>
+
+	<TButton>
+		<Name>btn_Save</Name>
+		<Caption>Save</Caption>]
+		<Left>180</Left>
+		<Top>472</Top>
+		<Width>80</Width>
+		<OnClick>btn_SaveOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>
+
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Caption>Cancel</Caption>]
+		<Left>560</Left>
+		<Top>472</Top>
+		<Width>80</Width>
+		<OnClick>btn_CancelOnClick</OnClick>
+		<CSSClass>red</CSSClass>
+
+	</TButton>
+
+</Tfrm_StorageReportDLG>

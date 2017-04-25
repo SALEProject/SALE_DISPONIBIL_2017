@@ -1,0 +1,150 @@
+input[type='text'].sale_TEdit
+{
+
+	background-color: white;
+	margin-left: 8px;
+	margin-bottom: 0px !important;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #282323;
+	padding: 0px 11px !important;
+	font-size: 13px;
+	font-weight: normal;
+	vertical-align: top;
+	box-shadow: none !important;
+	border-radius: 2px;
+	border: 1px solid #9FA1A3;
+	transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	margin: 0px;
+	box-sizing: border-box;
+
+
+}
+
+input[type='password'].sale_TEdit
+{
+	border-color: #E5E9EC;
+	outline: 0px none !important;
+	box-shadow: none;
+	background-color: #white;
+	margin-left: 8px;
+	margin-bottom: 0px !important;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #282323;
+	padding: 0px 11px !important;
+	font-size: 13px;
+	font-weight: normal;
+	vertical-align: top;
+	box-shadow: none !important;
+	border-radius: 2px;
+	border: 1px solid #9FA1A3;
+	transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	margin: 0px;
+	box-sizing: border-box;
+
+
+}
+
+input[type='text'].sale_TEdit:focus
+{
+
+	outline: 0px none !important;
+	box-shadow: none;
+	background-color: #F4F5F7;
+	margin-left: 8px;
+	margin-bottom: 0px !important;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #282323;
+	font-size: 13px;
+	font-weight: normal;
+	vertical-align: top;
+	box-shadow: none !important;
+	border-radius: 2px;
+	border: 1px solid #E5E9EC;
+	transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	margin: 0px;
+	box-sizing: border-box;
+
+
+}
+
+input[type='password'].sale_TEdit:focus
+{
+	border-color: #E5E9EC;
+	outline: 0px none !important;
+	box-shadow: none;
+	background-color: white;
+	margin-left: 8px;
+	margin-bottom: 0px !important;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #282323;
+	padding: 0px 11px !important;
+	font-size: 13px;
+	font-weight: normal;
+	vertical-align: top;
+	box-shadow: none !important;
+	border-radius: 2px;
+	border: 1px solid #9FA1A3;
+	transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	margin: 0px;
+	box-sizing: border-box;
+
+}
+
+input[type='text'].sale_TEdit.hint
+{
+
+
+	font-size: 12px;
+	font-style: italic;
+	color: lightgray;
+
+
+}
+
+
+input[type='text'].sale_TEdit.required
+{
+
+
+	background-color: #FDF1DB;
+	border-color: #ECAD3C;
+
+
+}
+
+input[type='text'].sale_TEdit.required.verified
+{
+
+
+	background-color: #FFF;
+	border-color: #21C800;
+
+
+}
+
+input[type='text'].sale_TEdit.invalid
+{
+	border:1px solid #f00 !important;
+  	box-shadow:0 0 4px 0 #f00 !important;
+}
+
+input[type='text'].sale_TEdit.required:focus
+{
+	outline: 0px none !important;
+	box-shadow: none;
+	background-color: #F4F5F7;
+	margin-left: 8px;
+	margin-bottom: 0px !important;
+	font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+	color: #282323;
+	font-size: 13px;
+	font-weight: normal;
+	vertical-align: top;
+	box-shadow: none !important;
+	border-radius: 2px;
+	border: 1px solid #E5E9EC;
+	transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+	margin: 0px;
+	box-sizing: border-box;
+
+}

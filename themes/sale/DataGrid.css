@@ -1,0 +1,143 @@
+div.sale_TDataGrid
+{
+}
+
+div.sale_TDataGrid_filter
+{
+	margin: 16px;
+	float: left;
+}
+
+div.sale_TDataGrid_pagination
+{
+	margin: 21px 18px 18px 0px;
+	margin-left: 0px;
+	float: right;
+}
+
+div.sale_TDataGrid_pagination div.sale_TDataGrid_pageposition
+{
+
+}
+
+div.sale_TDataGrid_pagination div.sale_TDataGrid_pages
+{
+
+}
+
+div.sale_TDataGrid_pagination div.sale_TDataGrid_pages a.sale_TDataGrid_page
+{
+	background-color: #FFF;
+	border: 1px solid #C2C5CA;
+	padding: 4px 8px;
+	cursor: pointer;
+	color: #333;
+	margin: 0 2px;
+}
+
+input#frm_StorageReports.dg_StorageReports_reset{
+	display: inline;
+	margin-left: 6px;
+	width: 28px;
+	background-color: rgb(21, 38, 57);
+	color: rgb(255, 255, 255);
+	height: 22px;
+	border: 0px none;
+	cursor: pointer;
+	border-radius: 4px;
+}
+
+div.sale_TDataGrid_pagination div.sale_TDataGrid_pages a.sale_TDataGrid_page.current{
+	background-color: #15266A;
+	color: #fff;
+}
+
+div.sale_TDataGrid table
+{
+
+	color: #576475!important;
+	line-height: 1.42857;
+	vertical-align: top;
+	padding: 6px 12px !important;
+	font-size: 13px;
+	box-sizing: border-box;
+	border-collapse: collapse;
+    border-spacing: 0px;
+    font-family: "Open Sans";
+    font-size: 13px;
+    font-style: normal;
+	font-weight: normal;
+	/*	border-top: 1px solid #C2C5CA;
+	*/
+	display: block;
+	float: left;
+}
+
+div.sale_TDataGrid table tr
+{
+
+}
+
+div.sale_TDataGrid table tr td
+{
+	color: ##576475!important;
+	line-height: 1.42857;
+	vertical-align: top;
+	padding: 6px 12px !important;
+	font-size: 13px;
+	display: table-cell;
+	box-sizing: border-box;
+	border-collapse: collapse;
+    border-spacing: 0px;
+    font-family: "Open Sans";
+    font-size: 13px;
+    font-style: normal;
+	font-weight: normal;
+	border-top: 1px solid #C2C5CA;
+	min-height: 20px;
+}
+
+div.sale_TDataGrid table tr td.alternate
+{
+	background-color: white;
+	color: #576475!important;
+	border-top: 1px solid #C2C5CA;
+	line-height: 1.42857;
+	vertical-align: top;
+	font-size: 13px;
+	display: table-cell;
+	box-sizing: border-box;
+	border-collapse: collapse;
+    border-spacing: 0px;
+    font-family: "Open Sans";
+    font-style: normal;
+	font-weight: normal;
+	padding: 6px 12px !important;
+	min-height: 20px;
+}
+
+
+div.sale_TDataGrid table tr td.fixed
+{
+	display: table-cell;
+	text-transform: uppercase;
+	vertical-align: bottom;
+	border-bottom: 0px none;
+	padding: 9px;
+	cursor: pointer;
+	background-color: white;
+	color: #6F7B8A;
+	border-top: 1px solid #C2C5CA;
+	line-height: 1.42857;
+	vertical-align: top;
+	box-sizing: border-box;
+	border-collapse: collapse;
+    border-spacing: 0px;
+    font-family: "Open Sans";
+    font-style: normal;
+	font-weight: normal;
+	text-align: left;
+	box-sizing: border-box;
+	font-size: 12px;
+	min-height: 20px;
+}

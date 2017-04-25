@@ -1,0 +1,107 @@
+div.sale_TForm
+{
+	background-color: transparent;
+	/*margin: 16px;*/
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	height: 97%;
+
+
+}
+
+div.sale_TForm.rotund
+{
+	background-color: white;
+	margin: 16px;
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+	border-radius: 6px;
+}
+
+div.sale_TForm.morph
+{
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+div.sale_TForm_modal
+{
+	background-color: #888888;
+	opacity: 0.5;
+	filter: alpha(opacity=50); /* For IE8 and earlier */
+}
+
+div.sale_TForm div.sale_TForm_caption
+{
+	display: block;
+	background-color: #444;
+	height: 64px;
+	box-shadow: 0px 0px 20px #444;
+	border-radius: 20px 20px 0px 0px;
+	/*box-shadow: 10px 10px 5px #888888;*/
+	border: 1px solid rgb(68, 68, 68);
+}
+
+div.sale_TForm div.sale_TForm_content
+{
+	border-radius: 0px 0px 20px 20px;
+	border: 1px solid rgb(68, 68, 68);
+	background-color: white;
+	box-shadow: 0px 0px 20px #444;
+	/*box-shadow: 10px 10px 5px #888888;*/
+}
+
+div.sale_TForm a.sale_TForm_close
+{
+	display: block;
+	position: absolute;
+	/*background-color: red;*/
+	background: #ff2d19;
+	right: 12px;
+	top: 0px;
+	width: 24px;
+	height: 16px;
+	border-bottom-right-radius: 5px;
+	border-bottom-left-radius: 5px;
+	border-bottom: 1px solid white;
+	border-right: 1px solid white;
+	border-left: 1px solid white;
+	cursor: pointer;
+	opacity: 0.5;
+}
+
+div.sale_TForm a.sale_TForm_resize
+{
+	display: block;
+	position: absolute;
+	background-color: transparent;
+	/*border: 1px solid black;*/
+	width: 16px;
+	height: 16px;
+}
+
+div.sale_TForm a.sale_TForm_close:hover
+{
+	opacity: 1;
+}
+
+div.sale_TForm span.sale_TForm_caption
+{
+	height: 64px;
+	color: #aaa;
+	position: absolute;
+	left: 16px;
+	top: 20px;
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	font-size: 20px;
+	text-shadow: 14px 2px 0px #444, 0 0 0 black, 14px 0px 0px #444;
+
+}

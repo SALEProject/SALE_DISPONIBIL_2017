@@ -1,0 +1,25 @@
+{
+    "routes": {
+        "slash": {
+            "method": "GET|POST",
+            "route": "\/",
+            "target": "default"
+        },
+        "index": {
+            "method": "GET|POST",
+            "route": "\/index.php",
+            "target": "default"
+        },
+        "rpc": {
+            "method": "GET|POST",
+            "route": "\/rpc",
+            "target": "rpc.php"
+        }
+    },
+    "environment": {
+        "PATH": {
+            "applications": "applications",
+            "sysutils": "sysutils"
+        }
+    }
+}

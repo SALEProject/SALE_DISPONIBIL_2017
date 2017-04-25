@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_XLSHistory>
+	<Name>frm_XLSHistory</Name>
+	<theme>sale</theme>
+	
+	<Caption>XLS Upload History</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>400</Width>
+	<Height>275</Height>
+	<BorderStyle>bsNone</BorderStyle>
+	<Position>poFillContainer</Position>
+	
+	<TButton>
+		<Name>btn_UploadXLS</Name>
+		<Caption>Upload XLS</Caption>]
+		<Left>24</Left>
+		<Top>28</Top>
+		<OnClick>btn_UploadXLSOnClick</OnClick>
+	</TButton>
+		
+	<TDataGrid>
+		<Name>dg_DataSourceHistory</Name>
+		<Left>24</Left>
+		<Top>80</Top>
+		<Width>960</Width>
+		<Height>256</Height>
+		<ColsCount>5</ColsCount>
+		<RowsCount>5</RowsCount>
+		<FixedCols>1</FixedCols>
+		<FixedRows>1</FixedRows>
+		<RowsPerPage>10</RowsPerPage>
+		<OnFilter>dg_DataSourceHistoryOnFilter</OnFilter>
+	</TDataGrid>
+				
+</Tfrm_XLSHistory>

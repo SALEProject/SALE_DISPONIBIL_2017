@@ -1,0 +1,215 @@
+.datepicker-wrapper {
+    display: inline-block;
+    position: relative;
+}
+
+.datepicker-calendar {
+	font-family: "Segoe UI Light_","Open Sans Light",Verdana,Arial,Helvetica,sans-serif;
+	font-size: 12px;
+	background-color: #FFF;
+	color: #333;
+  border-radius: 20px 20px 0px 0px;
+  border: 1px solid #444;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	padding: 2px;
+	display: none;
+	position: absolute;
+  top: 100%;
+	left: 0;
+	z-index: 100;
+}
+
+.open .datepicker-calendar {
+    display: block;
+    border-radius: 12px;
+    padding: 8px;
+}
+
+.datepicker-calendar .datepicker-months {
+	background-color: #444;
+  border-radius: 20px 20px 0px 0px;
+  border: 1px solid #444;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	color: #AAA;
+	padding: 2px;
+	text-align: center;
+    font-size: 120%;
+}
+
+.datepicker-calendar .datepicker-prev-month,
+.datepicker-calendar .datepicker-next-month {
+	color: #fff;
+	text-decoration: none;
+	padding: 0 .4em;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.datepicker-calendar .datepicker-prev-month {
+	float: left;
+}
+
+.datepicker-calendar .datepicker-next-month {
+	float: right;
+}
+
+.datepicker-calendar .datepicker-current-month {
+	padding: 0 .5em;
+}
+
+.datepicker-calendar .datepicker-prev-month:hover,
+.datepicker-calendar .datepicker-next-month:hover {
+	background-color: #fdf5ce;
+	color: #c77405;
+}
+
+.datepicker-calendar table {
+	border-collapse: collapse;
+	padding: 0;
+	width: 100%;
+}
+
+.datepicker-calendar thead {
+    font-size: 90%;
+}
+
+.datepicker-calendar th,
+.datepicker-calendar td {
+    width: 14.3%;
+}
+
+.datepicker-calendar th {
+	text-align: center;
+    padding: 5px;
+}
+
+.datepicker-calendar td {
+	text-align: right;
+	padding: 1px;
+}
+
+.datepicker-calendar .datepicker-day {
+	display: block;
+	color: #6F7B8A;
+	background-color: #FFF;
+	border: 1px solid #ccc;
+	padding: 5px;
+	cursor: pointer;
+}
+
+.datepicker-calendar .datepicker-day:hover {
+	color: #C77405;
+	background-color: #fdf5ce;
+	border: 1px solid #fbcb09;
+}
+
+.datepicker-calendar .today .datepicker-day {
+	background-color: #fff0A5;
+	border: 1px solid #fed22f;
+	color: #363636;
+}
+
+.datepicker-calendar .selected .datepicker-day {
+	background-color: #394A5D;
+	color: #f6f6f6;
+}
+
+.datepicker-calendar .disabled .datepicker-day,
+.datepicker-calendar .disabled .datepicker-day:hover {
+    background-color: #FFF;
+    border: 1px dotted #ccc;
+    color: #bbb;
+    cursor: default;
+}
+
+
+input.sale_TDatePicker.required.hint{
+  font-size: 12px;
+  font-style: italic;
+  color: lightgray;
+  background-color: #FDF1DB;
+	border-color: #ECAD3C;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-size: 13px;
+  font-weight: normal;
+  vertical-align: top;
+  box-shadow: none !important;
+  border-radius: 2px;
+  border: 1px solid #ECAD3C;
+  transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  margin: 0px;
+  box-sizing: border-box;
+  padding: 6px 11px !important;
+}
+
+input.sale_TDatePicker.required{
+margin-bottom: 0px !important;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+color: #282323;
+padding: 6px 11px !important;
+font-size: 13px;
+font-weight: normal;
+vertical-align: top;
+box-shadow: none !important;
+border-radius: 2px;
+border: 1px solid #9FA1A3;
+transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+margin-top: 0px;
+margin-right: 0px;
+margin-left: 0px;
+box-sizing: border-box;
+background-color: #FDF1DB !important;
+border-color: #ECAD3C !important;
+}
+
+input.sale_TDatePicker.required:focus{
+outline: 0px none !important;
+background-color: #F4F5F7 !important;
+margin-bottom: 0px !important;
+font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+color: #282323;
+font-size: 13px;
+font-weight: normal;
+vertical-align: top;
+box-shadow: none !important;
+border-radius: 2px;
+border: 1px solid #E5E9EC !important;
+transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+margin-top: 0px;
+margin-right: 0px;
+margin-left: 0px;
+box-sizing: border-box;
+}
+
+input.sale_TDatePicker.required.hint:focus{
+
+  outline: 0px none !important;
+  background-color: #F4F5F7 !important;
+  margin-bottom: 0px !important;
+  font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+  color: #282323;
+  font-size: 13px;
+  font-weight: normal;
+  vertical-align: top;
+  box-shadow: none !important;
+  border-radius: 2px;
+  border: 1px solid #E5E9EC !important;
+  transition: background 0.2s linear 0s, box-shadow 0.2s linear 0s;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-left: 0px;
+  box-sizing: border-box;
+}
+
+
+input[type='text'].sale_TDatePicker.required.verified
+{
+	background-color: #FFF !important;
+	border-color: #21C800 !important;
+}

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_MainLogin>
+	<Name>frm_MainLogin</Name>
+	<theme>bitnova</theme>
+	
+	<Caption>User Login</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>352</Width>
+	<Height>200</Height>
+	<BorderStyle>bsSizeable</BorderStyle>
+	<Position>poScreenCenter</Position>
+	
+	<TImage>
+		<Name>Image1</Name>
+		<Left>16</Left>
+		<Top>32</Top>
+		<Width>64</Width>
+		<Height>64</Height>
+		<Picture>user.png</Picture>
+	</TImage>
+	
+	<TLabel>
+		<Name>Label1</Name>
+		<Caption>User Name:</Caption>
+		<Left>96</Left>
+		<Top>37</Top>
+		<CSSClass>text-large</CSSClass>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_UserName</Name>
+		<Left>184</Left>
+		<Top>32</Top>
+		<Width>152</Width>
+		<Height>24</Height>		
+		<Text></Text>
+		<CSSClass>text-large</CSSClass>
+		<Hint>username</Hint>
+		<Password>false</Password>
+	</TEdit>
+			
+	<TLabel>
+		<Name>Label2</Name>
+		<Caption>Password:</Caption>
+		<Left>96</Left>
+		<Top>69</Top>
+		<CSSClass>text-large</CSSClass>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_Password</Name>
+		<Left>184</Left>
+		<Top>64</Top>
+		<Width>152</Width>
+		<Height>24</Height>		
+		<Text></Text>
+		<CSSClass>text-large</CSSClass>
+		<Hint>password</Hint>
+		<Password>true</Password>
+	</TEdit>
+
+	<TBevel>
+		<Name>Bevel1</Name>
+		<Left>16</Left>
+		<Top>120</Top>
+		<Width>320</Width>
+		<Height>8</Height>
+		<Shape>bsBottomLine</Shape>
+	</TBevel>
+	
+	<TButton>
+		<name>btn_Login</name>
+		<Caption>Login</Caption>
+		<Left>256</Left>
+		<Top>144</Top>
+		<CSSClass>large default</CSSClass>
+		
+		<OnClick>btn_Login_OnClick</OnClick>
+	</TButton>
+
+</Tfrm_MainLogin>

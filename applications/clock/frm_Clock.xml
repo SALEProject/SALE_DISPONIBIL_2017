@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_Clock>
+	<Name>frm_Clock</Name>
+	<theme>bitnova</theme>
+	
+	<Caption>Clock</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>304</Width>
+	<Height>320</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poDesigned</Position>
+
+</Tfrm_Clock>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_TicTacToe>
+	<name>frm_TicTacToe</name>
+	<theme>bitnova</theme>
+	
+	<Caption>Tic Tac Toe</Caption>
+	<Left>200</Left>
+	<Top>200</Top>
+	<Width>320</Width>
+	<Height>320</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poDesigned</Position>
+	
+	<TButton>
+		<name>btn_New</name>
+		<Caption>New Game</Caption>
+		<Left>8</Left>
+		<Top>16</Top>
+	</TButton>
+		
+	<TButton>
+		<name>btn_Close</name>
+		<Caption>Close</Caption>
+		<Left>8</Left>
+		<Top>48</Top>
+	</TButton>
+		
+	
+	
+</Tfrm_TicTacToe>

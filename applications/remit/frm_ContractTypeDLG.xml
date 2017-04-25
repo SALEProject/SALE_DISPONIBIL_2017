@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_ContractTypeDLG>
+	<Name>frm_ContractTypeDLG</Name>
+	<theme>sale</theme>
+	
+	<Caption>REMIT Contract Type Definition</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>464</Width>
+	<Height>300</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	<CSSClass>rotund</CSSClass>
+
+	<TLabel>
+		<Name>lbl_Code</Name>
+		<Left>32</Left>
+		<Top>32</Top>
+		<Caption>Code:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_Code</Name>
+		<Left>32</Left>
+		<Top>56</Top>
+		<Width>400</Width>
+		<Height>36</Height>
+		<Hint>Code</Hint>
+		<CSSClass>required</CSSClass>
+	</TEdit>	
+
+	<TLabel>
+		<Name>lbl_Name</Name>
+		<Left>32</Left>
+		<Top>96</Top>
+		<Caption>Contract Type:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_ContractType</Name>
+		<Left>32</Left>
+		<Top>120</Top>
+		<Width>400</Width>
+		<Height>36</Height>
+		<Hint>Contract Type</Hint>
+		<CSSClass>required</CSSClass>
+	</TEdit>
+	
+	<TCheckBox>
+		<Name>ckb_enableTable1</Name>
+		<Left>32</Left>
+		<Top>168</Top>
+		<Caption>Table 1</Caption>
+	</TCheckBox>
+	
+	<TCheckBox>
+		<Name>ckb_enableTable2</Name>
+		<Left>160</Left>
+		<Top>168</Top>
+		<Caption>Table 2</Caption>
+	</TCheckBox>
+	
+	
+	<TButton>
+		<Name>btn_Save</Name>
+		<Caption>Save</Caption>]
+		<Left>100</Left>
+		<Top>210</Top>
+		<Width>80</Width>
+		<OnClick>btn_SaveOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>
+		
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Caption>Cancel</Caption>]
+		<Left>264</Left>
+		<Top>210</Top>
+		<Width>80</Width>
+		<OnClick>btn_CancelOnClick</OnClick>
+		<CSSClass>red</CSSClass>
+		
+	</TButton>
+				
+</Tfrm_ContractTypeDLG>

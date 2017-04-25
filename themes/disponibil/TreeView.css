@@ -1,0 +1,123 @@
+div.disponibil_TTreeView 
+{
+	user-select: none;
+	/*margin: 50px auto 0;*/
+ 	/*background: #f5f5f5;*/
+ 	padding: 8px;
+ 	/*border-radius: 3px;
+ 	border: solid 1px #777;
+ 	box-shadow: 0 0 -3px #333;*/
+	overflow: auto;
+}
+ 
+ul.disponibil_TTreeView, ul.default_TTreeView li
+{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+	display: inline-block;
+	position: relative;
+	wdth: 100%;
+	float: left;
+}
+
+ul.disponibil_TTreeView_items
+{
+	padding-left: 16px;
+}				
+ 
+ul.disponibil_TTreeView li input
+{
+    position: absolute;
+    opacity: 0;
+}
+ 
+ul.disponibil_TTreeView li label
+{
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+	background: url('http://experiments.wemakesites.net//pages/css3-treeview/example/icons.png') no-repeat;
+	cursor: pointer;
+    background-position: 18px 0;
+}
+
+ul.disponibil_TTreeView li label::before
+{
+    background: url('http://experiments.wemakesites.net//pages/css3-treeview/example/icons.png') no-repeat;
+	cursor: pointer;
+    display: inline-block;
+    height: 16px;
+    line-height: 16px;
+    vertical-align: middle;
+				
+    content: '';
+    width: 16px;
+    margin: 0 22px 0 0;
+    vertical-align: middle;
+    background-position: 0 -32px;
+}
+
+ul.disponibil_TTreeView li a
+{
+ 	/*display: inline-block;*/
+	height: 16px;
+	line-height: 16px;
+	vertical-align: middle;
+	color: #35d;
+	text-decoration: none;
+	padding-left: 24px;
+}
+ 
+ul.disponibil_TTreeView li a:hover
+{
+    text-decoration: underline;
+}
+ 
+/*ul.disponibil_TTreeView li input + label + ul
+{
+    margin: 0 0 0 22px;
+}*/
+ 
+ul.disponibil_TTreeView li input ~ ul
+{
+    display: none;
+	padding-left: 16px;
+}
+ 
+ul.disponibil_TTreeView li input:disabled + label
+{
+    cursor: default;
+    opacity: .6;
+}
+ 
+ul.disponibil_TTreeView li input:checked:not(:disabled) ~ ul
+{
+    display: block;
+}
+
+ul.disponibil_TTreeView li input:checked + label::before
+{
+    background-position: 0 -16px;
+}
+
+/*@media screen and (-webkit-min-device-pixel-ratio:0)
+{
+    .css-treeview 
+    {
+        -webkit-animation: webkit-adjacent-element-selector-bugfix infinite 1s;
+    }
+ 
+    @-webkit-keyframes webkit-adjacent-element-selector-bugfix 
+    {
+        from 
+        { 
+            padding: 0;
+        } 
+        to 
+        { 
+            padding: 0;
+        }
+    }
+}*/

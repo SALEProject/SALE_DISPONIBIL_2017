@@ -1,0 +1,51 @@
+span.sale_TLabel
+{
+	display: block;
+	margin-bottom: 5px;
+	font-family: "Open Sans";
+	font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  box-sizing: border-box;
+  color: #6F7B8A;
+}
+
+span.sale_TLabel.white
+{
+	display: block;
+	margin-bottom: 5px;
+	font-family: "Open Sans";
+	font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
+  box-sizing: border-box;
+  color: #6F7B8A;
+	background: white;
+	/*padding-left: 8px;*/
+	padding-right: 8px;
+}
+
+}
+
+span.sale_TLabel.active
+{
+	font-family: "Open Sans";
+	font-size: 24px;
+	font-weight: 600;
+	margin-left: 0px;
+	color: #515050;
+	background: transparent none repeat scroll 0% 0%;
+
+}
+
+
+span.sale_TLabel.formcaption
+{
+	font-family: "Open Sans";
+	font-size: 32px;
+	font-weight: 600;
+	margin-left: 0px;
+	color: #515050;
+	background: transparent none repeat scroll 0% 0%;
+
+}

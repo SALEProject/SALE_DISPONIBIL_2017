@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_AssetsView>
+	<Name>frm_AssetsView</Name>
+	<theme>disponibil</theme>
+	
+	<Caption>Assets View</Caption>
+	<Left>32</Left>
+	<Top>60</Top>
+	<Width>280</Width>
+	<Height>160</Height>
+	<BorderStyle>bsSingle</BorderStyle>
+	<Position>poFillContainer</Position>
+	<CustomTarget>column_left</CustomTarget>
+	
+	<TLabel>
+		<Name>lbl_FormCaption</Name>
+		<Left>8</Left>
+		<Top>8</Top>
+		<Caption>Active disponibile</Caption>
+		<CSSClass>formcaption</CSSClass>
+	</TLabel>
+		
+	<TTreeView>
+		<Name>tv_Assets</Name>
+		<Left>8</Left>
+		<Top>32</Top>
+		<Width>256</Width>
+		<!-- <Height>296</Height> -->
+		<OnChange>tv_AssetsOnChange</OnChange>
+	</TTreeView>
+	
+</Tfrm_AssetsView>

@@ -1,0 +1,956 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_NonStandardContractReportDLG>
+	<Name>frm_NonStandardContractReportDLG</Name>
+	<theme>sale</theme>
+
+	<Caption>REMIT Table 2 Report</Caption>
+	<Left>64</Left>
+	<Top>56</Top>
+	<Width>824</Width>
+	<Height>562</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	<CSSClass>rotund</CSSClass>
+
+	<TPageControl>
+		<Name>pc_NonStandardContractReport</Name>
+		<Left>0</Left>
+		<Top>16</Top>
+		<Width>820</Width>
+		<Height>528</Height>
+		<CSSClass>required</CSSClass>
+
+		<TTabSheet>
+			<Name>tab_General</Name>
+			<Caption>General</Caption>
+			<Left>0</Left>
+			<Top>16</Top>
+			<Width>820</Width>
+			<Height>528</Height>
+			<CSSClass>required</CSSClass>
+
+			<TLabel>
+				<Name>lbl_ContractID</Name>
+				<Left>32</Left>
+				<Top>32</Top>
+				<Caption>Contract ID:</Caption>
+			</TLabel>
+
+			<TEdit>
+				<Name>ed_ContractID</Name>
+				<Left>206</Left>
+				<Top>32</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Contract ID</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^[a-zA-Z0-9]+$</Mask>
+			</TEdit>
+
+			<TLabel>
+				<Name>lbl_ContractType</Name>
+				<Left>440</Left>
+				<Top>32</Top>
+				<Caption>Contract Type:</Caption>
+			</TLabel>
+
+			<TComboBox>
+				<Name>cb_ContractType</Name>
+				<Left>620</Left>
+				<Top>32</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Contract Type</Hint>
+				<CSSClass>required</CSSClass>
+				<DataField>Name</DataField>
+				<KeyField>ID</KeyField>
+			</TComboBox>
+
+			<!-- <TLabel>
+				<Name>lbl_ContractName</Name>
+				<Left>32</Left>
+				<Top>64</Top>
+				<Caption>Contract Name:</Caption>
+			</TLabel>
+
+			<TComboBox>
+				<Name>cb_ContractName</Name>
+				<Left>206</Left>
+				<Top>64</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Contract Name</Hint>
+				<CSSClass>required</CSSClass>
+				<DataField>Name</DataField>
+		        <KeyField>ID</KeyField>
+			</TComboBox> -->
+
+			<TLabel>
+				<Name>lbl_ActionType</Name>
+				<Left>440</Left>
+				<Top>64</Top>
+				<Caption>Action Type:</Caption>
+			</TLabel>
+
+			<TComboBox>
+				<Name>cb_ActionType</Name>
+				<Left>620</Left>
+				<Top>64</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>ActionType</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>New, Modify, Error, Cancel</Items>
+			</TComboBox>
+
+			<!-- <TLabel>
+				<Name>lbl_EnergyCommodity</Name>
+				<Left>440</Left>
+				<Top>52</Top>
+				<Caption>Energy Commodity: </Caption>
+			</TLabel>
+
+			<TComboBox>
+				<Name>cb_EnergyCommodityType</Name>
+				<Left>620</Left>
+				<Top>52</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Energy Commodity Type</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>EL, NG</Items>
+			</TComboBox> -->
+
+			<TLabel>
+				<Name>lbl_ContractDate</Name>
+				<Left>32</Left>
+				<Top>64</Top>
+				<Caption>Contract Date:</Caption>
+			</TLabel>
+
+			<TDatePicker>
+				<Name>dp_ContractDate</Name>
+				<Left>206</Left>
+				<Top>64</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Contract Date</Hint>
+				<CSSClass>required</CSSClass>
+			</TDatePicker>
+
+			<TLabel>
+				<Name>lbl_PointOrZone</Name>
+				<Left>440</Left>
+				<Top>96</Top>
+				<Caption>Delivery Point Or Zone:</Caption>
+			</TLabel>
+
+			<TEdit>
+				<Name>ed_DeliveryPointOrZone</Name>
+				<Left>620</Left>
+				<Top>96</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Delivery Point Or Zone</Hint>
+				<CSSClass>required</CSSClass>
+				<!-- <Mask>^[0-9][0-9][XYZTWV].+$</Mask> -->
+			</TEdit>
+
+
+		<!-- <TEdit>
+				<Name>ed_ContractDate</Name>
+				<Left>300</Left>
+				<Top>88</Top>
+				<Height>24</Height>
+				<Width>74</Width>
+				<Hint>06:00:00</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^[0-9:]+$</Mask>
+			</TEdit> -->
+
+			<TBevel>
+				<Name>BevelContractParts</Name>
+				<Left>32</Left>
+				<Top>150</Top>
+				<Width>756</Width>
+				<Height>4</Height>
+				<Shape>bsBottomLine</Shape>
+			</TBevel>
+
+			<TLabel>
+				<Name>lbl_ContractParts</Name>
+				<Left>32</Left>
+				<Top>144</Top>
+				<Caption> Contract Parts </Caption>
+				<CSSClass>white</CSSClass>
+			</TLabel>
+
+
+			<TLabel>
+				<Name>lbl_ParticipantID</Name>
+				<Left>32</Left>
+				<Top>188</Top>
+				<Caption>Participant ID: </Caption>
+			</TLabel>
+
+			<TEdit>
+				<Name>ed_ParticipantID</Name>
+				<Left>206</Left>
+				<Top>188</Top>
+				<Width>100</Width>
+				<Height>24</Height>
+				<Hint>Participant ID</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^[a-zA-Z.0-9]+$</Mask>
+			</TEdit>
+
+			<TComboBox>
+				<Name>cb_ParticipantIDType</Name>
+				<Left>310</Left>
+				<Top>188</Top>
+				<Width>66</Width>
+				<Height>24</Height>
+				<Hint>Participant ID Type</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>ACER, LEI, BIC, EIC, GLN/GS1</Items>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_CounterpartID</Name>
+				<Left>440</Left>
+				<Top>188</Top>
+				<Caption>Counterpart ID:</Caption>
+			</TLabel>
+
+			<TEdit>
+				<Name>ed_CounterpartID</Name>
+				<Left>620</Left>
+				<Top>188</Top>
+				<Width>100</Width>
+				<Height>24</Height>
+				<Hint>Counterpart Part. ID</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^[a-zA-Z.0-9]+$</Mask>
+			</TEdit>
+
+			<TComboBox>
+				<Name>cb_CounterpartIDType</Name>
+				<Left>724</Left>
+				<Top>188</Top>
+				<Width>66</Width>
+				<Height>24</Height>
+				<Hint>Counterpart ID Type</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>ACER, LEI, BIC, EIC, GLN/GS1</Items>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_BuySell</Name>
+				<Left>32</Left>
+				<Top>220</Top>
+				<Caption>Buy/Sell:</Caption>
+			</TLabel>
+
+			<TComboBox>
+				<Name>cb_BuySell</Name>
+				<Left>206</Left>
+				<Top>220</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Buy/Sell:</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>Buy, Sell, Buy and Sell</Items>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_BeneficiaryID</Name>
+				<Left>440</Left>
+				<Top>220</Top>
+				<Caption>Beneficiary ID:</Caption>
+			</TLabel>
+
+			<TEdit>
+				<Name>ed_BeneficiaryID</Name>
+				<Left>620</Left>
+				<Top>220</Top>
+				<Width>100</Width>
+				<Height>24</Height>
+				<Hint>Beneficiary ID</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^[a-zA-Z.0-9]+$</Mask>
+			</TEdit>
+
+			<TComboBox>
+				<Name>cb_BeneficiaryIDType</Name>
+				<Left>724</Left>
+				<Top>220</Top>
+				<Width>66</Width>
+				<Height>24</Height>
+				<Hint>Beneficiary ID Type</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>ACER, LEI, BIC, EIC, GLN/GS1</Items>
+			</TComboBox>
+
+		</TTabSheet>
+
+		<TTabSheet>
+			<Name>tab_Trades</Name>
+			<Caption>Trades</Caption>
+			<Left>0</Left>
+			<Top>16</Top>
+			<Width>824</Width>
+			<Height>720</Height>
+			<CssClass>required</CssClass>
+
+			<TLabel>
+				<Name>lbl_DeliveryStartDate</Name>
+				<Left>32</Left>
+				<Top>32</Top>
+				<Caption>Delivery Start Date: </Caption>
+			</TLabel>
+
+			<!-- 	<TEdit>
+				<Name>ed_DeliveryStartDate</Name>
+				<Left>192</Left>
+				<Top>472</Top>
+				<Width>128</Width>
+				<Height>24</Height>
+				<Hint>Delivery Start Date</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^(\d{4})-(\d{2})-(\d{2})+$</Mask>
+			</TEdit> -->
+
+			<TDatePicker>
+				<Name>dp_DeliveryStartDate</Name>
+				<Left>206</Left>
+				<Top>32</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Delivery Start Date</Hint>
+				<CSSClass>required</CSSClass>
+			</TDatePicker>
+
+
+			<TLabel>
+				<Name>lbl_DeliveryEndDate</Name>
+				<Left>440</Left>
+				<Top>32</Top>
+				<Caption>Delivery End Date:</Caption>
+			</TLabel>
+
+			<!-- 	<TEdit>
+				<Name>ed_DeliveryEndDate</Name>
+				<Left>576</Left>
+				<Top>472</Top>
+				<Width>128</Width>
+				<Height>24</Height>
+				<Hint>Delivery End Date</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^(\d{4})-(\d{2})-(\d{2})+$</Mask>
+			</TEdit> -->
+
+			<TDatePicker>
+				<Name>dp_DeliveryEndDate</Name>
+				<Left>620</Left>
+				<Top>32</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Delivery End Date</Hint>
+				<CSSClass>required</CSSClass>
+			</TDatePicker>
+
+			<!-- <TLabel>
+				<Name>lbl_Volume</Name>
+				<Left>32</Left>
+				<Top>64</Top>
+				<Caption>Volume:</Caption>
+			</TLabel>
+
+			<TEdit>
+				<Name>ed_Volume</Name>
+				<Left>206</Left>
+				<Top>64</Top>
+				<Width>100</Width>
+				<Height>24</Height>
+				<Hint>Volume</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^[0-9.]+$</Mask>
+			</TEdit> 
+
+			<TComboBox>
+				<Name>cb_VolumeMU</Name>
+				<Left>310</Left>
+				<Top>64</Top>
+				<Width>66</Width>
+				<Height>24</Height>
+				<Hint>Measuring Unit</Hint>
+				<CSSClass>required</CSSClass>
+				<DataField>NameTR</DataField>
+				<KeyField>ID</KeyField>
+			</TComboBox> -->
+
+			<TLabel>
+				<Name>lbl_LoadType</Name>
+				<Left>440</Left>
+				<Top>64</Top>
+				<Caption>Load Type:</Caption>
+			</TLabel>
+
+			<TComboBox>
+				<Name>cb_LoadType</Name>
+				<Left>620</Left>
+				<Top>64</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Load Type</Hint>
+				<CSSClass>required</CSSClass>
+				<DataField>Name</DataField>
+						<KeyField>ID</KeyField>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_Volumeity</Name>
+				<Left>32</Left>
+				<Top>96</Top>
+				<Caption>Volume Optionality: </Caption>
+			</TLabel>
+
+			<TComboBox>
+				<Name>cb_VolumeOptionality</Name>
+				<Left>206</Left>
+				<Top>96</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Volume Optionality</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>V, F, C, M, O</Items>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_VolumeOptionalityFrequency</Name>
+				<Left>440</Left>
+				<Top>96</Top>
+				<Caption>Volume Opt. Frequency: </Caption>
+			</TLabel>
+
+			<TComboBox>
+				<Name>cb_VolumeOptionalityFrequency</Name>
+				<Left>620</Left>
+				<Top>96</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Volume Optionality Frequency</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>X, H, D, W, M, Q, S, A, O</Items>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_TypeOfIndexPrice</Name>
+				<Left>32</Left>
+				<Top>128</Top>
+				<Caption>Price Index Type: </Caption>
+			</TLabel>
+
+			<TComboBox>
+				<Name>cb_TypeOfIndexPrice</Name>
+				<Left>206</Left>
+				<Top>128</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Volume Optionality</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>F, I, C, O</Items>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_Price</Name>
+				<Left>32</Left>
+				<Top>160</Top>
+				<Caption>Price:</Caption>
+			</TLabel>
+
+			<TEdit>
+				<Name>ed_Price</Name>
+				<Left>206</Left>
+				<Top>160</Top>
+				<Width>100</Width>
+				<Height>24</Height>
+				<Hint>Price</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^[0-9.]+$</Mask>
+
+			</TEdit>
+
+			<TComboBox>
+				<Name>cb_PriceCurrency</Name>
+				<Left>310</Left>
+				<Top>160</Top>
+				<Width>66</Width>
+				<Height>24</Height>
+				<Hint>Currency</Hint>
+				<CSSClass>required</CSSClass>
+				<DataField>NameTR</DataField>
+		        <KeyField>ID</KeyField>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_PriceFormula</Name>
+				<Left>440</Left>
+				<Top>160</Top>
+				<Caption>Price Formula:</Caption>
+			</TLabel>
+
+			<TEdit>
+				<Name>ed_PriceFormula</Name>
+				<Left>620</Left>
+				<Top>160</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Price Formula</Hint>
+				<CSSClass>required</CSSClass>
+				<!-- <Mask>^[0-9.]+$</Mask> -->
+			</TEdit>
+
+
+			<TLabel>
+				<Name>lbl_NotionalAmount</Name>
+				<Left>32</Left>
+				<Top>192</Top>
+				<Caption>Notional Amount:</Caption>
+			</TLabel>
+
+			<TEdit>
+				<Name>ed_NotionalAmount</Name>
+				<Left>206</Left>
+				<Top>192</Top>
+				<Width>100</Width>
+				<Height>24</Height>
+				<Hint>Notional Amount</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^(|[0-9.]+)$</Mask>
+			</TEdit>
+
+			<TComboBox>
+				<Name>cb_NotionalAmountCurrency</Name>
+				<Left>310</Left>
+				<Top>192</Top>
+				<Width>66</Width>
+				<Height>24</Height>
+				<Hint>Currency</Hint>
+				<CSSClass>required</CSSClass>
+				<DataField>NameTR</DataField>
+		        <KeyField>ID</KeyField>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_NotionalQuantity</Name>
+				<Left>440</Left>
+				<Top>192</Top>
+				<Caption>Notional Quantity:</Caption>
+			</TLabel>
+
+			<TEdit>
+				<Name>ed_TotalNotionalQuantity</Name>
+				<Left>620</Left>
+				<Top>192</Top>
+				<Width>100</Width>
+				<Height>24</Height>
+				<Hint>Notional Quantity</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^(|[0-9.]+)$</Mask>
+			</TEdit>
+
+			<TComboBox>
+				<Name>cb_NotionalQuantityMU</Name>
+				<Left>724</Left>
+				<Top>192</Top>
+				<Width>66</Width>
+				<Height>24</Height>
+				<Hint>Measuring Unit</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>KWh, MWh, GWh, Therm, KTherm, MTherm, cm, mcm, Btu, MMBtu, MJ, MMJ, 100MJ, GJ</Items>
+				<DataField>NameTR</DataField>
+		        <KeyField>ID</KeyField>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_SettlementMethod</Name>
+				<Left>32</Left>
+				<Top>224</Top>
+				<Caption>Settlement Method: </Caption>
+			</TLabel>
+
+			<TComboBox>
+				<Name>cb_SettlementMethod</Name>
+				<Left>206</Left>
+				<Top>224</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Settlement Method</Hint>
+				<CSSClass>required</CSSClass>
+				<Items>P, C, O</Items>
+			</TComboBox>
+
+			<TLabel>
+				<Name>lbl_TradingCapacity</Name>
+				<Left>440</Left>
+				<Top>224</Top>
+				<Caption>Trading Capacity:</Caption>
+			</TLabel>
+
+			<!-- <TEdit>
+				<Name>ed_TradingCapacity</Name>
+				<Left>620</Left>
+				<Top>224</Top>
+				<Width>100</Width>
+				<Height>24</Height>
+				<Hint>Trading Capacity</Hint>
+				<CSSClass>required</CSSClass>
+				<Mask>^[0-9.]+$</Mask>
+			</TEdit>-->
+
+			<TComboBox>
+				<Name>cb_TradingCapacityType</Name>
+				<Left>620</Left>
+				<Top>224</Top>
+				<Width>170</Width>
+				<Height>24</Height>
+				<Hint>Trading Capacity Type</Hint>
+				<CSSClass>required</CSSClass>
+		        <Items>P, A</Items>
+			</TComboBox>
+
+		</TTabSheet>
+
+		<TTabSheet>
+			<Name>tab_Volumes</Name>
+			<Caption>Volume Optionality Intervals</Caption>
+			<Left>0</Left>
+			<Top>16</Top>
+			<Width>820</Width>
+			<Height>528</Height>
+			<CSSClass>required</CSSClass>
+
+			<TLabel>
+				<Name>lbl_VolumesDescription</Name>
+				<Caption>Current list of Volume Optionality Intervals</Caption>
+				<Left>32</Left>
+				<Top>32</Top>
+			</TLabel>
+
+			<TDataGrid>
+				<Name>dg_Volumes</Name>
+				<Left>32</Left>
+				<Top>56</Top>
+				<Width>640</Width>
+				<Height>240</Height>
+				<ShowFilter>false</ShowFilter>
+			</TDataGrid>
+
+			<TButton>
+				<Name>btn_NewVolume</Name>
+				<Caption>Add</Caption>
+				<Left>32</Left>
+				<Top>280</Top>
+				<Width>80</Width>
+				<OnClick>btn_NewVolumeOnClick</OnClick>
+			</TButton>
+
+			<TPanel>
+				<Name>pnl_VolumeOptionality</Name>
+				<Left>120</Left>
+				<Top>280</Top>
+				<Width>480</Width>
+				<Height>140</Height>
+				<Visible>false</Visible>
+
+				<TLabel>
+					<Name>lbl_Capacity</Name>
+					<Left>32</Left>
+					<Top>16</Top>
+					<Caption>Capacity:</Caption>
+				</TLabel>
+
+				<TEdit>
+					<Name>ed_Capacity</Name>
+					<Left>206</Left>
+					<Top>16</Top>
+					<Width>100</Width>
+					<Height>24</Height>
+					<Hint>Capacity</Hint>
+					<CSSClass>required</CSSClass>
+					<Mask>^[0-9.]+$</Mask>
+				</TEdit>
+
+				<TComboBox>
+					<Name>cb_CapacityMU</Name>
+					<Left>310</Left>
+					<Top>16</Top>
+					<Width>66</Width>
+					<Height>24</Height>
+					<Hint>Measuring Unit</Hint>
+					<CSSClass>required</CSSClass>
+			        <Items>KW, KWh/h, KWh/d, MW, MWh/h, MWh/d, GW, GWh/h, GWh/d, Therm/d, KTherm/d, MTherm/d, cm/d, mcm/d, Btu/d, MMBtu/d, MJ/d, 100MJ/d, MMJ/d, GJ/d</Items>
+				</TComboBox>
+
+				<TLabel>
+					<Name>lbl_StartDate</Name>
+					<Left>32</Left>
+					<Top>48</Top>
+					<Caption>Start Date: </Caption>
+				</TLabel>
+
+				<TDatePicker>
+					<Name>dp_StartDate</Name>
+					<Left>206</Left>
+					<Top>48</Top>
+					<Width>170</Width>
+					<Height>24</Height>
+					<Hint>Start Date</Hint>
+					<CSSClass>required</CSSClass>
+				</TDatePicker>
+
+
+				<TLabel>
+					<Name>lbl_EndDate</Name>
+					<Left>32</Left>
+					<Top>82</Top>
+					<Caption>End Date:</Caption>
+				</TLabel>
+
+				<TDatePicker>
+					<Name>dp_EndDate</Name>
+					<Left>206</Left>
+					<Top>82</Top>
+					<Width>170</Width>
+					<Height>24</Height>
+					<Hint>End Date</Hint>
+					<CSSClass>required</CSSClass>
+				</TDatePicker>
+
+				<TButton>
+					<Name>btn_SaveVolume</Name>
+					<Caption>Save</Caption>
+					<Left>384</Left>
+					<Top>16</Top>
+					<Width>88</Width>
+					<OnClick>btn_SaveVolumeOnClick</OnClick>
+				</TButton>
+
+				<TButton>
+					<Name>btn_CancelVolume</Name>
+					<Caption>Cancel</Caption>
+					<Left>384</Left>
+					<Top>64</Top>
+					<Width>88</Width>
+					<OnClick>btn_CancelVolumeOnClick</OnClick>
+				</TButton>
+
+			</TPanel>
+
+		</TTabSheet>
+
+
+
+
+		<TTabSheet>
+			<Name>tab_Fixings</Name>
+			<Caption>Fixing Index Details</Caption>
+			<Left>0</Left>
+			<Top>16</Top>
+			<Width>824</Width>
+			<Height>720</Height>
+			<CSSClass>required</CSSClass>
+
+			<TLabel>
+				<Name>lbl_FixingsDescription</Name>
+				<Caption>Current list of Fixing Indeces</Caption>
+				<Left>32</Left>
+				<Top>32</Top>
+			</TLabel>
+
+			<TDataGrid>
+				<Name>dg_Fixings</Name>
+				<Left>32</Left>
+				<Top>56</Top>
+				<Width>720</Width>
+				<Height>240</Height>
+				<ShowFilter>false</ShowFilter>
+			</TDataGrid>
+
+			<TButton>
+				<Name>btn_NewFixing</Name>
+				<Caption>Add</Caption>
+				<Left>32</Left>
+				<Top>280</Top>
+				<Width>80</Width>
+				<OnClick>btn_NewFixingOnClick</OnClick>
+			</TButton>
+
+			<TPanel>
+				<Name>pnl_FixingDetails</Name>
+				<Left>120</Left>
+				<Top>280</Top>
+				<Width>664</Width>
+				<Height>180</Height>
+				<Visible>false</Visible>
+
+				<TLabel>
+					<Name>lbl_FixingIndex</Name>
+					<Left>16</Left>
+					<Top>16</Top>
+					<Caption>Fixing Index:</Caption>
+				</TLabel>
+
+				<TEdit>
+					<Name>ed_FixingIndex</Name>
+					<Left>176</Left>
+					<Top>16</Top>
+					<Width>144</Width>
+					<Height>24</Height>
+					<Hint>Fixing Index</Hint>
+					<CSSClass>required</CSSClass>
+					<Mask>^[A-Za-z0-9_ -]+$</Mask>
+				</TEdit>
+
+				<TLabel>
+					<Name>lbl_FirstFixingDate</Name>
+					<Left>344</Left>
+					<Top>16</Top>
+					<Caption>First Fixing Date:</Caption>
+				</TLabel>
+
+				<TDatePicker>
+					<Name>dp_FirstFixingDate</Name>
+					<Left>480</Left>
+					<Top>16</Top>
+					<Width>144</Width>
+					<Height>24</Height>
+					<Hint>First Fixing Date</Hint>
+					<CSSClass>required</CSSClass>
+				</TDatePicker>
+
+				<TLabel>
+					<Name>lbl_FixingIndexType</Name>
+					<Left>16</Left>
+					<Top>48</Top>
+					<Caption>Fixing Index Type:</Caption>
+				</TLabel>
+
+				<TComboBox>
+					<Name>cb_FixingIndexType</Name>
+					<Left>176</Left>
+					<Top>48</Top>
+					<Width>144</Width>
+					<Height>24</Height>
+					<Hint>Fixing Index Type</Hint>
+					<CSSClass>required</CSSClass>
+					<DataField>Name</DataField>
+					<KeyField>ID</KeyField>
+			        <!-- <Items>SO, FW, FU, OP, OP_FW, OP_FU, OP_SW, SP, SW, OT</Items> -->
+				</TComboBox>
+
+				<TLabel>
+					<Name>lbl_LastFixingDate</Name>
+					<Left>344</Left>
+					<Top>48</Top>
+					<Caption>Last Fixing Date:</Caption>
+				</TLabel>
+
+				<TDatePicker>
+					<Name>dp_LastFixingDate</Name>
+					<Left>480</Left>
+					<Top>48</Top>
+					<Width>144</Width>
+					<Height>24</Height>
+					<Hint>Last Fixing Date</Hint>
+					<CSSClass>required</CSSClass>
+				</TDatePicker>
+
+				<TLabel>
+					<Name>lbl_FixingIndexSource</Name>
+					<Left>16</Left>
+					<Top>80</Top>
+					<Caption>Fixing Index Source:</Caption>
+				</TLabel>
+
+				<TEdit>
+					<Name>ed_FixingIndexSource</Name>
+					<Left>176</Left>
+					<Top>80</Top>
+					<Width>144</Width>
+					<Height>24</Height>
+					<Hint>Fixing Index Source</Hint>
+					<CSSClass>required</CSSClass>
+					<Mask>^[A-Za-z0-9_ -]+$</Mask>
+				</TEdit>
+
+				<TLabel>
+					<Name>lbl_FixingFrequency</Name>
+					<Left>344</Left>
+					<Top>80</Top>
+					<Caption>Fixing Frequency:</Caption>
+				</TLabel>
+
+				<TComboBox>
+					<Name>cb_FixingFrequency</Name>
+					<Left>480</Left>
+					<Top>80</Top>
+					<Width>144</Width>
+					<Height>24</Height>
+					<Hint>Fixing Frequency</Hint>
+					<CSSClass>required</CSSClass>
+			        <Items>X, H, D, W, M, Q, S, A, O</Items>
+				</TComboBox>
+
+				<TButton>
+					<Name>bnt_SaveFixing</Name>
+					<Caption>Save</Caption>
+					<Left>440</Left>
+					<Top>128</Top>
+					<Width>88</Width>
+					<OnClick>btn_SaveFixingOnClick</OnClick>
+				</TButton>
+
+				<TButton>
+					<Name>bnt_CancelFixing</Name>
+					<Caption>Cancel</Caption>
+					<Left>544</Left>
+					<Top>128</Top>
+					<Width>88</Width>
+					<OnClick>btn_CancelFixingOnClick</OnClick>
+				</TButton>
+
+			</TPanel>
+
+		</TTabSheet>
+
+
+
+
+	</TPageControl>
+
+
+
+	<TButton>
+		<Name>btn_Save</Name>
+		<Caption>Save</Caption>]
+		<Left>206</Left>
+		<Top>516</Top>
+		<Width>80</Width>
+		<OnClick>btn_SaveOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>
+
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Caption>Cancel</Caption>]
+		<Left>590</Left>
+		<Top>516</Top>
+		<Width>80</Width>
+		<OnClick>btn_CancelOnClick</OnClick>
+		<CSSClass>red</CSSClass>
+	</TButton>
+
+</Tfrm_NonStandardContractReportDLG>

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_ContractNameDLG>
+	<Name>frm_ContractNameDLG</Name>
+	<theme>sale</theme>
+	
+	<Caption>REMIT Contract Name Definition</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>464</Width>
+	<Height>300</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	<CSSClass>rotund</CSSClass>
+
+	<TLabel>
+		<Name>lbl_Name</Name>
+		<Left>32</Left>
+		<Top>32</Top>
+		<Caption>Contract Name:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_ContractName</Name>
+		<Left>32</Left>
+		<Top>56</Top>
+		<Width>400</Width>
+		<Height>36</Height>
+		<Hint>Contract Name</Hint>
+		<CSSClass>required</CSSClass>
+	</TEdit>	
+	
+	
+	<TButton>
+		<Name>btn_Save</Name>
+		<Caption>Save</Caption>]
+		<Left>100</Left>
+		<Top>210</Top>
+		<Width>80</Width>
+		<OnClick>btn_SaveOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>
+		
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Caption>Cancel</Caption>]
+		<Left>264</Left>
+		<Top>210</Top>
+		<Width>80</Width>
+		<OnClick>btn_CancelOnClick</OnClick>
+		<CSSClass>red</CSSClass>
+		
+	</TButton>
+				
+</Tfrm_ContractNameDLG>

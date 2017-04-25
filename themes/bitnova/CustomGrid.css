@@ -1,0 +1,28 @@
+div.bitnova_TCustomGrid
+{
+}
+
+div.bitnova_TCustomGrid table
+{
+	background-color: #c0c0c0;
+}
+
+div.bitnova_TCustomGrid table tr
+{
+}
+				
+div.bitnova_TCustomGrid table tr td
+{
+	background-color: #ccc;
+	color: white;
+}
+
+div.bitnova_TCustomGrid table tr td.alternate
+{
+	background-color: #888;
+}
+
+div.bitnova_TCustomGrid table tr td.fixed
+{
+	background-color: #606050;
+}

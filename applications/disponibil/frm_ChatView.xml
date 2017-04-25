@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_ChatView>
+	<Name>frm_ChatView</Name>
+	<theme>disponibil</theme>
+	
+	<Caption>Panou chat</Caption>
+	<Left>32</Left>
+	<Top>400</Top>
+	<Width>240</Width>
+	<Height>240</Height>
+	<BorderStyle>bsSingle</BorderStyle>
+	<Position>poFillContainer</Position>
+	<CustomTarget>column_left</CustomTarget>
+	
+	<TLabel>
+		<Name>lbl_FormCaption</Name>
+		<Left>8</Left>
+		<Top>8</Top>
+		<Caption>Panou Chat</Caption>
+		<CSSClass>formcaption</CSSClass>
+	</TLabel>
+		
+	<TMemo>
+		<Name>ed_Chat</Name>
+		<Left>8</Left>
+		<Top>32</Top>
+		<Width>256</Width>
+		<Height>160</Height>
+	</TMemo>
+	
+	<TEdit>
+		<Name>ed_Message</Name>
+		<Left>8</Left>
+		<Top>208</Top>
+		<Width>200</Width>
+		<Height>24</Height>
+		<Hint>Type a message</Hint>
+	</TEdit>
+		
+	<TButton>
+		<Name>btn_SendMessage</Name>
+		<Caption>Send</Caption>
+		<Left>216</Left>
+		<Top>208</Top>
+		<OnClick>btn_SendMessageOnClick</OnClick>
+	</TButton>	
+	
+</Tfrm_ChatView>

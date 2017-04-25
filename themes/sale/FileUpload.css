@@ -1,0 +1,75 @@
+
+div.sale_TFileUpload input[type="button"]
+{
+	/*background: url('bluegray_button.png') repeat-x 0px 0px;*/
+	background-color: #1F3853; 
+	outline: medium none;
+	background-position: 0px -15px;
+	display: inline-block;
+	padding: 7px 12px 9px;
+	margin-bottom: 0px;
+	color: white;
+	text-align: center;
+	border: medium none;
+	text-shadow: none;
+	box-shadow: none;
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	border-radius: 4px;
+	cursor: pointer;
+	transition: color 0.1s linear 0s, background-color 0.1s linear 0s !important;			
+	display: block;
+	visibility: visible;
+	position: absolute;
+}
+					
+					
+div.sale_TFileUpload span.sale_TFileUpload_message
+{
+	visibility: hidden;
+	position: relative;
+	left: 50px;
+	display: block;
+	width: 180px;
+	height: 100%;
+	top: 9px;
+	font-family: "Segoe UI Light_","Open Sans Light",Verdana,Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	color: #6F7B8A;
+}
+	
+div.sale_TFileUpload div.sale_TFileUpload_animation
+{
+	visibility: hidden;
+	display: block;
+	width: 50px;
+	height: 100%;
+	float: left;
+	top: 1%;
+	position: absolute;
+	background: url(themes/sale/loading.gif); 
+	background-repeat: no-repeat;
+	background-size: 200%;
+	background-position: bottom;
+	
+}					
+					
+					
+div.sale_TFileUpload span.sale_TFileUpload_lastupload
+{
+	visibility: visible;
+	display: block;
+	position: absolute;
+	top: 73%;
+	width: 180px;
+	height: 50%;
+	float: left;
+	text-align: left;
+	font-family: "Segoe UI Light_","Open Sans Light",Verdana,Arial,Helvetica,sans-serif;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: normal;
+	color: #6F7B8A;
+}
+

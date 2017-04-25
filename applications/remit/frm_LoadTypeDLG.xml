@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Tfrm_LoadTypeDLG>
+	<Name>frm_LoadTypeDLG</Name>
+	<theme>sale</theme>
+	
+	<Caption>REMIT LoadType Definition</Caption>
+	<Left>64</Left>
+	<Top>64</Top>
+	<Width>464</Width>
+	<Height>334</Height>
+	<BorderStyle>bsDialog</BorderStyle>
+	<Position>poScreenCenter</Position>
+	<ThumbVisible>false</ThumbVisible>
+	<CSSClass>rotund</CSSClass>
+	
+	<TLabel>
+		<Name>lbl_Code</Name>
+		<Left>32</Left>
+		<Top>32</Top>
+		<Caption>Code:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_Code</Name>
+		<Left>32</Left>
+		<Top>56</Top>
+		<Width>400</Width>
+		<Height>36</Height>
+		<Hint>Code</Hint>
+		<CSSClass>required</CSSClass>
+	</TEdit>	
+
+	<TLabel>
+		<Name>lbl_Name</Name>
+		<Left>32</Left>
+		<Top>112</Top>
+		<Caption>Load Type:</Caption>
+	</TLabel>
+	
+	<TEdit>
+		<Name>ed_LoadType</Name>
+		<Left>32</Left>
+		<Top>136</Top>
+		<Width>400</Width>
+		<Height>36</Height>
+		<Hint>Load Type</Hint>
+		<CSSClass>required</CSSClass>
+	</TEdit>
+	
+
+	<TButton>
+		<Name>btn_Save</Name>
+		<Caption>Save</Caption>]
+		<Left>100</Left>
+		<Top>272</Top>
+		<Width>80</Width>
+		<OnClick>btn_SaveOnClick</OnClick>
+		<CSSClass>green</CSSClass>
+	</TButton>
+		
+	<TButton>
+		<Name>btn_Cancel</Name>
+		<Caption>Cancel</Caption>]
+		<Left>264</Left>
+		<Top>272</Top>
+		<Width>80</Width>
+		<OnClick>btn_CancelOnClick</OnClick>
+		<CSSClass>red</CSSClass>
+		
+	</TButton>
+				
+</Tfrm_LoadTypeDLG>
